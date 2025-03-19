@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+    rel="stylesheet">
+  <!-- <link rel="icon" href="images/logo-small.svg" /> -->
+  <title>Home</title>
+</head>
+
+<body>
+  <div class="main">
+    <!-- #header -->
+    <!-- <header class="header" id="header">
+        <div class="autoContainer">
+          <div class="header__inner">
+            <a href="/" class="header__inner-logo">
+                <img src="images/logo-white.svg" alt="%ProjectName%" />
+            </a>
+            <div class="nav" id="menu">
+              <div class="nav__inner">
+                <div class="nav__inner-group">
+                  <a href="" class="nav__inner-link">Utility</a>
+                  <a href="" class="nav__inner-link">Tokenomics</a>
+                  <a href="" class="nav__inner-link">Roadmap</a>
+                  <a href="" class="nav__inner-link">WhitePaper</a>
+                </div>
+              </div>
+            </div>
+            <button class="burger" id="menuBtn"></button>
+          </div>
+        </div>
+      </header> -->
+    <!-- #header end -->
+
+    <!-- #hero -->
+    <section class="example">
+      <div class="autoContainer">
+        <div class="example__inner">
+          <button class="button button--primary _lg">
+            <span>
+              Bekijk categorie
+            </span>
+            <span class="icon icon--stroke">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 12L10 8L6 4" stroke="currentCollor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </span>
+          </button>
+          <button class="button button--primary">
+            <span class="icon icon--stroke">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M9 22C9.55228 22 10 21.5523 10 21C10 20.4477 9.55228 20 9 20C8.44772 20 8 20.4477 8 21C8 21.5523 8.44772 22 9 22Z"
+                  stroke="currentCollor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path
+                  d="M20 22C20.5523 22 21 21.5523 21 21C21 20.4477 20.5523 20 20 20C19.4477 20 19 20.4477 19 21C19 21.5523 19.4477 22 20 22Z"
+                  stroke="currentCollor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path
+                  d="M1 1H5L7.68 14.39C7.77144 14.8504 8.02191 15.264 8.38755 15.5583C8.75318 15.8526 9.2107 16.009 9.68 16H19.4C19.8693 16.009 20.3268 15.8526 20.6925 15.5583C21.0581 15.264 21.3086 14.8504 21.4 14.39L23 6H6"
+                  stroke="currentCollor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
+            <span>
+              In winkelmand
+            </span>
+          </button>
+          <button class="button button--border">
+            <span>
+              Lees meer
+            </span>
+            <span class="icon icon--stroke">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 7.5L10 12.5L15 7.5" stroke="currentCollor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+
+            </span>
+          </button>
+          <div class="input__outer">
+            <label>Voornaam*</label>
+            <div class="input">
+              <input type="text" placeholder="asd">
+            </div>
+            <p>
+              Voor als we vragen hebben over de bestelling
+            </p>
+          </div>
+          <div class="input">
+            <input type="text" placeholder="asd">
+          </div>
+          <div class="input input--select">
+            <input type="hidden">
+            <div class="input__selected-outer">
+              <div class="input__selected"></div>
+              <div class="input__selected-arrow icon icon--stroke">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5 7.5L10 12.5L15 7.5" stroke="currentCollor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </div>
+            </div>
+            <ul class="input__dropdown">
+              <li class="input__dropdown-item" data-default>
+                Nederland
+              </li>
+              <li class="input__dropdown-item">
+                Nederland-2
+              </li>
+              <li class="input__dropdown-item">
+                Nederland-3
+              </li>
+            </ul>
+          </div>
+          <div class="input__outer">
+            <label>
+              Type bestelling
+            </label>
+            <div class="input__outer-row">
+              <div class="input input--radio">
+                <input type="radio" id="radio-1" name="radio-1">
+                <span class="input__circle"></span>
+                <span class="input__text">
+                  Particulier
+                </span>
+              </div>
+              <div class="input input--radio">
+                <input type="radio" id="radio-2" name="radio-1">
+                <span class="input__circle"></span>
+                <span class="input__text">
+                  Zakelijk
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="box">
+            <h3>
+              Over ons
+            </h3>
+            <p>
+              Ons aanbod drogisterij producten is enorm. Het assortiment bestaat uit meer dan 70.000 hoogwaardige
+              artikelen. Dit zijn onder andere merken als Modifast, P20, AOV, Natusor en Biotics. NatuurlijkWinkelen
+              heeft de beste online prijzen.
+            </p>
+          </div>
+          <div class="box _sm">
+            <h5>
+              Meer dan 70.000 drogisterij artikelen
+            </h5>
+            <p class="_sm">
+              Op onze website kunt u gebruik maken van de handige zoekmethode. Hiermee krijgt u alle producten te zien
+              die aan uw persoonlijke wensen voldoen. Heel veel shopplezier!
+            </p>
+          </div>
+          <div class="checkbox__outer">
+            <div class="checkbox">
+              <input type="checkbox" id="check-1">
+              <span></span>
+            </div>
+            <label for="check-1">A. Vogel</label>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- #hero end -->
+    <!-- #footer -->
+    <footer class="footer">
+      <div class="autoContainer">
+        <div class="footer__inner"></div>
+      </div>
+    </footer>
+    <!-- #footer end -->
+  </div>
+  <script src="js/main.js"></script>
+  <script src="/js/customSelect.js"></script>
+</body>
+
+</html>

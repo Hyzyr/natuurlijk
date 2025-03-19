@@ -1,0 +1,46 @@
+@media (max-width: 1280px) {
+}
+@media (max-width: 1160px) {
+  .autoContainer {
+    padding: 0 40px;
+  }
+}
+@media (max-width: 1025px) {
+  .autoContainer {
+    padding: 0 30px;
+  }
+  @include header-1025;
+}
+@media (max-width: 940px) {
+  .autoContainer {
+    padding: 0 25px;
+  }
+}
+@media (max-width: 768px) {
+  .autoContainer {
+    padding: 0 15px;
+  }
+}
+@media (max-width: 580px) {
+}
+@media (max-width: 460px) {
+}
+@media (max-width: 390px) {
+}
+
+// @mixin index-1290 {
+// }
+// @mixin index-1160 {
+// }
+// @mixin index-1025 {
+// }
+// @mixin index-940 {
+// }
+// @mixin index-768 {
+// }
+// @mixin index-580 {
+// }
+// @mixin index-460 {
+// }
+// @mixin index-390 {
+// }
