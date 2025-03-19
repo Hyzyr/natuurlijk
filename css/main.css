@@ -941,6 +941,22 @@ svg {
   gap: 8px;
 }
 
+.tickText {
+  font-size: 14px;
+  color: #675642;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+.tickText .icon {
+  color: #287330;
+  width: 1.15em;
+  height: 1.15em;
+}
+.tickText__info {
+  margin-top: 1px;
+}
+
 .footer {
   margin-top: auto;
 }
