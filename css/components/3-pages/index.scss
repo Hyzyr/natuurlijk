@@ -10,3 +10,475 @@
     width: 400px;
   }
 }
+
+.hero {
+  background: $blue-30;
+  margin-bottom: -40px;
+
+  &__inner {
+    &-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 50px;
+    }
+  }
+
+  &__content {
+    width: 48%;
+    max-width: 578px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 48px;
+    padding: 120px 0;
+
+    p {
+      max-width: 460px;
+    }
+  }
+
+  &__image {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 50%;
+
+    img {
+      width: 50vw;
+      min-width: 50vw;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.latest {
+  padding-bottom: 40px;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 24px;
+    background: $blue-100;
+    border-radius: 6px;
+    width: 100%;
+
+    &-group {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+    }
+
+    &-image {
+      @include flexCenter;
+      width: 96px;
+
+      img {
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+.goods {
+  padding: 40px 0;
+
+  .row {
+    position: relative;
+    padding-top: 24px;
+    border-top: 1px solid $brown-25;
+  }
+
+  .cart {
+    width: 100%;
+  }
+
+  h3 {
+    color: $brown-100;
+  }
+}
+
+.brands {
+  padding: 40px 0;
+
+  &__item {
+    width: 100%;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 6em;
+    border: 1px solid $grey-100;
+    border-radius: 6px;
+
+    &-image {
+      @include flexCenter;
+      width: 6em;
+      height: 3.25em;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      &._lg {
+        width: 7em;
+      }
+    }
+  }
+}
+
+.about {
+  padding: 40px 0;
+
+  &__inner {
+    background: rgba($blue-100, 0.3);
+    border-radius: 6px;
+    overflow: hidden;
+
+    &-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 50px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+    gap: 40px;
+    max-width: 492px;
+  }
+
+  &__image {
+    @include flexCenter;
+    max-width: 722px;
+    flex: 1;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .box {
+    margin-bottom: 40px;
+
+    &--sm {
+      margin-bottom: unset;
+    }
+  }
+}
+
+.category {
+  padding: 40px 0;
+
+  &__item {
+    width: calc(25% - 16px);
+    border-radius: 6px;
+    overflow: hidden;
+
+    &-info {
+      padding: 16px;
+      background: $brown-25;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    &-image {
+      position: relative;
+    }
+
+    .ratioImage {
+      padding-bottom: 71%;
+    }
+
+    .badge {
+      position: absolute;
+      bottom: 12px;
+      left: 8px;
+    }
+
+    h5 {
+      color: $brown-100;
+    }
+
+    &._lg {
+      width: calc(33.3% - 16px);
+
+      .ratioImage {
+        padding-bottom: 52%;
+      }
+    }
+  }
+}
+
+.benefits {
+  padding-top: 120px;
+
+  &__inner {
+    position: relative;
+    padding: 28px 0;
+
+    &:before {
+      content: '';
+      width: 100vw;
+      height: 100%;
+      position: absolute;
+      left: 50%;
+      top: 0;
+      transform: translateX(-50%);
+      background: $green-100;
+      z-index: -1;
+    }
+  }
+
+  .row {
+    justify-content: space-between;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: $white;
+  }
+}
+
+@mixin index-1440 {
+  .hero {
+    &__content {
+      padding: 90px 0 100px;
+    }
+  }
+}
+
+@mixin index-1360 {
+  .latest {
+    &__item {
+      width: 100%;
+
+      &-image {
+        width: 80px;
+      }
+    }
+  }
+}
+
+@mixin index-1280 {
+  .hero {
+    margin-bottom: -20px;
+
+    &__content {
+      padding: 60px 0 60px;
+    }
+  }
+
+  .latest {
+    &__item {
+      gap: 24px;
+    }
+  }
+}
+
+@mixin index-1025 {
+  .latest {
+    .row {
+      width: calc(100% + 48px);
+      margin-left: -24px;
+    }
+
+    .swiper {
+      &-slide {
+        width: 340px;
+      }
+    }
+  }
+
+  .goods {
+    padding: 30px 0;
+  }
+
+  .brands {
+    padding: 30px 0;
+
+    &__item {
+      font-size: 18px;
+    }
+
+    .swiper {
+      &-slide {
+        width: 200px;
+      }
+    }
+
+    .row {
+      width: calc(100% + 48px);
+      margin-left: -24px;
+    }
+  }
+}
+
+@mixin index-940 {
+  .hero {
+    margin-bottom: -10px;
+
+    &__content {
+      padding: 40px 0;
+      gap: 32px;
+    }
+  }
+
+  .latest {
+    &__item {
+      &-image {
+        width: 75px;
+      }
+    }
+  }
+
+  .brands {
+    &__item {
+      font-size: 16px;
+    }
+
+    .swiper {
+      &-slide {
+        width: 180px;
+      }
+    }
+  }
+}
+
+@mixin index-768 {
+  .hero {
+    margin-bottom: unset;
+
+    &__inner {
+      &-row {
+        flex-direction: column;
+        gap: 0;
+      }
+    }
+
+    &__content {
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      margin: 0 auto;
+
+      p {
+        margin: 0 auto;
+        width: 85%;
+      }
+    }
+
+    &__image {
+      order: -1;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: 100vw;
+        min-width: 100vw;
+      }
+    }
+  }
+
+  .latest {
+    padding: 20px 0;
+
+    .row {
+      width: calc(100% + 32px);
+      margin-left: -16px;
+    }
+
+    &__item {
+      padding: 16px;
+
+      &-group {
+        position: relative;
+      }
+
+      &-image {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+      }
+
+      .box {
+        width: 70%;
+      }
+    }
+  }
+
+  .brands {
+    &__item {
+      font-size: 14px;
+
+      &-image {
+        width: 6.7em;
+        height: 3.4em;
+      }
+    }
+
+    .swiper {
+      &-slide {
+        width: 160px;
+      }
+    }
+
+    .row {
+      width: calc(100% + 32px);
+      margin-left: -16px;
+    }
+  }
+}
+
+@mixin index-580 {
+  .goods {
+    .row {
+      margin-bottom: 30px;
+      padding-top: unset;
+      border-top: unset;
+    }
+  }
+
+  .brands{
+    padding: 20px 0;
+
+    .row{
+      margin-bottom: 24px;
+    }
+  }
+}
+
+@mixin index-460 {
+  .hero {
+    &__content {
+      padding: 32px 0;
+      align-items: flex-start;
+      text-align: left;
+      width: 100%;
+      max-width: 360px;
+      margin: unset;
+
+      p {
+        width: 100%;
+      }
+    }
+  }
+
+  .goods {
+    padding: 20px 0;
+  }
+}

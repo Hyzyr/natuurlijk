@@ -223,6 +223,15 @@
   line-height: 1;
   @include transition;
 
+  &:active {
+    opacity: 0.7;
+  }
+
+  &:disabled {
+    cursor: default;
+    opacity: 0.5 !important;
+  }
+
   &--primary {
     font-family: $font-secondary;
     background: $brown-150;
@@ -237,6 +246,10 @@
     &._lg {
       font-size: 18px;
       padding: 0.77em 1.4em;
+    }
+
+    &-icon {
+      padding: 0.7em 0.94em;
     }
 
     &:hover {
@@ -258,13 +271,89 @@
     }
   }
 
-  &:active {
-    opacity: 0.7;
+  &--text {
+    position: relative;
+    font-family: $font-secondary;
+    font-weight: 700;
+    padding: 0 0 10px 0;
+    gap: 8px;
+    color: $green-100;
+
+    &::after {
+      content: '';
+      width: 100%;
+      height: 2px;
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      background: $green-100;
+      @include transition;
+    }
+
+    &:hover {
+      opacity: 0.7;
+
+      &::after {
+        width: 90%;
+      }
+
+      &:active {
+        opacity: 0.5;
+      }
+    }
   }
 
-  &:disabled {
-    cursor: default;
-    opacity: 0.5 !important;
+  &--arrow {
+    font-size: 24px;
+    padding: 0;
+    width: 2.6em;
+    height: 2.6em;
+    color: $green-100;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    background: $white;
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+
+    &-right {
+      right: -16px;
+    }
+
+    &-left {
+      left: -16px;
+    }
+
+    .icon {
+      font-size: inherit;
+    }
+
+    &.swiper-button-disabled {
+      opacity: 0 !important;
+    }
+
+    &:hover {
+      border-color: $green-100;
+    }
+  }
+
+  &--rounded {
+    border-radius: 50%;
+  }
+
+  &--icon {
+    padding: unset;
+    font-size: 24px;
+
+    .icon {
+      font-size: inherit;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 
   .icon {
@@ -274,7 +363,7 @@
 
 .ratioImage {
   position: relative;
-  padding-bottom: 65%;
+  padding-bottom: 100%;
   width: 100%;
 
   img {
@@ -285,6 +374,7 @@
     height: 100%;
     object-fit: cover;
   }
+
   &--contain {
     img {
       object-fit: contain;
@@ -293,14 +383,43 @@
 }
 
 .badge {
-  border-radius: 100px;
-  padding: 0.3em 0.5em;
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  padding: 0.32em 0.5em;
   color: $brown-150;
   font-style: normal;
-  font-weight: 500;
-  font-size: 15px;
+  font-weight: 700;
+  font-size: 12px;
   line-height: 1;
+  background: $green-100;
+  color: $white;
+  min-height: 24px;
+
+  &--lg {
+    font-size: 16px;
+  }
+
+  &--sm {
+    font-size: 12px;
+    font-weight: 400;
+  }
+
+  &--gray {
+    color: $brown-100;
+    background: $brown-25;
+  }
+
+  &--light {
+    background: $green-10;
+    color: $green-100;
+  }
+
+  &--white {
+    background: $white;
+    color: $brown-100;
+  }
 }
 
 .checkbox {
@@ -368,7 +487,7 @@
 
   &__outer {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
 
     label {
       color: $brown-150;
@@ -744,6 +863,22 @@
       stroke: currentColor;
     }
   }
+
+  &__outer {
+    font-size: 24px;
+    width: 2.3em;
+    height: 2.3em;
+    border-radius: 50%;
+    background-color: rgba($white, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .icon {
+      color: $white;
+      font-size: inherit;
+    }
+  }
 }
 
 .toggle {
@@ -820,7 +955,7 @@
   flex-direction: column;
   gap: 16px;
 
-  &._sm {
+  &--sm {
     gap: 8px;
   }
 }
@@ -840,5 +975,276 @@
 
   &__info {
     margin-top: 1px;
+  }
+}
+
+.cart {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    &-box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &-price {
+      display: flex;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      font-size: 14px;
+      line-height: 1;
+      color: $brown-100;
+
+      del {
+        margin-left: 8px;
+      }
+
+      strong {
+        margin-left: auto;
+        font-size: 20px;
+      }
+    }
+
+    &-group {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+
+      p {
+        margin-bottom: 4px;
+        font-size: 14px;
+        min-height: 3.8em;
+        @include ellipsis(3);
+        display: none;
+      }
+    }
+
+    &-stars {
+      align-items: center;
+      display: none;
+
+      .icon {
+        font-size: 24px;
+        color: $brown-25;
+        @include transition;
+
+        &.active {
+          color: $green-100;
+        }
+      }
+    }
+
+    h6 {
+      font-family: $font-secondary;
+      font-weight: 700;
+      min-height: 2em;
+      @include ellipsis(2);
+    }
+  }
+
+  .badge {
+    &--lg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+  }
+}
+
+.more {
+  position: relative;
+
+  &__button {
+    position: absolute;
+    top: 2px;
+    right: 0;
+  }
+
+  h3 {
+    margin-bottom: 40px;
+  }
+}
+
+.row {
+  display: flex;
+  gap: 32px;
+
+  &--wrap {
+    flex-wrap: wrap;
+  }
+
+  &--slider{
+    position: relative;
+  }
+}
+
+@mixin components-1360 {
+  .row {
+    gap: 20px;
+  }
+}
+
+@mixin components-1160 {
+  .more {
+    h3 {
+      margin-bottom: 35px;
+    }
+  }
+}
+
+@mixin components-1025 {
+  .more {
+    h3 {
+      margin-bottom: 30px;
+    }
+  }
+
+  .button {
+    &--arrow {
+      font-size: 22px;
+
+      &-right {
+        right: -5px;
+      }
+
+      &-left {
+        left: -5px;
+      }
+    }
+  }
+}
+
+@mixin components-940 {
+  .more {
+    h3 {
+      margin-bottom: 25px;
+    }
+  }
+}
+
+@mixin components-768 {
+  .button {
+    &--arrow {
+      font-size: 20px;
+
+      &-right {
+        right: 0;
+      }
+
+      &-left {
+        left: 0;
+      }
+    }
+  }
+}
+
+@mixin components-580 {
+  .cart {
+    &__info {
+      gap: 8px;
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      &-group {
+        margin-bottom: 8px;
+        width: 100%;
+      }
+
+      &-stars {
+        display: flex;
+      }
+
+      &-box {
+        width: 100%;
+        justify-content: space-between;
+        gap: 5px;
+      }
+
+      &-price {
+        width: 104px;
+        flex-wrap: wrap;
+        font-size: 12px;
+
+        strong {
+          width: 100%;
+          font-size: 18px;
+          margin: 8px 0 0;
+        }
+
+        del {
+          margin-left: 4px;
+        }
+      }
+
+      p {
+        display: block;
+      }
+
+      .button {
+        &--primary {
+          padding: unset;
+          font-size: 20px;
+          width: 2em;
+          height: 2em;
+          margin-left: auto;
+
+          span {
+            display: none;
+          }
+
+          .icon {
+            display: flex;
+          }
+        }
+      }
+    }
+
+    .badge {
+      &--lg {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .button {
+    &--arrow {
+      font-size: 18px;
+      top: 55%;
+    }
+  }
+
+  .more {
+    &__button {
+      position: relative;
+      margin-right: auto;
+      top: unset;
+      left: unset;
+      right: unset;
+      bottom: unset;
+    }
+  }
+}
+
+@mixin components-460 {
+  .button {
+    &--primary {
+      &._lg {
+        font-size: 16px;
+        padding: 0.9em 1em;
+      }
+    }
+
+    &--arrow {
+      font-size: 16px;
+    }
   }
 }

@@ -40,10 +40,15 @@
   -o-object-fit: cover;
 }
 
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @mixin containImage {
   width: 100%;
   height: 100%;
   object-fit: contain;
   -o-object-fit: contain;
 }
-

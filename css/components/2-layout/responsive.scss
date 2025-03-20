@@ -1,30 +1,63 @@
-@media (max-width: 1280px) {
+@media (max-width: 1440px) {
+  @include typography-1440;
+  @include index-1440;
 }
-@media (max-width: 1160px) {
+
+@media (max-width: 1360px) {
   .autoContainer {
     padding: 0 40px;
   }
+  @include typography-1360;
+  @include components-1360;
+  @include index-1360;
 }
-@media (max-width: 1025px) {
+
+@media (max-width: 1280px) {
+  @include typography-1280;
+  @include index-1280;
+}
+
+@media (max-width: 1160px) {
   .autoContainer {
-    padding: 0 30px;
+    padding: 0 24px;
   }
-  @include header-1025;
+  @include components-1160;
 }
+
+@media (max-width: 1025px) {
+  @include components-1025;
+  @include typography-1025;
+  @include index-1025;
+}
+
 @media (max-width: 940px) {
   .autoContainer {
-    padding: 0 25px;
+    padding: 0 20px;
   }
+  @include components-940;
+  @include index-940;
 }
+
 @media (max-width: 768px) {
   .autoContainer {
-    padding: 0 15px;
+    padding: 0 16px;
   }
+  @include components-768;
+  @include index-768;
 }
+
 @media (max-width: 580px) {
+  @include components-580;
+  @include typography-580;
+  @include index-580;
 }
+
 @media (max-width: 460px) {
+  @include typography-460;
+  @include components-460;
+  @include index-460;
 }
+
 @media (max-width: 390px) {
 }
 
