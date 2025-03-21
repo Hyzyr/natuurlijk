@@ -244,6 +244,7 @@ const settings = {
 
     },
   },
+
 };
 
 document.querySelectorAll('.swiper').forEach((swiperSlider) => {

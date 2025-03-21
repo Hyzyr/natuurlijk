@@ -1,33 +1,56 @@
-var menu = document.getElementById("menu");
-var menuBtn = document.getElementById("menuBtn");
-var body = document.body;
+// var menu = document.getElementById('menu');
+// var menuBtn = document.getElementById('menuBtn');
+// var body = document.body;
 
-const closeMenu = () => {
-  menu.classList.remove("active");
-  menuBtn.classList.remove("active");
-  body.classList.remove("active");
-};
+// const closeMenu = () => {
+//   menu.classList.remove('active');
+//   menuBtn.classList.remove('active');
+//   body.classList.remove('active');
+// };
 
-menuBtn.onclick = function () {
-  menu.classList.toggle("active");
-  menuBtn.classList.toggle("active");
-  body.classList.toggle("active");
-};
-window.onclick = function (event) {
-  if (event.target == menu) {
-    closeMenu();
-  }
-};
+// menuBtn.onclick = function () {
+//   menu.classList.toggle('active');
+//   menuBtn.classList.toggle('active');
+//   body.classList.toggle('active');
+// };
+// window.onclick = function (event) {
+//   if (event.target == menu) {
+//     closeMenu();
+//   }
+// };
 
-const header = document.getElementById("header");
-if (header)
-  window.addEventListener("scroll", () => {
-    if (document.documentElement.scrollTop > 400) {
-      header.classList.add("sticky");
-    } else {
-      header.classList.remove("sticky");
-    }
+// const header = document.getElementById('header');
+// if (header)
+//   window.addEventListener('scroll', () => {
+//     if (document.documentElement.scrollTop > 400) {
+//       header.classList.add('sticky');
+//     } else {
+//       header.classList.remove('sticky');
+//     }
+//   });
+
+const filter = document.getElementById('filter');
+if (filter) {
+  const filterDropdowns = document.querySelectorAll('.filter__dropdown');
+
+  filterDropdowns.forEach((dropdown) => {
+    const dropdownButton = dropdown.querySelector('.filter__dropdown-button');
+    const dropdownContent = dropdown.querySelector('.filter__dropdown-content');
+    const offsetHeight = dropdownContent.scrollHeight;
+    let toggle = true;
+    dropdownButton.addEventListener('click', () => {
+      if (toggle) {
+        dropdown.classList.add('active');
+        dropdownContent.style.height = offsetHeight + 'px';
+        toggle = false;
+      } else {
+        dropdown.classList.remove('active');
+        dropdownContent.style.height = 0;
+        toggle = true;
+      }
+    });
   });
+}
 
 // const links = document.querySelectorAll(".links");
 // const sections = document.querySelectorAll(".anchor");
