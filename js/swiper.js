@@ -241,10 +241,23 @@ const settings = {
         slidesPerView: 2,
         spaceBetween: 24,
       },
-
     },
   },
 
+  productCategorySlider: {
+    slidesPerView: 'auto',
+    spaceBetween: 4,
+    slidesOffsetBefore: 16,
+    slidesOffsetAfter: 16,
+
+    breakpoints: {
+      768: {
+        slidesPerView: 'auto',
+        slidesOffsetBefore: 24,
+        slidesOffsetAfter: 24,
+      },
+    },
+  },
 };
 
 document.querySelectorAll('.swiper').forEach((swiperSlider) => {

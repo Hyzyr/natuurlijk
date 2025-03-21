@@ -123,7 +123,7 @@
       &__dropdown {
         max-height: 30vh;
         overflow-y: auto;
-        pointer-events: none;
+        pointer-events: all;
         opacity: 1;
       }
     }
@@ -387,6 +387,32 @@
 
     &:hover {
       transform: scale(1.1);
+    }
+  }
+
+  &--filter {
+    gap: 12px;
+    font-size: 16px;
+    padding: 0.7em 0.8em;
+    justify-content: space-between;
+
+    .circle {
+      font-size: 12px;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: $green-10;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $brown-150;
+      transition: inherit;
+    }
+
+    &:hover {
+      .circle {
+        background: rgba($green-100, 0.2);
+      }
     }
   }
 
@@ -1091,7 +1117,7 @@
 
     p {
       margin-bottom: 8px;
-      font-size: 14px;
+      font-size: 16px;
       min-height: 3.8em;
       @include ellipsis(3);
     }
@@ -1135,25 +1161,50 @@
 }
 
 .group {
-  display: flex;
-  align-items: center;
-  gap: 4px;
   margin-bottom: 40px;
 
-  &__button {
+  &__desktop {
     display: flex;
     align-items: center;
-    grid-area: 4px;
-    font-size: 14px;
-    color: $green-100;
+    gap: 4px;
 
-    .icon {
-      color: $brown-150;
-      font-size: 16px;
+    &-button {
+      display: flex;
+      align-items: center;
+      grid-area: 4px;
+      font-size: 14px;
+      color: $green-100;
+
+      .icon {
+        color: $brown-150;
+        font-size: 16px;
+      }
+
+      &.active {
+        color: $brown-50;
+      }
     }
+  }
 
-    &.active {
-      color: $brown-50;
+  &__mobile {
+    display: none;
+
+    &-button {
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      color: $green-100;
+      @include transition;
+
+      .icon {
+        width: 1em;
+        height: 1em;
+      }
+
+      &:hover {
+        opacity: 0.7;
+      }
     }
   }
 }
@@ -1234,6 +1285,18 @@
       }
     }
   }
+
+  .group {
+    margin-bottom: 16px;
+
+    &__desktop {
+      display: none;
+    }
+
+    &__mobile {
+      display: flex;
+    }
+  }
 }
 
 @mixin components-940 {
@@ -1241,6 +1304,10 @@
     h3 {
       margin-bottom: 25px;
     }
+  }
+
+  .cart {
+    gap: 25px;
   }
 }
 
@@ -1266,10 +1333,16 @@
       }
     }
   }
+
+  .cart {
+    gap: 20px;
+  }
 }
 
 @mixin components-580 {
   .cart {
+    gap: 10px;
+
     &__info {
       flex-direction: row;
       flex-wrap: wrap;
@@ -1313,6 +1386,7 @@
     }
 
     p {
+      font-size: 14px;
       margin-bottom: 8px;
     }
 

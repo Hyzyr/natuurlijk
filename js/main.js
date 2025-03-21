@@ -1,6 +1,6 @@
 // var menu = document.getElementById('menu');
 // var menuBtn = document.getElementById('menuBtn');
-// var body = document.body;
+const body = document.body;
 
 // const closeMenu = () => {
 //   menu.classList.remove('active');
@@ -31,6 +31,7 @@
 
 const filter = document.getElementById('filter');
 if (filter) {
+  // filter dropdowns start
   const filterDropdowns = document.querySelectorAll('.filter__dropdown');
 
   filterDropdowns.forEach((dropdown) => {
@@ -50,6 +51,22 @@ if (filter) {
       }
     });
   });
+  // filter dropdowns end
+
+  // filter popup start
+  const filterOpenButton = document.getElementById('filterOpenButton');
+  const filterCloseButton = document.getElementById('filterCloseButton');
+
+  filterOpenButton.addEventListener('click', () => {
+    filter.classList.add('active');
+    body.classList.add('active');
+  });
+
+  filterCloseButton.addEventListener('click', () => {
+    filter.classList.remove('active');
+    body.classList.remove('active');
+  });
+  // filter popup end
 }
 
 // const links = document.querySelectorAll(".links");
