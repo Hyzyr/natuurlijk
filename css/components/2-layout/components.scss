@@ -90,9 +90,10 @@
         box-sizing: border-box;
         padding: 8px 5px;
         border-radius: 6px;
+        z-index: 1;
+        pointer-events: none;
         @include transition;
         @include hideScroll;
-        z-index: 1;
 
         &-item {
           cursor: pointer;
@@ -122,6 +123,7 @@
       &__dropdown {
         max-height: 30vh;
         overflow-y: auto;
+        pointer-events: none;
         opacity: 1;
       }
     }
@@ -270,8 +272,23 @@
     }
 
     &:hover {
-      background: rgba($brown-150, 0.25);
+      background: rgba($brown-150, 0.05);
       color: $brown-150;
+    }
+  }
+
+  &--secondary {
+    font-size: 18px;
+    padding: 0.78em 0.8em;
+    font-family: $font-secondary;
+    background: $green-100;
+    border-color: $green-100;
+    color: $white;
+    gap: 15px;
+
+    &:hover {
+      background: rgba($green-100, 0.05);
+      color: $green-100;
     }
   }
 
@@ -1138,6 +1155,40 @@
     &.active {
       color: $brown-50;
     }
+  }
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+
+  &__button {
+    width: 2em;
+    height: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    color: $green-100;
+    border: 1px solid transparent;
+    cursor: pointer;
+    @include transition;
+
+    &.active {
+      background-color: $green-10;
+    }
+
+    &:hover {
+      border-color: $green-100;
+    }
+  }
+
+  &__outer {
+    display: flex;
+    align-items: center;
+    gap: 32px;
   }
 }
 

@@ -309,10 +309,11 @@ svg {
   box-sizing: border-box;
   padding: 8px 5px;
   border-radius: 6px;
+  z-index: 1;
+  pointer-events: none;
   transition: all 0.3s ease-in-out 0s;
   scrollbar-width: none; /* Firefox 64 */
   -ms-overflow-style: none; /* Internet Explorer 11 */
-  z-index: 1;
 }
 .input--select .input__dropdown::-webkit-scrollbar {
   /** WebKit */
@@ -339,6 +340,7 @@ svg {
 .input--select.active .input__dropdown {
   max-height: 30vh;
   overflow-y: auto;
+  pointer-events: none;
   opacity: 1;
 }
 .input--radio {
@@ -463,8 +465,21 @@ svg {
   padding: 0.7em 0.94em;
 }
 .button--primary:hover {
-  background: rgba(51, 43, 33, 0.25);
+  background: rgba(51, 43, 33, 0.05);
   color: #332B21;
+}
+.button--secondary {
+  font-size: 18px;
+  padding: 0.78em 0.8em;
+  font-family: "DM Sans", sans-serif;
+  background: #287330;
+  border-color: #287330;
+  color: #fff;
+  gap: 15px;
+}
+.button--secondary:hover {
+  background: rgba(40, 115, 48, 0.05);
+  color: #287330;
 }
 .button--border {
   font-family: "DM Sans", sans-serif;
@@ -1213,6 +1228,36 @@ svg {
   color: #B3AAA0;
 }
 
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+}
+.pagination__button {
+  width: 2em;
+  height: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  color: #287330;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out 0s;
+}
+.pagination__button.active {
+  background-color: #E9F1EA;
+}
+.pagination__button:hover {
+  border-color: #287330;
+}
+.pagination__outer {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
 .footer {
   margin-top: auto;
 }
@@ -1742,6 +1787,13 @@ svg {
   border-bottom: 1px solid #ECEAE7;
   margin-bottom: 24px;
 }
+.products__container-group .input--select {
+  width: 200px;
+  z-index: 2;
+}
+.products__container-group .input--select .input__selected {
+  padding: 0.95em 2.8em 0.95em 1em;
+}
 .products__container-total {
   color: #675642;
 }
@@ -1749,6 +1801,7 @@ svg {
   display: flex;
   flex-wrap: wrap;
   gap: 40px 24px;
+  margin-bottom: 120px;
   z-index: 0;
 }
 .products__container-box {
@@ -1762,15 +1815,18 @@ svg {
 .products__container-box._left {
   margin-left: auto;
 }
+.products__container-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.products__container-footer .input--select {
+  width: auto;
+  min-width: 85px;
+}
 .products__container .cart {
   width: calc(25% - 18px);
-}
-.products__container .input--select {
-  width: 200px;
-  z-index: 2;
-}
-.products__container .input--select .input__selected {
-  padding: 0.95em 2.8em 0.95em 1em;
 }
 .products__container .button--border {
   padding: 0.9em 1em;

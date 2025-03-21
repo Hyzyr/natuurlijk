@@ -20,6 +20,19 @@
       padding-bottom: 16px;
       border-bottom: 1px solid $brown-25;
       margin-bottom: 24px;
+
+      .input {
+        &--select {
+          width: 200px;
+          z-index: 2;
+  
+          .input {
+            &__selected {
+              padding: 0.95em 2.8em 0.95em 1em;
+            }
+          }
+        }
+      }
     }
 
     &-total {
@@ -30,6 +43,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 40px 24px;
+      margin-bottom: 120px;
       z-index: 0;
     }
 
@@ -47,22 +61,25 @@
       }
     }
 
+    &-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+
+      .input{
+        &--select{
+          width: auto;
+          min-width: 85px;
+        }
+      }
+    }
+
     .cart {
       width: calc(25% - 18px);
     }
 
-    .input {
-      &--select {
-        width: 200px;
-        z-index: 2;
-
-        .input {
-          &__selected {
-            padding: 0.95em 2.8em 0.95em 1em;
-          }
-        }
-      }
-    }
+   
 
     .button {
       &--border {
