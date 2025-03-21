@@ -868,6 +868,8 @@
     font-size: 24px;
     width: 2.3em;
     height: 2.3em;
+    min-width: 2.3em;
+    min-height: 2.3em;
     border-radius: 50%;
     background-color: rgba($white, 0.1);
     display: flex;
@@ -1065,7 +1067,7 @@
 
   &__button {
     position: absolute;
-    top: 2px;
+    top: 10px;
     right: 0;
   }
 
@@ -1082,7 +1084,7 @@
     flex-wrap: wrap;
   }
 
-  &--slider{
+  &--slider {
     position: relative;
   }
 }
@@ -1113,11 +1115,19 @@
       font-size: 22px;
 
       &-right {
-        right: -5px;
+        right: 10px;
+
+        &._unset {
+          right: -5px;
+        }
       }
 
       &-left {
-        left: -5px;
+        left: 10px;
+
+        &._unset {
+          left: -5px;
+        }
       }
     }
   }
@@ -1137,11 +1147,19 @@
       font-size: 20px;
 
       &-right {
-        right: 0;
+        right: 16px;
+
+        &._unset {
+          right: 0;
+        }
       }
 
       &-left {
-        left: 0;
+        left: 16px;
+
+        &._unset {
+          left: 0;
+        }
       }
     }
   }

@@ -3,7 +3,7 @@
   margin-top: auto;
 
   &__row {
-    padding: 56px 0 106px;
+    padding: 56px 0;
     position: relative;
     display: flex;
     gap: 32px;
@@ -37,9 +37,7 @@
     }
 
     &._social {
-      position: absolute;
-      bottom: 56px;
-      left: 0;
+      display: none;
     }
 
     &-group {
@@ -50,6 +48,7 @@
     }
 
     &-link {
+      font-size: 16px;
       color: $brown-100;
       font-weight: 500;
       cursor: pointer;
@@ -81,6 +80,12 @@
     &-container {
       display: flex;
       gap: 16px;
+    }
+
+    &-social {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
     }
 
     p {
@@ -165,6 +170,92 @@
     p {
       font-size: 14px;
       color: $brown-100;
+    }
+  }
+}
+
+@mixin footer-1160 {
+  .footer {
+    &__row {
+      flex-wrap: wrap;
+    }
+
+    &__column {
+      flex: unset;
+      width: 33%;
+
+      &:last-child {
+        margin: unset;
+      }
+    }
+  }
+}
+
+@mixin footer-1025 {
+  .footer {
+    &__row {
+      padding: 40px 0;
+    }
+  }
+}
+
+@mixin footer-940 {
+  .footer {
+    &__row {
+      gap: 40px;
+    }
+
+    &__column {
+      width: calc(50% - 20px);
+      max-width: unset;
+      gap: 16px;
+
+      &._sm {
+        max-width: unset;
+      }
+    }
+  }
+}
+
+@mixin footer-768 {
+  .footer {
+    &__copy {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      gap: 40px;
+
+      &-group {
+        flex-direction: column;
+        order: -1;
+        gap: 16px;
+      }
+    }
+  }
+}
+
+@mixin footer-580 {
+  .footer {
+    &__row {
+      flex-direction: column;
+    }
+
+    &__column {
+      width: 100%;
+      max-width: 362px;
+
+      &-social {
+        display: none;
+      }
+
+      &._social {
+        display: flex;
+      }
+    }
+
+    h5 {
+      font-size: 22px;
     }
   }
 }

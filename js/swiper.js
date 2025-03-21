@@ -85,16 +85,22 @@ const settings = {
       1520: {
         slidesPerView: 6,
         spaceBetween: 32,
+        slidesOffsetBefore: 0,
+        slidesOffsetAfter: 0,
       },
 
       1360: {
         slidesPerView: 5,
         spaceBetween: 32,
+        slidesOffsetBefore: 0,
+        slidesOffsetAfter: 0,
       },
 
       1025: {
         slidesPerView: 4,
         spaceBetween: 20,
+        slidesOffsetBefore: 0,
+        slidesOffsetAfter: 0,
       },
 
       940: {
@@ -117,6 +123,125 @@ const settings = {
         slidesOffsetBefore: 16,
         slidesOffsetAfter: 16,
       },
+    },
+  },
+
+  categorySlider: {
+    slidesPerView: 'auto',
+    spaceBetween: 16,
+    slidesOffsetBefore: 16,
+    slidesOffsetAfter: 16,
+
+    breakpoints: {
+      1420: {
+        slidesPerView: 4,
+        spaceBetween: 32,
+        slidesOffsetBefore: 0,
+        slidesOffsetAfter: 0,
+      },
+
+      1160: {
+        slidesPerView: 3,
+        spaceBetween: 32,
+        slidesOffsetBefore: 0,
+        slidesOffsetAfter: 0,
+      },
+
+      1025: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+        slidesOffsetBefore: 0,
+        slidesOffsetAfter: 0,
+      },
+
+      768: {
+        slidesPerView: 2.5,
+        spaceBetween: 24,
+        slidesOffsetBefore: 24,
+        slidesOffsetAfter: 24,
+      },
+
+      460: {
+        slidesPerView: 'auto',
+        slidesOffsetBefore: 16,
+        slidesOffsetAfter: 16,
+      },
+    },
+  },
+
+  categorySlider2: {
+    slidesPerView: 'auto',
+    spaceBetween: 16,
+    slidesOffsetBefore: 16,
+    slidesOffsetAfter: 16,
+
+    breakpoints: {
+      1420: {
+        slidesPerView: 3,
+        spaceBetween: 32,
+        slidesOffsetBefore: 0,
+        slidesOffsetAfter: 0,
+      },
+
+      1160: {
+        slidesPerView: 3,
+        spaceBetween: 32,
+        slidesOffsetBefore: 0,
+        slidesOffsetAfter: 0,
+      },
+
+      1025: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+        slidesOffsetBefore: 0,
+        slidesOffsetAfter: 0,
+      },
+
+      768: {
+        slidesPerView: 2.5,
+        spaceBetween: 24,
+        slidesOffsetBefore: 24,
+        slidesOffsetAfter: 24,
+      },
+
+      460: {
+        slidesPerView: 'auto',
+        slidesOffsetBefore: 16,
+        slidesOffsetAfter: 16,
+      },
+    },
+  },
+
+  benefitsSlider: {
+    slidesPerView: 1,
+    spaceBetween: 16,
+
+    breakpoints: {
+      1420: {
+        slidesPerView: 4,
+        spaceBetween: 32,
+      },
+
+      1160: {
+        slidesPerView: 4,
+        spaceBetween: 32,
+      },
+
+      1025: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+
+      840: {
+        slidesPerView: 3,
+        spaceBetween: 24,
+      },
+
+      580: {
+        slidesPerView: 2,
+        spaceBetween: 24,
+      },
+
     },
   },
 };
