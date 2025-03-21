@@ -69,6 +69,47 @@ if (filter) {
   // filter popup end
 }
 
+// popup start -------------------------------
+const popup = document.getElementById('popup');
+if (popup) {
+  const popupCloseButtons = document.querySelectorAll('.popup__close');
+  const popupProducts = document.getElementById('popupProducts');
+  const popupProductsButtons =
+    popupProducts.querySelectorAll('.button--primary');
+
+  const closePopUp = () => {
+    popup.classList.remove('active');
+    body.classList.remove('active');
+  };
+
+  const openPopUp = () => {
+    popup.classList.add('active');
+    body.classList.add('active');
+  };
+
+  popupCloseButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      closePopUp();
+    });
+  });
+
+  popupProductsButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      openPopUp();
+    });
+  });
+
+  popup.addEventListener('click', (e) => {
+    if (
+      e.target.classList.value === 'popup active' ||
+      e.target.classList.value === 'popup__inner'
+    ) {
+      closePopUp();
+    }
+  });
+}
+// popup end -------------------------------
+
 // const links = document.querySelectorAll(".links");
 // const sections = document.querySelectorAll(".anchor");
 // function changeLinkState() {

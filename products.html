@@ -931,7 +931,7 @@
                   </button>
                 </div>
               </div>
-              <div class="products__container-row">
+              <div class="products__container-row" id="popupProducts">
                 <div class="cart">
                   <div class="badge badge--lg">
                     <span>
@@ -2145,6 +2145,58 @@
       </div>
     </footer>
     <!-- #footer end -->
+    <!-- #popup start -->
+    <div class="popup" id="popup">
+      <div class="popup__inner">
+        <div class="popup__container">
+          <button class="button button--icon popup__close">
+            <span class="icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </span>
+          </button>
+          <div class="popup__product">
+            <h5>
+              Het artikel is toegevoegd aan uw winkelmand
+            </h5>
+            <div class="popup__product-group">
+              <div class="popup__product-image">
+                <img src="/images/goods/product-2.png" alt="product">
+              </div>
+              <strong>
+                Zwitsal Schuimbad (400 ml)
+              </strong>
+            </div>
+            <div class="popup__product-info">
+              Als je nog voor <strong>47,50</strong> meer bestelt, versturen wij jouw bestelling gratis!
+            </div>
+          </div>
+          <div class="popup__container-footer">
+            <button class="button button--border">
+              <span>
+                Naar winkelmand
+              </span>
+            </button>
+            <button class="button button--secondary">
+              <span>
+                Verder winkelen
+              </span>
+              <span class="icon icon--stroke">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- #popup end -->
   </div>
   <script src="https://cdn.jsdelivr.net/npm/swiper@latest/swiper-bundle.min.js"></script>
   <script src="/js/swiper.js"></script>
