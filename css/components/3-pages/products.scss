@@ -23,9 +23,10 @@
 
       .input {
         &--select {
-          width: 200px;
+          width: 100%;
+          max-width: 200px;
           z-index: 2;
-  
+
           .input {
             &__selected {
               padding: 0.95em 2.8em 0.95em 1em;
@@ -45,6 +46,22 @@
       gap: 40px 24px;
       margin-bottom: 120px;
       z-index: 0;
+
+      &._grid{
+        .cart{
+          width: 100%;
+          flex-direction: row;
+
+          &__image{
+            width: 200px;
+          }
+
+          &__info{
+            flex-direction: row;
+
+          }
+        }
+      }
     }
 
     &-box {
@@ -59,6 +76,10 @@
       &._left {
         margin-left: auto;
       }
+
+      &._lg {
+        flex: 1;
+      }
     }
 
     &-footer {
@@ -67,8 +88,8 @@
       justify-content: space-between;
       gap: 20px;
 
-      .input{
-        &--select{
+      .input {
+        &--select {
           width: auto;
           min-width: 85px;
         }
@@ -78,8 +99,6 @@
     .cart {
       width: calc(25% - 18px);
     }
-
-   
 
     .button {
       &--border {
@@ -103,6 +122,10 @@
     padding-top: 16px;
     margin-bottom: 64px;
 
+    &-slider {
+      display: none;
+    }
+
     &-container {
       display: flex;
       flex-direction: column;
@@ -116,6 +139,7 @@
       gap: 20px;
       border-bottom: 1px solid $brown-25;
       cursor: pointer;
+      font-size: 16px;
       @include transition;
 
       small {
@@ -132,9 +156,121 @@
       margin-bottom: 40px;
     }
   }
+
+  &__suggestions {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    &-row {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__more {
+    display: flex;
+    gap: 32px;
+    max-width: 1072px;
+    position: relative;
+
+    &-item {
+      position: relative;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    &-box {
+      font-size: 24px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      padding: 20px 16px;
+      color: $white;
+      @include transition;
+      cursor: pointer;
+
+      .icon {
+        color: inherit;
+        font-size: 18px;
+        @include transition;
+      }
+
+      h4 {
+        font-size: inherit;
+        color: inherit;
+        @include transition;
+      }
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+
+    &-image {
+      position: relative;
+
+      &:after {
+        content: '';
+        width: 100%;
+        height: 40%;
+        background: linear-gradient(0deg, #332b21 0%, rgba(51, 43, 33, 0) 100%);
+        opacity: 0.7;
+        border-radius: 0px 0px 6px 6px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+    }
+
+    .ratioImage {
+      padding-bottom: 120%;
+    }
+
+    .swiper {
+      width: 100%;
+    }
+  }
+
+  .button {
+    &--filter {
+      display: none;
+    }
+  }
+
+  &--suggestions {
+    padding: 40px 0;
+
+    .cart {
+      width: calc(20% - 20px);
+    }
+  }
 }
 
 .filter {
+  &__inner {
+    &-box {
+      margin-bottom: 40px;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+
+      .button {
+        display: none;
+
+        &:hover {
+          color: $green-100;
+        }
+      }
+    }
+  }
+
   &__dropdown {
     border-bottom: 1px solid $brown-25;
     @include transition;
@@ -231,7 +367,414 @@
     }
   }
 
-  h5 {
-    margin-bottom: 40px;
+  &__footer {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 16px;
+    width: 100%;
+    border-top: 1px solid $brown-25;
+    background: $white;
+    padding: 16px;
+
+    .button {
+      width: 100%;
+    }
+  }
+}
+
+@mixin products-1440 {
+}
+
+@mixin products-1360 {
+  .products {
+    &__row {
+      .cart {
+        width: calc(33.33% - 16px);
+      }
+    }
+  }
+}
+
+@mixin products-1280 {
+  .products {
+    &__category {
+      h5 {
+        margin-bottom: 30px;
+      }
+    }
+
+    &__row {
+      &-column {
+        width: 280px;
+      }
+    }
+  }
+
+  .filter {
+    &__inner {
+      &-box {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+
+@mixin products-1160 {
+  .products {
+    &__row {
+      gap: 30px;
+    }
+
+    &--suggestions {
+      .cart {
+        width: calc(25% - 18px);
+      }
+    }
+  }
+}
+
+@mixin products-1025 {
+  .products {
+    &__row {
+      flex-direction: column;
+      gap: 24px;
+
+      &-column {
+        width: 100%;
+      }
+
+      .cart {
+        position: relative;
+        padding-bottom: 16px;
+        width: calc(33.3% - 11px);
+
+        &::after {
+          content: '';
+          width: 100vw;
+          height: 1px;
+          background: $brown-25;
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+    }
+
+    &__category {
+      margin-bottom: unset;
+      padding: unset;
+
+      &-slider {
+        display: flex;
+        width: calc(100% + 48px);
+        margin-left: -24px;
+      }
+
+      &-container {
+        display: none;
+      }
+
+      &-button {
+        border-bottom: unset;
+        padding: 8px 11px;
+        border-radius: 4px;
+        background: $blue-100;
+
+        small {
+          display: none;
+        }
+
+        &.active {
+          color: $white;
+          background: $green-100;
+        }
+      }
+
+      .swiper {
+        &-slide {
+          width: auto;
+        }
+      }
+
+      h5 {
+        display: none;
+      }
+    }
+
+    &__container {
+      &-total {
+        display: none;
+      }
+
+      &-box {
+        & > strong {
+          display: none;
+        }
+
+        &._left {
+          display: none;
+        }
+      }
+
+      &-group {
+        gap: 12px;
+        padding-bottom: 0;
+        margin-bottom: 16px;
+        border: unset;
+      }
+
+      &-row {
+        padding: 16px 0;
+        border-top: 1px solid $brown-25;
+        margin-bottom: 32px;
+        gap: 16px;
+        overflow: hidden;
+      }
+
+      &-footer {
+        .products__container-box {
+          display: none;
+        }
+      }
+    }
+
+    &__more {
+      width: calc(100% + 48px);
+      margin-left: -24px;
+
+      &-box {
+        font-size: 22px;
+      }
+    }
+
+    .button {
+      &--filter {
+        display: flex;
+      }
+    }
+
+    .pagination {
+      &__outer {
+        width: 100%;
+        justify-content: space-between;
+
+        .button {
+          &--secondary {
+            font-size: 20px;
+            padding: unset;
+            width: 2em;
+            height: 2em;
+
+            span {
+              display: none;
+            }
+
+            .icon {
+              display: flex;
+            }
+          }
+        }
+      }
+    }
+
+    h3 {
+      display: none;
+    }
+  }
+
+  .filter {
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    background: $white;
+    z-index: 10;
+    opacity: 0;
+    transform: translateX(100%);
+    pointer-events: none;
+    @include transition;
+
+    &__inner {
+      padding: 16px 16px 100px 16px;
+      overflow-y: auto;
+      overflow-x: hidden;
+      background: $white;
+      height: 100%;
+
+      &-box {
+        margin-bottom: unset;
+        padding: 9px 0 25px;
+        position: relative;
+
+        .button {
+          display: flex;
+        }
+
+        &:after {
+          content: '';
+          width: 100vw;
+          height: 1px;
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          background: $brown-25;
+        }
+      }
+    }
+
+    &__footer {
+      display: flex;
+    }
+
+    &.active {
+      transform: translateX(0%);
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+}
+
+@mixin products-940 {
+  .products {
+    &--suggestions {
+      .cart {
+        width: calc(33.3% - 16px);
+      }
+    }
+  }
+}
+
+@mixin products-768 {
+  .products {
+    padding: 20px 0 0;
+
+    &__category {
+      &-slider {
+        display: flex;
+        width: calc(100% + 32px);
+        margin-left: -16px;
+      }
+    }
+
+    &__row {
+      .cart {
+        width: calc(50% - 12px);
+      }
+    }
+
+    &__suggestions {
+      gap: 20px;
+
+      &-row {
+        gap: 20px 16px;
+      }
+    }
+
+    &__more {
+      width: calc(100% + 32px);
+      margin-left: -16px;
+
+      &-box {
+        font-size: 20px;
+      }
+    }
+
+    &--suggestions {
+      padding: 20px 0;
+
+      .cart {
+        width: calc(50% - 8px);
+      }
+    }
+  }
+}
+
+@mixin products-580 {
+  .products {
+    &__more {
+      &-box {
+        padding: 16px;
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@mixin products-460 {
+  .products {
+    &__more {
+      .swiper {
+        &-slide {
+          width: 200px;
+        }
+      }
+    }
+  }
+}
+
+@mixin products-380 {
+  .products {
+    &__container {
+      &-box {
+        &._lg {
+          width: 100%;
+        }
+      }
+
+      &-group {
+        flex-direction: column;
+        width: 100%;
+
+        .input {
+          &--select {
+            width: 100%;
+            max-width: unset;
+          }
+        }
+
+        .button {
+          width: 100%;
+          justify-content: space-between;
+        }
+      }
+    }
+
+    &__row {
+      .cart {
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto;
+
+        p {
+          min-height: unset;
+        }
+
+        h6 {
+          min-height: unset;
+        }
+      }
+    }
+
+    &--suggestions {
+      .cart {
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto;
+
+        p {
+          min-height: unset;
+        }
+
+        h6 {
+          min-height: unset;
+        }
+      }
+    }
   }
 }
