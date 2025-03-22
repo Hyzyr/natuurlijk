@@ -65,6 +65,12 @@ p {
   }
 }
 
+.weight {
+  &-bold {
+    font-weight: bold;
+  }
+}
+
 @mixin typography-1440 {
   h1 {
     font-size: 50px;
