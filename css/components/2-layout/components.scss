@@ -1170,6 +1170,9 @@
       }
     }
 
+    &-container {
+    }
+
     h6 {
       font-family: $font-secondary;
       font-weight: 700;
@@ -1183,6 +1186,63 @@
       font-size: 16px;
       min-height: 3.8em;
       @include ellipsis(3);
+    }
+  }
+
+  &--product {
+    .cart {
+      &__info {
+        &-group {
+          .cart {
+            &__info {
+              &-stars {
+                display: none;
+              }
+            }
+          }
+        }
+
+        &-container {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  &--list {
+    width: 100% !important;
+    flex-direction: row;
+    align-items: center;
+
+    .cart {
+      &__image {
+        width: 200px;
+      }
+
+      &__info {
+        flex: 1;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 30px;
+
+        &-group {
+          max-width: 350px;
+          flex: 1;
+          .cart__info-stars {
+            display: flex;
+          }
+        }
+
+        &-container {
+          max-width: 320px;
+          flex: 1;
+          .cart__info-stars {
+            display: none;
+          }
+        }
+      }
     }
   }
 
@@ -1370,6 +1430,34 @@
       display: flex;
     }
   }
+
+  .cart {
+    &--product {
+      .cart {
+        &__info {
+          &-group {
+            .cart {
+              &__info {
+                &-stars {
+                  display: flex;
+                }
+              }
+            }
+          }
+
+          &-container {
+            .cart {
+              &__info {
+                &-stars {
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 @mixin components-940 {
@@ -1484,6 +1572,17 @@
     .badge {
       &--lg {
         font-size: 14px;
+      }
+    }
+
+    &--product {
+      .cart {
+        &__info {
+          &-container {
+            flex-wrap: wrap;
+            flex-direction: row;
+          }
+        }
       }
     }
   }

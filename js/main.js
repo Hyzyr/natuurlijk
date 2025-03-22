@@ -110,6 +110,71 @@ if (popup) {
 }
 // popup end -------------------------------
 
+// productGrid start -------------------------------
+const gridButton = document.getElementById('gridButton');
+let isGrid = true;
+
+gridButton.addEventListener('click', () => {
+  const cartsItemsWrapper = document.querySelector('.cartsItemsWrapper');
+  const cartsItems = cartsItemsWrapper.querySelectorAll('.cart');
+
+  if (isGrid) {
+    cartsItems.forEach((item) => {
+      item.classList.add('cart--list');
+    });
+
+    gridButton.innerHTML = `
+      <span class="icon icon--stroke">
+       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M10 3H3V10H10V3Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+           stroke-linejoin="round" />
+         <path d="M21 3H14V10H21V3Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+           stroke-linejoin="round" />
+         <path d="M21 14H14V21H21V14Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+           stroke-linejoin="round" />
+         <path d="M10 14H3V21H10V14Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+           stroke-linejoin="round" />
+         </svg>
+      </span>
+      <span>
+         Tegels
+      </span>
+    `;
+
+    isGrid = false;
+  } else {
+    cartsItems.forEach((item) => {
+      item.classList.remove('cart--list');
+    });
+
+    gridButton.innerHTML = `
+       <span class="icon icon--stroke">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6.66699 5H17.5003" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" />
+            <path d="M6.66699 10H17.5003" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" />
+            <path d="M6.66699 15H17.5003" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" />
+            <path d="M2.5 5H2.51" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                troke-linejoin="round" />
+            <path d="M2.5 10H2.51" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" />
+            <path d="M2.5 15H2.51" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </span>
+      <span>
+        Lijst
+      </span>
+    `;
+
+    isGrid = true;
+  }
+});
+
+// productGrid end -------------------------------
+
 // const links = document.querySelectorAll(".links");
 // const sections = document.querySelectorAll(".anchor");
 // function changeLinkState() {

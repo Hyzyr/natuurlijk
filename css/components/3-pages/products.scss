@@ -46,6 +46,22 @@
       gap: 40px 24px;
       margin-bottom: 120px;
       z-index: 0;
+
+      &._grid{
+        .cart{
+          width: 100%;
+          flex-direction: row;
+
+          &__image{
+            width: 200px;
+          }
+
+          &__info{
+            flex-direction: row;
+
+          }
+        }
+      }
     }
 
     &-box {
