@@ -1,0 +1,1310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@latest/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="css/main.css" />
+
+  <!-- <link rel="icon" href="images/logo-small.svg" /> -->
+  <title>Home</title>
+</head>
+
+<body>
+  <div class="main">
+    <!-- #header -->
+    <!-- <header class="header" id="header">
+        <div class="autoContainer">
+          <div class="header__inner">
+            <a href="/" class="header__inner-logo">
+                <img src="images/logo-white.svg" alt="%ProjectName%" />
+            </a>
+            <div class="nav" id="menu">
+              <div class="nav__inner">
+                <div class="nav__inner-group">
+                  <a href="" class="nav__inner-link">Utility</a>
+                  <a href="" class="nav__inner-link">Tokenomics</a>
+                  <a href="" class="nav__inner-link">Roadmap</a>
+                  <a href="" class="nav__inner-link">WhitePaper</a>
+                </div>
+              </div>
+            </div>
+            <button class="burger" id="menuBtn"></button>
+          </div>
+        </div>
+      </header> -->
+    <!-- #header end -->
+    <!-- #basket start -->
+    <section class="basket">
+      <div class="autoContainer">
+        <div class="basket__inner">
+          <div class="group">
+            <div class="group__desktop">
+              <div class="group__desktop-button">
+                <span>
+                  Home
+                </span>
+                <span class="icon icon--stroke">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                </span>
+              </div>
+              <div class="group__desktop-button active">
+                <span>
+                  Mijn winkelmand
+                </span>
+              </div>
+            </div>
+            <div class="group__mobile">
+              <div class="group__mobile-button">
+                <span class="icon icon--stroke">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19 12H5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path d="M12 19L5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                </span>
+                <span>
+                  Home
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="basket__content">
+            <div class="basket__content-container">
+              <div class="basket__content-box">
+                <h3>
+                  Mijn winkelmand
+                </h3>
+                <button class="button button--primary">
+                  <span>
+                    Nu bestellen
+                  </span>
+                  <span class="icon icon--stroke">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+                  </span>
+                </button>
+              </div>
+              <div class="basket__info">
+                <span>
+                  Artikel
+                </span>
+                <div class="basket__info-group">
+                  <span>
+                    Stuksprijs
+                  </span>
+                  <span>
+                    Aantal
+                  </span>
+                  <span>
+                    Subtotaal
+                  </span>
+                </div>
+              </div>
+              <div class="basket__item _borderTop">
+                <div class="basket__item-image">
+                  <div class="ratioImage">
+                    <img src="/images/details/zwitsal/image-1.png" alt="product">
+                  </div>
+                </div>
+                <div class="basket__item-container">
+                  <div class="basket__item-info">
+                    <h6 class="_sm">
+                      Zwitsal Schuimbad (400 ml)
+                    </h6>
+                    <div class="badge badge--grey">
+                      <span>
+                        400ml
+                      </span>
+                    </div>
+                    <div class="box box--bg">
+                      <span>
+                        Op werkdagen voor 14:00 besteld, zelfde dag verzonden
+                      </span>
+                    </div>
+                  </div>
+                  <div class="basket__item-group">
+                    <div class="basket__item-price">
+                      <span>
+                        € 6.99
+                      </span>
+                    </div>
+                    <div class="input__outer">
+                      <div class="input input--select">
+                        <input type="hidden" value="1">
+                        <div class="input__selected-outer">
+                          <div class="input__selected">
+                          </div>
+                          <div class="input__selected-arrow icon icon--stroke">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                          </div>
+                        </div>
+                        <ul class="input__dropdown">
+                          <li class="input__dropdown-item" data-value="1" data-default>
+                            1
+                          </li>
+                          <li class="input__dropdown-item" data-value="2">
+                            2
+                          </li>
+                          <li class="input__dropdown-item" data-value="3">
+                            3
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="basket__item-buttons">
+                      <button class="button button--icon">
+                        <span class='icon icon--stroke'>
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M20.84 4.61C20.3292 4.09901 19.7228 3.69365 19.0554 3.41709C18.3879 3.14052 17.6725 2.99818 16.95 2.99818C16.2275 2.99818 15.5121 3.14052 14.8446 3.41709C14.1772 3.69365 13.5708 4.09901 13.06 4.61L12 5.67L10.94 4.61C9.9083 3.57831 8.50903 2.99871 7.05 2.99871C5.59096 2.99871 4.19169 3.57831 3.16 4.61C2.1283 5.64169 1.54871 7.04097 1.54871 8.5C1.54871 9.95903 2.1283 11.3583 3.16 12.39L4.22 13.45L12 21.23L19.78 13.45L20.84 12.39C21.351 11.8792 21.7563 11.2728 22.0329 10.6054C22.3095 9.9379 22.4518 9.22249 22.4518 8.5C22.4518 7.77751 22.3095 7.06211 22.0329 6.39465C21.7563 5.72719 21.351 5.12076 20.84 4.61Z"
+                              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </span>
+                      </button>
+                      <button class="button button--icon">
+                        <span class='icon icon--stroke'>
+                          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2.5 5H4.16667H17.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round" />
+                            <path
+                              d="M15.8346 5.00002V16.6667C15.8346 17.1087 15.659 17.5326 15.3465 17.8452C15.0339 18.1578 14.61 18.3334 14.168 18.3334H5.83464C5.39261 18.3334 4.96868 18.1578 4.65612 17.8452C4.34356 17.5326 4.16797 17.1087 4.16797 16.6667V5.00002M6.66797 5.00002V3.33335C6.66797 2.89133 6.84356 2.4674 7.15612 2.15484C7.46869 1.84228 7.89261 1.66669 8.33464 1.66669H11.668C12.11 1.66669 12.5339 1.84228 12.8465 2.15484C13.159 2.4674 13.3346 2.89133 13.3346 3.33335V5.00002"
+                              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M8.33203 9.16669V14.1667" stroke="currentColor" stroke-width="2"
+                              stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M11.668 9.16669V14.1667" stroke="currentColor" stroke-width="2"
+                              stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </span>
+                      </button>
+                    </div>
+                    <div class="basket__item-price">
+                      <strong>
+                        € 6.99
+                      </strong>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="basket__item">
+                <div class="basket__item-image">
+                  <div class="ratioImage">
+                    <img src="/images/details/zwitsal/image-1.png" alt="product">
+                  </div>
+                </div>
+                <div class="basket__item-container">
+                  <div class="basket__item-info">
+                    <h6 class="_sm">
+                      Zwitsal Schuimbad (400 ml)
+                    </h6>
+                    <div class="badge badge--grey">
+                      <span>
+                        400ml
+                      </span>
+                    </div>
+                    <div class="box box--bg">
+                      <span>
+                        Op werkdagen voor 14:00 besteld, zelfde dag verzonden
+                      </span>
+                    </div>
+                  </div>
+                  <div class="basket__item-group">
+                    <div class="basket__item-price">
+                      <span>
+                        € 6.99
+                      </span>
+                    </div>
+                    <div class="input__outer">
+                      <div class="input input--select">
+                        <input type="hidden" value="1">
+                        <div class="input__selected-outer">
+                          <div class="input__selected">
+                          </div>
+                          <div class="input__selected-arrow icon icon--stroke">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                          </div>
+                        </div>
+                        <ul class="input__dropdown">
+                          <li class="input__dropdown-item" data-value="1" data-default>
+                            1
+                          </li>
+                          <li class="input__dropdown-item" data-value="2">
+                            2
+                          </li>
+                          <li class="input__dropdown-item" data-value="3">
+                            3
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="basket__item-buttons">
+                      <button class="button button--icon">
+                        <span class='icon icon--stroke'>
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M20.84 4.61C20.3292 4.09901 19.7228 3.69365 19.0554 3.41709C18.3879 3.14052 17.6725 2.99818 16.95 2.99818C16.2275 2.99818 15.5121 3.14052 14.8446 3.41709C14.1772 3.69365 13.5708 4.09901 13.06 4.61L12 5.67L10.94 4.61C9.9083 3.57831 8.50903 2.99871 7.05 2.99871C5.59096 2.99871 4.19169 3.57831 3.16 4.61C2.1283 5.64169 1.54871 7.04097 1.54871 8.5C1.54871 9.95903 2.1283 11.3583 3.16 12.39L4.22 13.45L12 21.23L19.78 13.45L20.84 12.39C21.351 11.8792 21.7563 11.2728 22.0329 10.6054C22.3095 9.9379 22.4518 9.22249 22.4518 8.5C22.4518 7.77751 22.3095 7.06211 22.0329 6.39465C21.7563 5.72719 21.351 5.12076 20.84 4.61Z"
+                              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </span>
+                      </button>
+                      <button class="button button--icon">
+                        <span class='icon icon--stroke'>
+                          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2.5 5H4.16667H17.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round" />
+                            <path
+                              d="M15.8346 5.00002V16.6667C15.8346 17.1087 15.659 17.5326 15.3465 17.8452C15.0339 18.1578 14.61 18.3334 14.168 18.3334H5.83464C5.39261 18.3334 4.96868 18.1578 4.65612 17.8452C4.34356 17.5326 4.16797 17.1087 4.16797 16.6667V5.00002M6.66797 5.00002V3.33335C6.66797 2.89133 6.84356 2.4674 7.15612 2.15484C7.46869 1.84228 7.89261 1.66669 8.33464 1.66669H11.668C12.11 1.66669 12.5339 1.84228 12.8465 2.15484C13.159 2.4674 13.3346 2.89133 13.3346 3.33335V5.00002"
+                              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M8.33203 9.16669V14.1667" stroke="currentColor" stroke-width="2"
+                              stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M11.668 9.16669V14.1667" stroke="currentColor" stroke-width="2"
+                              stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </span>
+                      </button>
+                    </div>
+                    <div class="basket__item-price">
+                      <strong>
+                        € 6.99
+                      </strong>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="basket__order">
+              <div class="basket__order-container">
+                <div class="basket__order-group">
+                  <div class="basket__order-button">
+                    <span>
+                      Kortingscode
+                    </span>
+                    <span class="icon icon--stroke">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 12.5L10 7.5L5 12.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                      </svg>
+                    </span>
+                  </div>
+                  <div class="basket__order-content">
+                    <div class="basket__order-box">
+                      <div class="input">
+                        <input type="text" placeholder="Kortingscode">
+                      </div>
+                      <button class="button button--border">
+                        <span>
+                          Toepassen
+                        </span>
+                      </button>
+                    </div>
+                    <div class="basket__order-info">
+                      <div class="basket__order-item">
+                        <div class="basket__order-text">
+                          <span>
+                            Totaal artikelen
+                          </span>
+                          <span>
+                            2
+                          </span>
+                        </div>
+                        <span>
+                          € 10,98
+                        </span>
+                      </div>
+                      <div class="basket__order-item">
+                        <div class="basket__order-text">
+                          <span>
+                            Bezorgkosten
+                          </span>
+                          <span class="icon icon--stroke">
+                            <svg width="16" height="18" viewBox="0 0 16 18" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M7.9987 15.6667C11.6806 15.6667 14.6654 12.6819 14.6654 9.00004C14.6654 5.31814 11.6806 2.33337 7.9987 2.33337C4.3168 2.33337 1.33203 5.31814 1.33203 9.00004C1.33203 12.6819 4.3168 15.6667 7.9987 15.6667Z"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                              <path d="M8 11.6667V9" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                              <path d="M8 6.33337H8.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            </svg>
+                          </span>
+                        </div>
+                        <span>
+                          € 4,95
+                        </span>
+                      </div>
+                      <div class="basket__order-item _lg">
+                        <strong>
+                          Totaal
+                        </strong>
+                        <strong>
+                          € 15,93
+                        </strong>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="box box--bg">
+                  <span> Als je nog voor <strong>63,97</strong> meer bestelt, versturen wij jouw bestelling
+                    gratis!</span>
+                </div>
+              </div>
+              <div class="basket__order-footer">
+                <button class="button button--border">
+                  <span>
+                    Verder winkelen
+                  </span>
+                </button>
+                <button class="button button--primary">
+                  <span>
+                    Nu bestellen
+                  </span>
+                  <span class="icon icon--stroke">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+                  </span>
+                </button>
+              </div>
+            </div>
+            <div class="basket__benefits-outer">
+              <div class="basket__benefits">
+                <h6>
+                  Daarom Natuurlijkwinkelen.nl NL
+                </h6>
+                <ul class="list">
+                  <li class="list__item">
+                    <span class="icon icon--stroke">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M22 11.08V12C21.9988 14.1564 21.3005 16.2547 20.0093 17.9818C18.7182 19.709 16.9033 20.9725 14.8354 21.5839C12.7674 22.1953 10.5573 22.1219 8.53447 21.3746C6.51168 20.6273 4.78465 19.2461 3.61096 17.4371C2.43727 15.628 1.87979 13.4881 2.02168 11.3363C2.16356 9.18455 2.99721 7.13631 4.39828 5.49706C5.79935 3.85781 7.69279 2.71537 9.79619 2.24013C11.8996 1.7649 14.1003 1.98232 16.07 2.85999"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M22 4L12 14.01L9 11.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round"></path>
+                      </svg>
+                    </span>
+                    <span class="list__item-text">
+                      14 dagen bedenktijd
+                    </span>
+                  </li>
+                  <li class="list__item">
+                    <span class="icon icon--stroke">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M22 11.08V12C21.9988 14.1564 21.3005 16.2547 20.0093 17.9818C18.7182 19.709 16.9033 20.9725 14.8354 21.5839C12.7674 22.1953 10.5573 22.1219 8.53447 21.3746C6.51168 20.6273 4.78465 19.2461 3.61096 17.4371C2.43727 15.628 1.87979 13.4881 2.02168 11.3363C2.16356 9.18455 2.99721 7.13631 4.39828 5.49706C5.79935 3.85781 7.69279 2.71537 9.79619 2.24013C11.8996 1.7649 14.1003 1.98232 16.07 2.85999"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M22 4L12 14.01L9 11.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round"></path>
+                      </svg>
+                    </span>
+                    <span class="list__item-text">
+                      Betaling per iDEAL, Bankoverboeking, Billink of Bancontact
+                    </span>
+                  </li>
+                  <li class="list__item">
+                    <span class="icon icon--stroke">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M22 11.08V12C21.9988 14.1564 21.3005 16.2547 20.0093 17.9818C18.7182 19.709 16.9033 20.9725 14.8354 21.5839C12.7674 22.1953 10.5573 22.1219 8.53447 21.3746C6.51168 20.6273 4.78465 19.2461 3.61096 17.4371C2.43727 15.628 1.87979 13.4881 2.02168 11.3363C2.16356 9.18455 2.99721 7.13631 4.39828 5.49706C5.79935 3.85781 7.69279 2.71537 9.79619 2.24013C11.8996 1.7649 14.1003 1.98232 16.07 2.85999"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M22 4L12 14.01L9 11.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round"></path>
+                      </svg>
+                    </span>
+                    <span class="list__item-text">
+                      Bescherming van alle klant- en bestelgegevens.
+                    </span>
+                  </li>
+                  <li class="list__item">
+                    <span class="icon icon--stroke">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M22 11.08V12C21.9988 14.1564 21.3005 16.2547 20.0093 17.9818C18.7182 19.709 16.9033 20.9725 14.8354 21.5839C12.7674 22.1953 10.5573 22.1219 8.53447 21.3746C6.51168 20.6273 4.78465 19.2461 3.61096 17.4371C2.43727 15.628 1.87979 13.4881 2.02168 11.3363C2.16356 9.18455 2.99721 7.13631 4.39828 5.49706C5.79935 3.85781 7.69279 2.71537 9.79619 2.24013C11.8996 1.7649 14.1003 1.98232 16.07 2.85999"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M22 4L12 14.01L9 11.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round"></path>
+                      </svg>
+                    </span>
+                    <span class="list__item-text">
+                      Bestel veilig en vertrouwd
+                    </span>
+                  </li>
+                </ul>
+                <div class="footer__payments">
+                  <div class="footer__payments-item">
+                    <img src="/images/footer/paymnet-1.svg" alt="payment">
+                  </div>
+                  <div class="footer__payments-item">
+                    <img src="/images/footer/paymnet-2.svg" alt="payment">
+                  </div>
+                  <div class="footer__payments-item">
+                    <img src="/images/footer/paymnet-3.svg" alt="payment">
+                  </div>
+                  <div class="footer__payments-item">
+                    <img src="/images/footer/paymnet-4.svg" alt="payment">
+                  </div>
+                  <div class="footer__payments-item">
+                    <img src="/images/footer/paymnet-5.svg" alt="payment">
+                  </div>
+                  <div class="footer__payments-item _sm">
+                    <img src="/images/footer/paymnet-6.svg" alt="payment">
+                  </div>
+                </div>
+              </div>
+              <button class="button button--border">
+                <span>
+                  Verder winkelen
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- #basket end -->
+    <!-- #products start-->
+    <section class="products products--suggestions">
+      <div class="autoContainer">
+        <div class="products__inner">
+          <div class="products__suggestions">
+            <h4>
+              Dit past erbij!
+            </h4>
+            <div class="products__suggestions-row">
+              <div class="cart">
+                <div class="badge badge--lg badge--red">
+                  <span>
+                    19% korting
+                  </span>
+                </div>
+                <div class="cart__image">
+                  <div class="ratioImage ratioImage--contain">
+                    <img src="/images/goods/product-1.png" alt="product">
+                  </div>
+                </div>
+                <div class="cart__info">
+                  <div class="cart__info-group">
+                    <h6>
+                      WELEDA Rhinodoron <span class="noBreak">neusspray (20 ml)</span>
+                    </h6>
+                    <p>Weleda Rhinodoron Neusspray verzorgt, reinigt en bevochtigt het droge</p>
+                    <div class="cart__info-stars">
+                      <span class="icon active">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect width="28" height="28" fill="white" />
+                          <path
+                            d="M13.9997 2.33325L17.6047 9.63658L25.6663 10.8149L19.833 16.4966L21.2097 24.5232L13.9997 20.7316L6.78967 24.5232L8.16634 16.4966L2.33301 10.8149L10.3947 9.63658L13.9997 2.33325Z"
+                            fill="currentColor" />
+                        </svg>
+                      </span>
+                      <span class="icon active">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect width="28" height="28" fill="white" />
+                          <path
+                            d="M13.9997 2.33325L17.6047 9.63658L25.6663 10.8149L19.833 16.4966L21.2097 24.5232L13.9997 20.7316L6.78967 24.5232L8.16634 16.4966L2.33301 10.8149L10.3947 9.63658L13.9997 2.33325Z"
+                            fill="currentColor" />
+                        </svg>
+                      </span>
+                      <span class="icon active">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect width="28" height="28" fill="white" />
+                          <path
+                            d="M13.9997 2.33325L17.6047 9.63658L25.6663 10.8149L19.833 16.4966L21.2097 24.5232L13.9997 20.7316L6.78967 24.5232L8.16634 16.4966L2.33301 10.8149L10.3947 9.63658L13.9997 2.33325Z"
+                            fill="currentColor" />
+                        </svg>
+                      </span>
+                      <span class="icon active">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect width="28" height="28" fill="white" />
+                          <path
+                            d="M13.9997 2.33325L17.6047 9.63658L25.6663 10.8149L19.833 16.4966L21.2097 24.5232L13.9997 20.7316L6.78967 24.5232L8.16634 16.4966L2.33301 10.8149L10.3947 9.63658L13.9997 2.33325Z"
+                            fill="currentColor" />
+                        </svg>
+                      </span>
+                      <span class="icon">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect width="28" height="28" fill="white" />
+                          <path
+                            d="M13.9997 2.33325L17.6047 9.63658L25.6663 10.8149L19.833 16.4966L21.2097 24.5232L13.9997 20.7316L6.78967 24.5232L8.16634 16.4966L2.33301 10.8149L10.3947 9.63658L13.9997 2.33325Z"
+                            fill="currentColor" />
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="cart__info-box">
+                    <div class="badge badge--sm badge--grey">
+                      <span>20 ml</span>
+                    </div>
+                    <div class="badge badge--light">
+                      <span>Op voorraad</span>
+                    </div>
+                  </div>
+                  <div class="cart__info-price">
+                    <span>
+                      Adviesprijs
+                    </span>
+                    <del>€ 9,99</del>
+                    <strong>
+                      € 8.06
+                    </strong>
+                  </div>
+                  <button class="button button--primary">
+                    <span class="icon icon--stroke">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M9 22C9.55228 22 10 21.5523 10 21C10 20.4477 9.55228 20 9 20C8.44772 20 8 20.4477 8 21C8 21.5523 8.44772 22 9 22Z"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        </path>
+                        <path
+                          d="M20 22C20.5523 22 21 21.5523 21 21C21 20.4477 20.5523 20 20 20C19.4477 20 19 20.4477 19 21C19 21.5523 19.4477 22 20 22Z"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        </path>
+                        <path
+                          d="M1 1H5L7.68 14.39C7.77144 14.8504 8.02191 15.264 8.38755 15.5583C8.75318 15.8526 9.2107 16.009 9.68 16H19.4C19.8693 16.009 20.3268 15.8526 20.6925 15.5583C21.0581 15.264 21.3086 14.8504 21.4 14.39L23 6H6"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        </path>
+                      </svg>
+                    </span>
+                    <span>
+                      In winkelmand
+                    </span>
+                  </button>
+                </div>
+              </div>
+              <div class="cart">
+                <div class="badge badge--lg">
+                  <span>
+                    19% korting
+                  </span>
+                </div>
+                <div class="cart__image">
+                  <div class="ratioImage ratioImage--contain">
+                    <img src="/images/goods/product-2.png" alt="product">
+                  </div>
+                </div>
+                <div class="cart__info">
+                  <div class="cart__info-group">
+                    <h6>
+                      WELEDA Rhinodoron <span class="noBreak">neusspray (20 ml)</span>
+                    </h6>
+                    <p>Weleda Rhinodoron Neusspray verzorgt, reinigt en bevochtigt het droge</p>
+                    <div class="cart__info-stars">
+                      <span class="icon active">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect width="28" height="28" fill="white" />
+                          <path
+                            d="M13.9997 2.33325L17.6047 9.63658L25.6663 10.8149L19.833 16.4966L21.2097 24.5232L13.9997 20.7316L6.78967 24.5232L8.16634 16.4966L2.33301 10.8149L10.3947 9.63658L13.9997 2.33325Z"
+                            fill="currentColor" />
+                        </svg>
+                      </span>
+                      <span class="icon active">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect width="28" height="28" fill="white" />
+                          <path
+                            d="M13.9997 2.33325L17.6047 9.63658L25.6663 10.8149L19.833 16.4966L21.2097 24.5232L13.9997 20.7316L6.78967 24.5232L8.16634 16.4966L2.33301 10.8149L10.3947 9.63658L13.9997 2.33325Z"
+                            fill="currentColor" />
+                        </svg>
+                      </span>
+                      <span class="icon active">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect width="28" height="28" fill="white" />
+                          <path
+                            d="M13.9997 2.33325L17.6047 9.63658L25.6663 10.8149L19.833 16.4966L21.2097 24.5232L13.9997 20.7316L6.78967 24.5232L8.16634 16.4966L2.33301 10.8149L10.3947 9.63658L13.9997 2.33325Z"
+                            fill="currentColor" />
+                        </svg>
+                      </span>
+                      <span class="icon active">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect width="28" height="28" fill="white" />
+                          <path
+                            d="M13.9997 2.33325L17.6047 9.63658L25.6663 10.8149L19.833 16.4966L21.2097 24.5232L13.9997 20.7316L6.78967 24.5232L8.16634 16.4966L2.33301 10.8149L10.3947 9.63658L13.9997 2.33325Z"
+                            fill="currentColor" />
+                        </svg>
+                      </span>
+                      <span class="icon">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect width="28" height="28" fill="white" />
+                          <path
+                            d="M13.9997 2.33325L17.6047 9.63658L25.6663 10.8149L19.833 16.4966L21.2097 24.5232L13.9997 20.7316L6.78967 24.5232L8.16634 16.4966L2.33301 10.8149L10.3947 9.63658L13.9997 2.33325Z"
+                            fill="currentColor" />
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="cart__info-box">
+                    <div class="badge badge--sm badge--grey">
+                      <span>20 ml</span>
+                    </div>
+                    <div class="badge badge--light">
+                      <span>Op voorraad</span>
+                    </div>
+                  </div>
+                  <div class="cart__info-price">
+                    <span>
+                      Adviesprijs
+                    </span>
+                    <del>€ 9,99</del>
+                    <strong>
+                      € 8.06
+                    </strong>
+                  </div>
+                  <button class="button button--primary">
+                    <span class="icon icon--stroke">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M9 22C9.55228 22 10 21.5523 10 21C10 20.4477 9.55228 20 9 20C8.44772 20 8 20.4477 8 21C8 21.5523 8.44772 22 9 22Z"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        </path>
+                        <path
+                          d="M20 22C20.5523 22 21 21.5523 21 21C21 20.4477 20.5523 20 20 20C19.4477 20 19 20.4477 19 21C19 21.5523 19.4477 22 20 22Z"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        </path>
+                        <path
+                          d="M1 1H5L7.68 14.39C7.77144 14.8504 8.02191 15.264 8.38755 15.5583C8.75318 15.8526 9.2107 16.009 9.68 16H19.4C19.8693 16.009 20.3268 15.8526 20.6925 15.5583C21.0581 15.264 21.3086 14.8504 21.4 14.39L23 6H6"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        </path>
+                      </svg>
+                    </span>
+                    <span>
+                      In winkelmand
+                    </span>
+                  </button>
+                </div>
+              </div>
+              <div class="cart">
+                <div class="badge badge--lg">
+                  <span>
+                    19% korting
+                  </span>
+                </div>
+                <div class="cart__image">
+                  <div class="ratioImage ratioImage--contain">
+                    <img src="/images/goods/product-1.png" alt="product">
+                  </div>
+                </div>
+                <div class="cart__info">
+                  <div class="cart__info-group">
+                    <h6>
+                      WELEDA Rhinodoron <span class="noBreak">neusspray (20 ml)</span>
+                    </h6>
+                    <p>Weleda Rhinodoron Neusspray verzorgt, reinigt en bevochtigt het droge</p>
+                    <div class="cart__info-stars">
+                      <span class="icon active">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect width="28" height="28" fill="white" />
+                          <path
+                            d="M13.9997 2.33325L17.6047 9.63658L25.6663 10.8149L19.833 16.4966L21.2097 24.5232L13.9997 20.7316L6.78967 24.5232L8.16634 16.4966L2.33301 10.8149L10.3947 9.63658L13.9997 2.33325Z"
+                            fill="currentColor" />
+                        </svg>
+                      </span>
+                      <span class="icon active">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect width="28" height="28" fill="white" />
+                          <path
+                            d="M13.9997 2.33325L17.6047 9.63658L25.6663 10.8149L19.833 16.4966L21.2097 24.5232L13.9997 20.7316L6.78967 24.5232L8.16634 16.4966L2.33301 10.8149L10.3947 9.63658L13.9997 2.33325Z"
+                            fill="currentColor" />
+                        </svg>
+                      </span>
+                      <span class="icon active">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect width="28" height="28" fill="white" />
+                          <path
+                            d="M13.9997 2.33325L17.6047 9.63658L25.6663 10.8149L19.833 16.4966L21.2097 24.5232L13.9997 20.7316L6.78967 24.5232L8.16634 16.4966L2.33301 10.8149L10.3947 9.63658L13.9997 2.33325Z"
+                            fill="currentColor" />
+                        </svg>
+                      </span>
+                      <span class="icon active">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect width="28" height="28" fill="white" />
+                          <path
+                            d="M13.9997 2.33325L17.6047 9.63658L25.6663 10.8149L19.833 16.4966L21.2097 24.5232L13.9997 20.7316L6.78967 24.5232L8.16634 16.4966L2.33301 10.8149L10.3947 9.63658L13.9997 2.33325Z"
+                            fill="currentColor" />
+                        </svg>
+                      </span>
+                      <span class="icon">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect width="28" height="28" fill="white" />
+                          <path
+                            d="M13.9997 2.33325L17.6047 9.63658L25.6663 10.8149L19.833 16.4966L21.2097 24.5232L13.9997 20.7316L6.78967 24.5232L8.16634 16.4966L2.33301 10.8149L10.3947 9.63658L13.9997 2.33325Z"
+                            fill="currentColor" />
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="cart__info-box">
+                    <div class="badge badge--sm badge--grey">
+                      <span>20 ml</span>
+                    </div>
+                    <div class="badge badge--light">
+                      <span>Op voorraad</span>
+                    </div>
+                  </div>
+                  <div class="cart__info-price">
+                    <span>
+                      Adviesprijs
+                    </span>
+                    <del>€ 9,99</del>
+                    <strong>
+                      € 8.06
+                    </strong>
+                  </div>
+                  <button class="button button--primary">
+                    <span class="icon icon--stroke">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M9 22C9.55228 22 10 21.5523 10 21C10 20.4477 9.55228 20 9 20C8.44772 20 8 20.4477 8 21C8 21.5523 8.44772 22 9 22Z"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        </path>
+                        <path
+                          d="M20 22C20.5523 22 21 21.5523 21 21C21 20.4477 20.5523 20 20 20C19.4477 20 19 20.4477 19 21C19 21.5523 19.4477 22 20 22Z"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        </path>
+                        <path
+                          d="M1 1H5L7.68 14.39C7.77144 14.8504 8.02191 15.264 8.38755 15.5583C8.75318 15.8526 9.2107 16.009 9.68 16H19.4C19.8693 16.009 20.3268 15.8526 20.6925 15.5583C21.0581 15.264 21.3086 14.8504 21.4 14.39L23 6H6"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        </path>
+                      </svg>
+                    </span>
+                    <span>
+                      In winkelmand
+                    </span>
+                  </button>
+                </div>
+              </div>
+              <div class="cart">
+                <div class="badge badge--lg">
+                  <span>
+                    19% korting
+                  </span>
+                </div>
+                <div class="cart__image">
+                  <div class="ratioImage ratioImage--contain">
+                    <img src="/images/goods/product-2.png" alt="product">
+                  </div>
+                </div>
+                <div class="cart__info">
+                  <div class="cart__info-group">
+                    <h6>
+                      WELEDA Rhinodoron <span class="noBreak">neusspray (20 ml)</span>
+                    </h6>
+                    <p>Weleda Rhinodoron Neusspray verzorgt, reinigt en bevochtigt het droge</p>
+                    <div class="cart__info-stars">
+                      <span class="icon active">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect width="28" height="28" fill="white" />
+                          <path
+                            d="M13.9997 2.33325L17.6047 9.63658L25.6663 10.8149L19.833 16.4966L21.2097 24.5232L13.9997 20.7316L6.78967 24.5232L8.16634 16.4966L2.33301 10.8149L10.3947 9.63658L13.9997 2.33325Z"
+                            fill="currentColor" />
+                        </svg>
+                      </span>
+                      <span class="icon active">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect width="28" height="28" fill="white" />
+                          <path
+                            d="M13.9997 2.33325L17.6047 9.63658L25.6663 10.8149L19.833 16.4966L21.2097 24.5232L13.9997 20.7316L6.78967 24.5232L8.16634 16.4966L2.33301 10.8149L10.3947 9.63658L13.9997 2.33325Z"
+                            fill="currentColor" />
+                        </svg>
+                      </span>
+                      <span class="icon active">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect width="28" height="28" fill="white" />
+                          <path
+                            d="M13.9997 2.33325L17.6047 9.63658L25.6663 10.8149L19.833 16.4966L21.2097 24.5232L13.9997 20.7316L6.78967 24.5232L8.16634 16.4966L2.33301 10.8149L10.3947 9.63658L13.9997 2.33325Z"
+                            fill="currentColor" />
+                        </svg>
+                      </span>
+                      <span class="icon active">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect width="28" height="28" fill="white" />
+                          <path
+                            d="M13.9997 2.33325L17.6047 9.63658L25.6663 10.8149L19.833 16.4966L21.2097 24.5232L13.9997 20.7316L6.78967 24.5232L8.16634 16.4966L2.33301 10.8149L10.3947 9.63658L13.9997 2.33325Z"
+                            fill="currentColor" />
+                        </svg>
+                      </span>
+                      <span class="icon">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect width="28" height="28" fill="white" />
+                          <path
+                            d="M13.9997 2.33325L17.6047 9.63658L25.6663 10.8149L19.833 16.4966L21.2097 24.5232L13.9997 20.7316L6.78967 24.5232L8.16634 16.4966L2.33301 10.8149L10.3947 9.63658L13.9997 2.33325Z"
+                            fill="currentColor" />
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="cart__info-box">
+                    <div class="badge badge--sm badge--grey">
+                      <span>20 ml</span>
+                    </div>
+                    <div class="badge badge--light">
+                      <span>Op voorraad</span>
+                    </div>
+                  </div>
+                  <div class="cart__info-price">
+                    <span>
+                      Adviesprijs
+                    </span>
+                    <del>€ 9,99</del>
+                    <strong>
+                      € 8.06
+                    </strong>
+                  </div>
+                  <button class="button button--primary">
+                    <span class="icon icon--stroke">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M9 22C9.55228 22 10 21.5523 10 21C10 20.4477 9.55228 20 9 20C8.44772 20 8 20.4477 8 21C8 21.5523 8.44772 22 9 22Z"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        </path>
+                        <path
+                          d="M20 22C20.5523 22 21 21.5523 21 21C21 20.4477 20.5523 20 20 20C19.4477 20 19 20.4477 19 21C19 21.5523 19.4477 22 20 22Z"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        </path>
+                        <path
+                          d="M1 1H5L7.68 14.39C7.77144 14.8504 8.02191 15.264 8.38755 15.5583C8.75318 15.8526 9.2107 16.009 9.68 16H19.4C19.8693 16.009 20.3268 15.8526 20.6925 15.5583C21.0581 15.264 21.3086 14.8504 21.4 14.39L23 6H6"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        </path>
+                      </svg>
+                    </span>
+                    <span>
+                      In winkelmand
+                    </span>
+                  </button>
+                </div>
+              </div>
+              <div class="cart">
+                <div class="badge badge--lg">
+                  <span>
+                    19% korting
+                  </span>
+                </div>
+                <div class="cart__image">
+                  <div class="ratioImage ratioImage--contain">
+                    <img src="/images/goods/product-1.png" alt="product">
+                  </div>
+                </div>
+                <div class="cart__info">
+                  <div class="cart__info-group">
+                    <h6>
+                      WELEDA Rhinodoron <span class="noBreak">neusspray (20 ml)</span>
+                    </h6>
+                    <p>Weleda Rhinodoron Neusspray verzorgt, reinigt en bevochtigt het droge</p>
+                    <div class="cart__info-stars">
+                      <span class="icon active">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect width="28" height="28" fill="white" />
+                          <path
+                            d="M13.9997 2.33325L17.6047 9.63658L25.6663 10.8149L19.833 16.4966L21.2097 24.5232L13.9997 20.7316L6.78967 24.5232L8.16634 16.4966L2.33301 10.8149L10.3947 9.63658L13.9997 2.33325Z"
+                            fill="currentColor" />
+                        </svg>
+                      </span>
+                      <span class="icon active">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect width="28" height="28" fill="white" />
+                          <path
+                            d="M13.9997 2.33325L17.6047 9.63658L25.6663 10.8149L19.833 16.4966L21.2097 24.5232L13.9997 20.7316L6.78967 24.5232L8.16634 16.4966L2.33301 10.8149L10.3947 9.63658L13.9997 2.33325Z"
+                            fill="currentColor" />
+                        </svg>
+                      </span>
+                      <span class="icon active">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect width="28" height="28" fill="white" />
+                          <path
+                            d="M13.9997 2.33325L17.6047 9.63658L25.6663 10.8149L19.833 16.4966L21.2097 24.5232L13.9997 20.7316L6.78967 24.5232L8.16634 16.4966L2.33301 10.8149L10.3947 9.63658L13.9997 2.33325Z"
+                            fill="currentColor" />
+                        </svg>
+                      </span>
+                      <span class="icon active">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect width="28" height="28" fill="white" />
+                          <path
+                            d="M13.9997 2.33325L17.6047 9.63658L25.6663 10.8149L19.833 16.4966L21.2097 24.5232L13.9997 20.7316L6.78967 24.5232L8.16634 16.4966L2.33301 10.8149L10.3947 9.63658L13.9997 2.33325Z"
+                            fill="currentColor" />
+                        </svg>
+                      </span>
+                      <span class="icon">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect width="28" height="28" fill="white" />
+                          <path
+                            d="M13.9997 2.33325L17.6047 9.63658L25.6663 10.8149L19.833 16.4966L21.2097 24.5232L13.9997 20.7316L6.78967 24.5232L8.16634 16.4966L2.33301 10.8149L10.3947 9.63658L13.9997 2.33325Z"
+                            fill="currentColor" />
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="cart__info-box">
+                    <div class="badge badge--sm badge--grey">
+                      <span>20 ml</span>
+                    </div>
+                    <div class="badge badge--light">
+                      <span>Op voorraad</span>
+                    </div>
+                  </div>
+                  <div class="cart__info-price">
+                    <span>
+                      Adviesprijs
+                    </span>
+                    <del>€ 9,99</del>
+                    <strong>
+                      € 8.06
+                    </strong>
+                  </div>
+                  <button class="button button--primary">
+                    <span class="icon icon--stroke">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M9 22C9.55228 22 10 21.5523 10 21C10 20.4477 9.55228 20 9 20C8.44772 20 8 20.4477 8 21C8 21.5523 8.44772 22 9 22Z"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        </path>
+                        <path
+                          d="M20 22C20.5523 22 21 21.5523 21 21C21 20.4477 20.5523 20 20 20C19.4477 20 19 20.4477 19 21C19 21.5523 19.4477 22 20 22Z"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        </path>
+                        <path
+                          d="M1 1H5L7.68 14.39C7.77144 14.8504 8.02191 15.264 8.38755 15.5583C8.75318 15.8526 9.2107 16.009 9.68 16H19.4C19.8693 16.009 20.3268 15.8526 20.6925 15.5583C21.0581 15.264 21.3086 14.8504 21.4 14.39L23 6H6"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        </path>
+                      </svg>
+                    </span>
+                    <span>
+                      In winkelmand
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- #products end-->
+    <!-- #benefits start -->
+    <div class="benefits">
+      <div class="autoContainer">
+        <div class="benefits__inner">
+          <div class="row row--slider benefitsSlider">
+            <div class="swiper" data-swiper="benefitsSlider" data-swiper-wrapper=".benefitsSlider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="benefits__item">
+                    <div class="icon__outer">
+                      <span class="icon icon--stroke">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g clip-path="url(#clip0_1601_415)">
+                            <path d="M13.3333 2.5H0.833328V13.3333H13.3333V2.5Z" stroke="currentColor" stroke-width="2"
+                              stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M13.3333 6.66667H16.6667L19.1667 9.16667V13.3333H13.3333V6.66667Z"
+                              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                              d="M4.58333 17.5C5.73393 17.5 6.66667 16.5673 6.66667 15.4167C6.66667 14.2661 5.73393 13.3333 4.58333 13.3333C3.43274 13.3333 2.5 14.2661 2.5 15.4167C2.5 16.5673 3.43274 17.5 4.58333 17.5Z"
+                              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                              d="M15.4167 17.5C16.5673 17.5 17.5 16.5673 17.5 15.4167C17.5 14.2661 16.5673 13.3333 15.4167 13.3333C14.2661 13.3333 13.3333 14.2661 13.3333 15.4167C13.3333 16.5673 14.2661 17.5 15.4167 17.5Z"
+                              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_1601_415">
+                              <rect width="20" height="20" fill="currentColor" />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </span>
+                    </div>
+                    <div class="benefits__item-text">
+                      Binnen <strong>1-3 werkdagen</strong> verzonden
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="benefits__item">
+                    <div class="icon__outer">
+                      <span class="icon icon--stroke">
+                        <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M6.16667 9.16667L9.5 1.66667C10.163 1.66667 10.7989 1.93006 11.2678 2.3989C11.7366 2.86774 12 3.50363 12 4.16667V7.5H16.7167C16.9583 7.49726 17.1976 7.54709 17.418 7.64601C17.6384 7.74494 17.8347 7.89061 17.9932 8.07293C18.1518 8.25525 18.2688 8.46985 18.3361 8.70188C18.4035 8.9339 18.4196 9.1778 18.3833 9.41667L17.2333 16.9167C17.1731 17.3141 16.9712 17.6763 16.6649 17.9367C16.3586 18.197 15.9686 18.3379 15.5667 18.3333H6.16667M6.16667 9.16667V18.3333M6.16667 9.16667H3.66667C3.22464 9.16667 2.80072 9.34226 2.48816 9.65482C2.17559 9.96738 2 10.3913 2 10.8333V16.6667C2 17.1087 2.17559 17.5326 2.48816 17.8452C2.80072 18.1577 3.22464 18.3333 3.66667 18.3333H6.16667"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                      </span>
+                    </div>
+                    <div class="benefits__item-text">
+                      <strong>Gratis bezorging</strong> vanaf € 74,95
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="benefits__item">
+                    <div class="icon__outer">
+                      <span class="icon icon--stroke">
+                        <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M16.5 3.33333H4.83329C3.91282 3.33333 3.16663 4.07953 3.16663 5V16.6667C3.16663 17.5871 3.91282 18.3333 4.83329 18.3333H16.5C17.4204 18.3333 18.1666 17.5871 18.1666 16.6667V5C18.1666 4.07953 17.4204 3.33333 16.5 3.33333Z"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M14 1.66667V5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                          <path d="M7.33325 1.66667V5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                          <path d="M3.16663 8.33333H18.1666" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                      </span>
+                    </div>
+                    <div class="benefits__item-text">
+                      14 dagen <strong>bedenktijd</strong>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="benefits__item">
+                    <div class="icon__outer">
+                      <span class="icon icon--stroke">
+                        <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M16.5 3.33333H4.83329C3.91282 3.33333 3.16663 4.07953 3.16663 5V16.6667C3.16663 17.5871 3.91282 18.3333 4.83329 18.3333H16.5C17.4204 18.3333 18.1666 17.5871 18.1666 16.6667V5C18.1666 4.07953 17.4204 3.33333 16.5 3.33333Z"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M14 1.66667V5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                          <path d="M7.33325 1.66667V5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                          <path d="M3.16663 8.33333H18.1666" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                      </span>
+                    </div>
+                    <div class="benefits__item-text">
+                      <strong>Veilig en makkelijk</strong> online betalen
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- #benefits end -->
+    <!-- #footer -->
+    <footer class="footer">
+      <div class="autoContainer">
+        <div class="footer__inner">
+          <div class="footer__row">
+            <div class="footer__column">
+              <h5>
+                Over Natuurlijkwinkelen.nl
+              </h5>
+              <div class="footer__column-group">
+                <a href="#" class="footer__column-link">
+                  <span>
+                    Mijn account
+                  </span>
+                </a>
+                <a href="#" class="footer__column-link">
+                  <span>
+                    Nieuwsbrief
+                  </span>
+                </a>
+              </div>
+              <div class="footer__column-social">
+                <h5>
+                  Volg ons
+                </h5>
+                <div class="footer__column-container">
+                  <button class="button button--icon">
+                    <span class="icon">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M21.4286 0H2.57143C1.88944 0 1.23539 0.270918 0.753154 0.753154C0.270918 1.23539 0 1.88944 0 2.57143L0 21.4286C0 22.1106 0.270918 22.7646 0.753154 23.2468C1.23539 23.7291 1.88944 24 2.57143 24H9.92411V15.8405H6.54911V12H9.92411V9.07286C9.92411 5.74339 11.9063 3.90429 14.9421 3.90429C16.3961 3.90429 17.9164 4.16357 17.9164 4.16357V7.43143H16.2413C14.5907 7.43143 14.0759 8.45571 14.0759 9.50625V12H17.7605L17.1712 15.8405H14.0759V24H21.4286C22.1106 24 22.7646 23.7291 23.2468 23.2468C23.7291 22.7646 24 22.1106 24 21.4286V2.57143C24 1.88944 23.7291 1.23539 23.2468 0.753154C22.7646 0.270918 22.1106 0 21.4286 0Z"
+                          fill="currentColor" />
+                      </svg>
+                    </span>
+                  </button>
+                  <button class="button button--icon">
+                    <span class="icon">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M12.0027 5.8467C8.59743 5.8467 5.85075 8.594 5.85075 12C5.85075 15.406 8.59743 18.1533 12.0027 18.1533C15.4079 18.1533 18.1546 15.406 18.1546 12C18.1546 8.594 15.4079 5.8467 12.0027 5.8467ZM12.0027 16.0004C9.80212 16.0004 8.00312 14.2064 8.00312 12C8.00312 9.7936 9.79677 7.99955 12.0027 7.99955C14.2086 7.99955 16.0022 9.7936 16.0022 12C16.0022 14.2064 14.2032 16.0004 12.0027 16.0004ZM19.8412 5.595C19.8412 6.39295 19.1987 7.03024 18.4062 7.03024C17.6085 7.03024 16.9713 6.38759 16.9713 5.595C16.9713 4.80241 17.6138 4.15977 18.4062 4.15977C19.1987 4.15977 19.8412 4.80241 19.8412 5.595ZM23.9157 7.05166C23.8247 5.12909 23.3856 3.42608 21.9775 2.02298C20.5747 0.619882 18.8721 0.180743 16.9499 0.0843468C14.9689 -0.0281156 9.03112 -0.0281156 7.05008 0.0843468C5.1333 0.175388 3.43068 0.614526 2.02253 2.01763C0.614389 3.42073 0.180703 5.12373 0.0843279 7.0463C-0.0281093 9.02778 -0.0281093 14.9669 0.0843279 16.9483C0.175349 18.8709 0.614389 20.5739 2.02253 21.977C3.43068 23.3801 5.12794 23.8193 7.05008 23.9157C9.03112 24.0281 14.9689 24.0281 16.9499 23.9157C18.8721 23.8246 20.5747 23.3855 21.9775 21.977C23.3803 20.5739 23.8193 18.8709 23.9157 16.9483C24.0281 14.9669 24.0281 9.03314 23.9157 7.05166ZM21.3564 19.0744C20.9388 20.1241 20.1303 20.9327 19.0755 21.3558C17.496 21.9824 13.7481 21.8378 12.0027 21.8378C10.2572 21.8378 6.50396 21.977 4.92984 21.3558C3.88042 20.9381 3.07195 20.1294 2.64897 19.0744C2.02253 17.4946 2.16709 13.7458 2.16709 12C2.16709 10.2542 2.02789 6.50006 2.64897 4.92558C3.06659 3.87593 3.87507 3.06728 4.92984 2.6442C6.50931 2.01763 10.2572 2.16222 12.0027 2.16222C13.7481 2.16222 17.5014 2.02298 19.0755 2.6442C20.1249 3.06192 20.9334 3.87058 21.3564 4.92558C21.9828 6.50541 21.8383 10.2542 21.8383 12C21.8383 13.7458 21.9828 17.4999 21.3564 19.0744Z"
+                          fill="currentColor" />
+                      </svg>
+                    </span>
+                  </button>
+                  <button class="button button--icon">
+                    <span class="icon">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M23.4985 6.64036C23.2225 5.60106 22.4092 4.78253 21.3766 4.50476C19.505 4 12 4 12 4C12 4 4.49503 4 2.62336 4.50476C1.59077 4.78258 0.777523 5.60106 0.501503 6.64036C0 8.52417 0 12.4545 0 12.4545C0 12.4545 0 16.3849 0.501503 18.2687C0.777523 19.308 1.59077 20.0924 2.62336 20.3702C4.49503 20.875 12 20.875 12 20.875C12 20.875 19.505 20.875 21.3766 20.3702C22.4092 20.0924 23.2225 19.308 23.4985 18.2687C24 16.3849 24 12.4545 24 12.4545C24 12.4545 24 8.52417 23.4985 6.64036ZM9.54544 16.023V8.88605L15.8181 12.4546L9.54544 16.023Z"
+                          fill="currentColor" />
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="footer__column _sm">
+              <h5>
+                Klantenservice
+              </h5>
+              <div class="footer__column-group">
+                <a href="#" class="footer__column-link">
+                  <span>
+                    Bestellen
+                  </span>
+                </a>
+                <a href="#" class="footer__column-link">
+                  <span>
+                    Betalen
+                  </span>
+                </a>
+                <a href="#" class="footer__column-link">
+                  <span>
+                    Levering
+                  </span>
+                </a>
+                <a href="#" class="footer__column-link">
+                  <span>
+                    Retourneren
+                  </span>
+                </a>
+                <a href="#" class="footer__column-link">
+                  <span>
+                    Garantie
+                  </span>
+                </a>
+              </div>
+            </div>
+            <div class="footer__column">
+              <h5>
+                Vragen?
+              </h5>
+              <p>
+                Neem contact op met onze klantenservice. Bereikbaar op werkdagen van 09:00 tot 17:00 uur
+                via
+                <a href="mailto:info@natuurlijkwinkelen.nl">
+                  info@natuurlijkwinkelen.nl
+                </a> en
+                <a href="tel:+31 (0)85 792 01 80">
+                  +31 (0)85 792 01 80
+                </a>
+              </p>
+            </div>
+            <div class="footer__column _social">
+              <h5>
+                Volg ons
+              </h5>
+              <div class="footer__column-container">
+                <button class="button button--icon">
+                  <span class="icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M21.4286 0H2.57143C1.88944 0 1.23539 0.270918 0.753154 0.753154C0.270918 1.23539 0 1.88944 0 2.57143L0 21.4286C0 22.1106 0.270918 22.7646 0.753154 23.2468C1.23539 23.7291 1.88944 24 2.57143 24H9.92411V15.8405H6.54911V12H9.92411V9.07286C9.92411 5.74339 11.9063 3.90429 14.9421 3.90429C16.3961 3.90429 17.9164 4.16357 17.9164 4.16357V7.43143H16.2413C14.5907 7.43143 14.0759 8.45571 14.0759 9.50625V12H17.7605L17.1712 15.8405H14.0759V24H21.4286C22.1106 24 22.7646 23.7291 23.2468 23.2468C23.7291 22.7646 24 22.1106 24 21.4286V2.57143C24 1.88944 23.7291 1.23539 23.2468 0.753154C22.7646 0.270918 22.1106 0 21.4286 0Z"
+                        fill="currentColor" />
+                    </svg>
+                  </span>
+                </button>
+                <button class="button button--icon">
+                  <span class="icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M12.0027 5.8467C8.59743 5.8467 5.85075 8.594 5.85075 12C5.85075 15.406 8.59743 18.1533 12.0027 18.1533C15.4079 18.1533 18.1546 15.406 18.1546 12C18.1546 8.594 15.4079 5.8467 12.0027 5.8467ZM12.0027 16.0004C9.80212 16.0004 8.00312 14.2064 8.00312 12C8.00312 9.7936 9.79677 7.99955 12.0027 7.99955C14.2086 7.99955 16.0022 9.7936 16.0022 12C16.0022 14.2064 14.2032 16.0004 12.0027 16.0004ZM19.8412 5.595C19.8412 6.39295 19.1987 7.03024 18.4062 7.03024C17.6085 7.03024 16.9713 6.38759 16.9713 5.595C16.9713 4.80241 17.6138 4.15977 18.4062 4.15977C19.1987 4.15977 19.8412 4.80241 19.8412 5.595ZM23.9157 7.05166C23.8247 5.12909 23.3856 3.42608 21.9775 2.02298C20.5747 0.619882 18.8721 0.180743 16.9499 0.0843468C14.9689 -0.0281156 9.03112 -0.0281156 7.05008 0.0843468C5.1333 0.175388 3.43068 0.614526 2.02253 2.01763C0.614389 3.42073 0.180703 5.12373 0.0843279 7.0463C-0.0281093 9.02778 -0.0281093 14.9669 0.0843279 16.9483C0.175349 18.8709 0.614389 20.5739 2.02253 21.977C3.43068 23.3801 5.12794 23.8193 7.05008 23.9157C9.03112 24.0281 14.9689 24.0281 16.9499 23.9157C18.8721 23.8246 20.5747 23.3855 21.9775 21.977C23.3803 20.5739 23.8193 18.8709 23.9157 16.9483C24.0281 14.9669 24.0281 9.03314 23.9157 7.05166ZM21.3564 19.0744C20.9388 20.1241 20.1303 20.9327 19.0755 21.3558C17.496 21.9824 13.7481 21.8378 12.0027 21.8378C10.2572 21.8378 6.50396 21.977 4.92984 21.3558C3.88042 20.9381 3.07195 20.1294 2.64897 19.0744C2.02253 17.4946 2.16709 13.7458 2.16709 12C2.16709 10.2542 2.02789 6.50006 2.64897 4.92558C3.06659 3.87593 3.87507 3.06728 4.92984 2.6442C6.50931 2.01763 10.2572 2.16222 12.0027 2.16222C13.7481 2.16222 17.5014 2.02298 19.0755 2.6442C20.1249 3.06192 20.9334 3.87058 21.3564 4.92558C21.9828 6.50541 21.8383 10.2542 21.8383 12C21.8383 13.7458 21.9828 17.4999 21.3564 19.0744Z"
+                        fill="currentColor" />
+                    </svg>
+                  </span>
+                </button>
+                <button class="button button--icon">
+                  <span class="icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M23.4985 6.64036C23.2225 5.60106 22.4092 4.78253 21.3766 4.50476C19.505 4 12 4 12 4C12 4 4.49503 4 2.62336 4.50476C1.59077 4.78258 0.777523 5.60106 0.501503 6.64036C0 8.52417 0 12.4545 0 12.4545C0 12.4545 0 16.3849 0.501503 18.2687C0.777523 19.308 1.59077 20.0924 2.62336 20.3702C4.49503 20.875 12 20.875 12 20.875C12 20.875 19.505 20.875 21.3766 20.3702C22.4092 20.0924 23.2225 19.308 23.4985 18.2687C24 16.3849 24 12.4545 24 12.4545C24 12.4545 24 8.52417 23.4985 6.64036ZM9.54544 16.023V8.88605L15.8181 12.4546L9.54544 16.023Z"
+                        fill="currentColor" />
+                    </svg>
+                  </span>
+                </button>
+              </div>
+            </div>
+            <div class="footer__column">
+              <h5>
+                Veilig en makkelijk betalen
+              </h5>
+              <div class="footer__payments">
+                <div class="footer__payments-item">
+                  <img src="/images/footer/paymnet-1.svg" alt="payment">
+                </div>
+                <div class="footer__payments-item">
+                  <img src="/images/footer/paymnet-2.svg" alt="payment">
+                </div>
+                <div class="footer__payments-item">
+                  <img src="/images/footer/paymnet-3.svg" alt="payment">
+                </div>
+                <div class="footer__payments-item">
+                  <img src="/images/footer/paymnet-4.svg" alt="payment">
+                </div>
+                <div class="footer__payments-item">
+                  <img src="/images/footer/paymnet-5.svg" alt="payment">
+                </div>
+                <div class="footer__payments-item _sm">
+                  <img src="/images/footer/paymnet-6.svg" alt="payment">
+                </div>
+              </div>
+              <div class="footer__payments-item _lg">
+                <img src="/images/footer/paymnet-7.svg" alt="payment">
+              </div>
+            </div>
+          </div>
+          <div class="footer__copy">
+            <p>
+              © 2025 Natuurlijkwinkelen.nl NL
+            </p>
+            <div class="footer__copy-group">
+              <a href="#" class="footer__copy-link">
+                <span>
+                  Algemene voorwaarden
+                </span>
+              </a>
+              <a href="#" class="footer__copy-link">
+                <span>
+                  Privacyverklaring
+                </span>
+              </a>
+              <a href="#" class="footer__copy-link">
+                <span>
+                  Cookies
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- #footer end -->
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@latest/swiper-bundle.min.js"></script>
+  <script src="/js/swiper.js"></script>
+  <script src="js/main.js"></script>
+  <script src="/js/customSelect.js"></script>
+</body>
+
+</html>

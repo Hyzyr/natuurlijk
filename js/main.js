@@ -113,6 +113,7 @@ if (popup) {
 // productGrid start -------------------------------
 const gridButton = document.getElementById('gridButton');
 let isGrid = true;
+if(gridButton){
 
 gridButton.addEventListener('click', () => {
   const cartsItemsWrapper = document.querySelector('.cartsItemsWrapper');
@@ -172,6 +173,7 @@ gridButton.addEventListener('click', () => {
     isGrid = true;
   }
 });
+}
 
 // productGrid end -------------------------------
 

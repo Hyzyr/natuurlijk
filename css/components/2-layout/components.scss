@@ -484,6 +484,10 @@
   &--red {
     background: $red;
   }
+
+  &--opacity {
+    background-color: $green-50;
+  }
 }
 
 .checkbox {
@@ -1081,8 +1085,9 @@
     }
 
     &-text {
-      margin-top: 3px;
+      margin-top: 2px;
       line-height: 1.2;
+      flex: 1;
     }
   }
 
@@ -1373,6 +1378,12 @@
     display: flex;
     align-items: center;
     gap: 32px;
+  }
+}
+
+.text {
+  &--primary {
+    color: $green-100;
   }
 }
 
