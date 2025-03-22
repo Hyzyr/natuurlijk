@@ -28,6 +28,7 @@
   @include index-1160;
   @include footer-1160;
   @include products-1160;
+  @include detail-1160;
 }
 
 @media (max-width: 1025px) {
@@ -36,6 +37,7 @@
   @include index-1025;
   @include footer-1025;
   @include products-1025;
+  @include detail-1025;
 }
 
 @media (max-width: 940px) {
@@ -45,6 +47,8 @@
   @include components-940;
   @include index-940;
   @include footer-940;
+  @include detail-940;
+  @include products-940;
 }
 
 @media (max-width: 768px) {
@@ -55,6 +59,7 @@
   @include index-768;
   @include footer-768;
   @include products-768;
+  @include detail-768;
 }
 
 @media (max-width: 580px) {
@@ -64,12 +69,14 @@
   @include footer-580;
   @include products-580;
   @include popup-580;
+  @include detail-580;
 }
 
 @media (max-width: 460px) {
   @include typography-460;
   @include components-460;
   @include index-460;
+  @include products-460;
 }
 
 @media (max-width: 380px) {

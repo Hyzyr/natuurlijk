@@ -1,3 +1,5 @@
+const detailSlider = document.querySelector('.detailSlider');
+
 const settings = {
   latestSlider: {
     slidesPerView: 1.18,
@@ -131,6 +133,7 @@ const settings = {
     spaceBetween: 16,
     slidesOffsetBefore: 16,
     slidesOffsetAfter: 16,
+    loop: true,
 
     breakpoints: {
       1420: {
@@ -138,6 +141,7 @@ const settings = {
         spaceBetween: 32,
         slidesOffsetBefore: 0,
         slidesOffsetAfter: 0,
+        loop: false,
       },
 
       1160: {
@@ -145,6 +149,7 @@ const settings = {
         spaceBetween: 32,
         slidesOffsetBefore: 0,
         slidesOffsetAfter: 0,
+        loop: true,
       },
 
       1025: {
@@ -152,6 +157,7 @@ const settings = {
         spaceBetween: 20,
         slidesOffsetBefore: 0,
         slidesOffsetAfter: 0,
+        loop: true,
       },
 
       768: {
@@ -159,12 +165,14 @@ const settings = {
         spaceBetween: 24,
         slidesOffsetBefore: 24,
         slidesOffsetAfter: 24,
+        loop: true,
       },
 
       460: {
         slidesPerView: 'auto',
         slidesOffsetBefore: 16,
         slidesOffsetAfter: 16,
+        loop: true,
       },
     },
   },
@@ -258,6 +266,74 @@ const settings = {
       },
     },
   },
+
+  detailSlider: {
+    slidesPerView: 1,
+    loop: true,
+    thumbs: {},
+    watchSlidesProgress: true,
+    allowTouchMove: true,
+
+    breakpoints: {
+      768: {
+        allowTouchMove: false,
+      },
+    },
+  },
+
+  detailSlider2: {
+    slidesPerView: 6,
+    spaceBetween: 16,
+    loop: true,
+    thumbs: {},
+
+    breakpoints: {
+      768: {},
+    },
+  },
+
+  moreSlider: {
+    slidesPerView: 'auto',
+    spaceBetween: 8,
+    slidesOffsetBefore: 16,
+    slidesOffsetAfter: 16,
+
+    breakpoints: {
+      1420: {
+        slidesPerView: 3,
+        spaceBetween: 32,
+        slidesOffsetBefore: 0,
+        slidesOffsetAfter: 0,
+      },
+
+      1160: {
+        slidesPerView: 3,
+        spaceBetween: 32,
+        slidesOffsetBefore: 0,
+        slidesOffsetAfter: 0,
+      },
+
+      1025: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+        slidesOffsetBefore: 0,
+        slidesOffsetAfter: 0,
+      },
+
+      768: {
+        slidesPerView: 2.5,
+        spaceBetween: 16,
+        slidesOffsetBefore: 24,
+        slidesOffsetAfter: 24,
+      },
+
+      460: {
+        slidesPerView: 2.5,
+        slidesOffsetBefore: 16,
+        slidesOffsetAfter: 16,
+      },
+    },
+  },
 };
 
 document.querySelectorAll('.swiper').forEach((swiperSlider) => {
@@ -271,6 +347,8 @@ document.querySelectorAll('.swiper').forEach((swiperSlider) => {
   const dots = parentElement.querySelector('.swiper-dots');
   const scroll = parentElement.querySelector('.swiper-scrollbar');
   const thumbs = thumbsSelector ? document.querySelector(thumbsSelector) : null;
+
+  console.log(thumbsSelector);
 
   new Swiper(swiperSlider, {
     ...settings[settingsKey],

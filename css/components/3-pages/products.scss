@@ -141,9 +141,98 @@
     }
   }
 
+  &__suggestions {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    &-row {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__more {
+    display: flex;
+    gap: 32px;
+    max-width: 1072px;
+    position: relative;
+
+    &-item {
+      position: relative;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    &-box {
+      font-size: 24px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      padding: 20px 16px;
+      color: $white;
+      @include transition;
+      cursor: pointer;
+
+      .icon {
+        color: inherit;
+        font-size: 18px;
+        @include transition;
+      }
+
+      h4 {
+        font-size: inherit;
+        color: inherit;
+        @include transition;
+      }
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+
+    &-image {
+      position: relative;
+
+      &:after {
+        content: '';
+        width: 100%;
+        height: 40%;
+        background: linear-gradient(0deg, #332b21 0%, rgba(51, 43, 33, 0) 100%);
+        opacity: 0.7;
+        border-radius: 0px 0px 6px 6px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+    }
+
+    .ratioImage {
+      padding-bottom: 120%;
+    }
+
+    .swiper {
+      width: 100%;
+    }
+  }
+
   .button {
     &--filter {
       display: none;
+    }
+  }
+
+  &--suggestions {
+    padding: 40px 0;
+
+    .cart {
+      width: calc(20% - 20px);
     }
   }
 }
@@ -280,16 +369,14 @@
 }
 
 @mixin products-1440 {
-  .products {
-    .cart {
-    }
-  }
 }
 
 @mixin products-1360 {
   .products {
-    .cart {
-      width: calc(33.33% - 16px);
+    &__row {
+      .cart {
+        width: calc(33.33% - 16px);
+      }
     }
   }
 }
@@ -323,6 +410,12 @@
     &__row {
       gap: 30px;
     }
+
+    &--suggestions {
+      .cart {
+        width: calc(25% - 18px);
+      }
+    }
   }
 }
 
@@ -334,6 +427,23 @@
 
       &-column {
         width: 100%;
+      }
+
+      .cart {
+        position: relative;
+        padding-bottom: 16px;
+        width: calc(33.3% - 11px);
+
+        &::after {
+          content: '';
+          width: 100vw;
+          height: 1px;
+          background: $brown-25;
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+        }
       }
     }
 
@@ -415,6 +525,15 @@
       }
     }
 
+    &__more {
+      width: calc(100% + 48px);
+      margin-left: -24px;
+
+      &-box {
+        font-size: 22px;
+      }
+    }
+
     .button {
       &--filter {
         display: flex;
@@ -442,23 +561,6 @@
             }
           }
         }
-      }
-    }
-
-    .cart {
-      position: relative;
-      padding-bottom: 16px;
-      width: calc(33.3% - 11px);
-
-      &::after {
-        content: '';
-        width: 100vw;
-        height: 1px;
-        background: $brown-25;
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
       }
     }
 
@@ -522,6 +624,16 @@
   }
 }
 
+@mixin products-940 {
+  .products {
+    &--suggestions {
+      .cart {
+        width: calc(33.3% - 16px);
+      }
+    }
+  }
+}
+
 @mixin products-768 {
   .products {
     padding: 20px 0 0;
@@ -534,13 +646,60 @@
       }
     }
 
-    .cart {
-      width: calc(50% - 12px);
+    &__row {
+      .cart {
+        width: calc(50% - 12px);
+      }
+    }
+
+    &__suggestions {
+      gap: 20px;
+
+      &-row {
+        gap: 20px 16px;
+      }
+    }
+
+    &__more {
+      width: calc(100% + 32px);
+      margin-left: -16px;
+
+      &-box {
+        font-size: 20px;
+      }
+    }
+
+    &--suggestions {
+      padding: 20px 0;
+
+      .cart {
+        width: calc(50% - 8px);
+      }
     }
   }
 }
 
 @mixin products-580 {
+  .products {
+    &__more {
+      &-box {
+        padding: 16px;
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@mixin products-460 {
+  .products {
+    &__more {
+      .swiper {
+        &-slide {
+          width: 200px;
+        }
+      }
+    }
+  }
 }
 
 @mixin products-380 {
@@ -570,17 +729,35 @@
       }
     }
 
-    .cart {
-      width: 100%;
-      max-width: 280px;
-      margin: 0 auto;
+    &__row {
+      .cart {
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto;
 
-      p {
-        min-height: unset;
+        p {
+          min-height: unset;
+        }
+
+        h6 {
+          min-height: unset;
+        }
       }
+    }
 
-      h6 {
-        min-height: unset;
+    &--suggestions {
+      .cart {
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto;
+
+        p {
+          min-height: unset;
+        }
+
+        h6 {
+          min-height: unset;
+        }
       }
     }
   }

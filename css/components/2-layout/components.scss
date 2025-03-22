@@ -272,7 +272,7 @@
     }
 
     &:hover {
-      background: rgba($brown-150, 0.05);
+      background: rgba($brown-150, 0.1);
       color: $brown-150;
     }
   }
@@ -466,7 +466,7 @@
     font-weight: 400;
   }
 
-  &--gray {
+  &--grey {
     color: $brown-100;
     background: $brown-25;
   }
@@ -479,6 +479,10 @@
   &--white {
     background: $white;
     color: $brown-100;
+  }
+
+  &--red {
+    background: $red;
   }
 }
 
@@ -1030,23 +1034,82 @@
   &--sm {
     gap: 8px;
   }
-}
 
-.tickText {
-  font-size: 14px;
-  color: $brown-100;
-  display: flex;
-  align-items: flex-start;
-  gap: 8px;
+  &--bg {
+    background: $green-10;
+    padding: 16px;
+    gap: 4px;
+    border-radius: 6px;
 
-  .icon {
-    color: $green-100;
-    width: 1.15em;
-    height: 1.15em;
+    strong {
+      color: $green-100;
+    }
   }
 
-  &__info {
-    margin-top: 1px;
+  &--lg {
+    font-size: 18px;
+  }
+
+  &--textLeft {
+    text-align: left;
+  }
+
+  p {
+    font-size: inherit;
+  }
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 18px;
+
+  &__item {
+    font-size: inherit;
+    color: $brown-100;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    line-height: 1.2;
+
+    .icon {
+      color: $green-100;
+      font-size: inherit;
+      width: 1.3em;
+      height: 1.3em;
+    }
+
+    &-text {
+      margin-top: 3px;
+      line-height: 1.2;
+    }
+  }
+
+  &--circle {
+    gap: 10px;
+
+    .list {
+      &__item {
+        position: relative;
+        color: $brown-150;
+        padding-left: 12px;
+        font-size: 18px;
+        line-height: 1.2;
+
+        &::before {
+          content: '';
+          width: 4px;
+          height: 4px;
+          background: $brown-150;
+          border-radius: 50%;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+        }
+      }
+    }
   }
 }
 
@@ -1157,6 +1220,16 @@
 
   &--slider {
     position: relative;
+
+    &._hideArrow {
+      .button {
+        &--arrow {
+          &-left {
+            display: none;
+          }
+        }
+      }
+    }
   }
 }
 
