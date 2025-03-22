@@ -147,6 +147,7 @@
       width: 100%;
       height: 100%;
       cursor: pointer;
+      z-index: 1;
 
       &:checked + .input__circle {
         border-color: $brown-100;

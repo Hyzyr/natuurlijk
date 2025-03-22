@@ -12,6 +12,7 @@
   @include components-1360;
   @include index-1360;
   @include products-1360;
+  @include checkout-1360;
 }
 
 @media (max-width: 1280px) {
@@ -19,6 +20,7 @@
   @include index-1280;
   @include products-1280;
   @include basket-1280;
+  @include checkout-1280;
 }
 
 @media (max-width: 1160px) {
@@ -31,6 +33,7 @@
   @include products-1160;
   @include detail-1160;
   @include basket-1160;
+  @include checkout-1160;
 }
 
 @media (max-width: 1025px) {
@@ -41,6 +44,7 @@
   @include products-1025;
   @include detail-1025;
   @include basket-1025;
+  @include checkout-1025;
 }
 
 @media (max-width: 940px) {
@@ -65,6 +69,7 @@
   @include products-768;
   @include detail-768;
   @include basket-768;
+  @include checkout-768;
 }
 
 @media (max-width: 580px) {
@@ -76,6 +81,7 @@
   @include popup-580;
   @include detail-580;
   @include basket-580;
+  @include checkout-580;
 }
 
 @media (max-width: 460px) {
