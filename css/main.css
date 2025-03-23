@@ -2530,6 +2530,7 @@ svg {
   flex-direction: column;
 }
 .info__item-button {
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -2538,14 +2539,14 @@ svg {
   line-height: 1.2;
   font-family: "DM Serif Text", sans-serif;
   color: #332B21;
-  margin-bottom: 24px;
+  transition: all 0.3s ease-in-out 0s;
 }
 .info__item-button .icon {
   font-size: 0.9em;
   color: inherit;
 }
 .info__item-content {
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: 40px;
 }
@@ -2632,6 +2633,17 @@ svg {
 .info__item-box p a {
   color: #287330;
   text-decoration: underline;
+}
+.info__item.active .info__item-content {
+  display: flex;
+  animation-name: fadeIn;
+  animation-duration: 0.3s;
+}
+.info__item.active .info__item-button {
+  margin-bottom: 24px;
+}
+.info__item.active .info__item-button .icon {
+  transform: rotate(180deg);
 }
 
 .basket {
@@ -4087,6 +4099,10 @@ svg {
   }
 }
 @media (max-width: 940px) {
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
   .autoContainer {
     padding: 0 20px;
   }
@@ -5109,6 +5125,10 @@ svg {
   }
 }
 @media (max-width: 460px) {
+  ::-webkit-scrollbar {
+    width: 2px;
+    height: 2px;
+  }
   h1 {
     font-size: 28px;
   }

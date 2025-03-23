@@ -50,6 +50,10 @@
 }
 
 @media (max-width: 940px) {
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
   .autoContainer {
     padding: 0 20px;
   }
@@ -92,10 +96,16 @@
 }
 
 @media (max-width: 460px) {
+  ::-webkit-scrollbar {
+    width: 2px;
+    height: 2px;
+  }
+
   @include typography-460;
   @include components-460;
   @include index-460;
   @include products-460;
+
 }
 
 @media (max-width: 380px) {
