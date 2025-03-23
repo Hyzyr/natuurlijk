@@ -1,23 +1,46 @@
-// var menu = document.getElementById('menu');
-// var menuBtn = document.getElementById('menuBtn');
+var menu = document.querySelector('.headerTabs');
+var menuFog = document.querySelector('.headerTabs-fog');
+var menuBtns = document.querySelectorAll('.nav-link');
 const body = document.body;
 
-// const closeMenu = () => {
-//   menu.classList.remove('active');
-//   menuBtn.classList.remove('active');
-//   body.classList.remove('active');
-// };
+const closeAll = () => {
+  menu.classList.remove('active');
+  body.classList.remove('active');
 
-// menuBtn.onclick = function () {
-//   menu.classList.toggle('active');
-//   menuBtn.classList.toggle('active');
-//   body.classList.toggle('active');
-// };
-// window.onclick = function (event) {
-//   if (event.target == menu) {
-//     closeMenu();
-//   }
-// };
+  menuBtns.forEach((btn) => btn.classList.remove('active'));
+};
+if (menuFog) menuFog.onclick = () => closeAll();
+if (menu)
+  menuBtns.forEach(
+    (btn) =>
+      (btn.onclick = () => {
+        let isClosed = !btn.classList.contains('active');
+        closeAll();
+        if(isClosed)
+        setTimeout(() => {
+          body.classList.add('active');
+          menu.classList.add('active');
+          btn.classList.add('active');
+        }, 200);
+      })
+  );
+
+const closeMenu = () => {
+  menu.classList.remove('active');
+  menuBtn.classList.remove('active');
+  body.classList.remove('active');
+};
+
+menuBtn.onclick = function () {
+  menu.classList.toggle('active');
+  menuBtn.classList.toggle('active');
+  body.classList.toggle('active');
+};
+window.onclick = function (event) {
+  if (event.target == menu) {
+    closeMenu();
+  }
+};
 
 const header = document.getElementById('header');
 if (header)
@@ -284,9 +307,9 @@ if (info) {
   infoItems.forEach((item) => {
     const infoButton = item.querySelector('.info__item-button');
 
-    infoButton.addEventListener('click' , ()=>{
-      item.classList.toggle('active')
-    })
+    infoButton.addEventListener('click', () => {
+      item.classList.toggle('active');
+    });
   });
 }
 // infoTab end -------------------------------
