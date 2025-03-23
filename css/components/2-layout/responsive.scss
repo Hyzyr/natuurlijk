@@ -12,12 +12,15 @@
   @include containers-1360;
   @include index-1360;
   @include products-1360;
+  @include checkout-1360;
 }
 
 @media (max-width: 1280px) {
   @include typography-1280;
   @include index-1280;
   @include products-1280;
+  @include basket-1280;
+  @include checkout-1280;
 }
 
 @media (max-width: 1160px) {
@@ -29,6 +32,8 @@
   @include footer-1160;
   @include products-1160;
   @include detail-1160;
+  @include basket-1160;
+  @include checkout-1160;
 }
 
 @media (max-width: 1025px) {
@@ -39,15 +44,26 @@
   @include footer-1025;
   @include products-1025;
   @include detail-1025;
+  @include basket-1025;
+  @include checkout-1025;
+  @include account-1025;
+  @include contact-1025;
 }
 
 @media (max-width: 940px) {
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+
   @include components-940;
   @include containers-940;
   @include index-940;
   @include footer-940;
   @include detail-940;
   @include products-940;
+  @include basket-940;
+  @include account-940;
 }
 
 @media (max-width: 768px) {
@@ -57,6 +73,10 @@
   @include footer-768;
   @include products-768;
   @include detail-768;
+  @include basket-768;
+  @include checkout-768;
+  @include account-768;
+  @include contact-768;
 }
 
 @media (max-width: 580px) {
@@ -68,33 +88,26 @@
   @include products-580;
   @include popup-580;
   @include detail-580;
+  @include basket-580;
+  @include checkout-580;
+  @include account-580;
+  @include contact-580;
 }
 
 @media (max-width: 460px) {
+  ::-webkit-scrollbar {
+    width: 2px;
+    height: 2px;
+  }
+
   @include typography-460;
   @include components-460;
   @include index-460;
   @include products-460;
+
 }
 
 @media (max-width: 380px) {
   @include index-380;
   @include products-380;
 }
-
-// @mixin index-1290 {
-// }
-// @mixin index-1160 {
-// }
-// @mixin index-1025 {
-// }
-// @mixin index-940 {
-// }
-// @mixin index-768 {
-// }
-// @mixin index-580 {
-// }
-// @mixin index-460 {
-// }
-// @mixin index-390 {
-// }

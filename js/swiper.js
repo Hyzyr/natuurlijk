@@ -348,7 +348,6 @@ document.querySelectorAll('.swiper').forEach((swiperSlider) => {
   const scroll = parentElement.querySelector('.swiper-scrollbar');
   const thumbs = thumbsSelector ? document.querySelector(thumbsSelector) : null;
 
-  console.log(thumbsSelector);
 
   new Swiper(swiperSlider, {
     ...settings[settingsKey],
