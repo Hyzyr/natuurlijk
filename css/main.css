@@ -2313,6 +2313,7 @@ svg {
 .filter__dropdown.active .filter__dropdown-content {
   pointer-events: all;
   opacity: 1;
+  height: unset;
 }
 .filter__dropdown.active .filter__dropdown-button .icon {
   transform: rotate(180deg);
@@ -2893,8 +2894,9 @@ svg {
   justify-content: center;
   width: 16px;
   position: absolute;
-  top: -4%;
-  right: -4%;
+  top: 0%;
+  right: 0%;
+  transform: translate(20%, -20%);
   display: none;
 }
 .checkout__tabs-tick img {
@@ -3125,6 +3127,91 @@ svg {
 }
 .checkout__basket .list {
   padding-top: 24px;
+}
+.checkout__send {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.checkout__send-item {
+  padding: 24px 210px 24px 24px;
+  border: 1px solid #675642;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: all 0.3s ease-in-out 0s;
+}
+.checkout__send-item.active .input {
+  margin-bottom: 14px;
+}
+.checkout__send-item.active .checkout__send-container {
+  height: auto;
+  opacity: 1;
+  pointer-events: all;
+}
+.checkout__send-container {
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  pointer-events: none;
+  transition: all 0.3s ease-in-out 0s;
+}
+.checkout__send-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 16px;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+.checkout__send-link {
+  color: #287330;
+  font-size: 16px;
+  line-height: 1.2;
+  text-decoration: underline;
+  transition: all 0.3s ease-in-out 0s;
+}
+.checkout__send-link:hover {
+  opacity: 0.7;
+}
+.checkout__send-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-bottom: 48px;
+}
+.checkout__send .box {
+  font-size: 16px;
+}
+.checkout__send .button {
+  font-weight: 700;
+  font-size: 18px;
+  min-height: 48px;
+}
+.checkout__send .button--primary {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+}
+.checkout__send .button--border {
+  background: transparent;
+  color: #675642;
+  border-color: #675642;
+  margin-right: auto;
+  gap: 24px;
+}
+.checkout__send .button--border:hover {
+  background: rgba(103, 86, 66, 0.1);
+}
+.checkout__send .input {
+  border: unset;
+  padding: 0;
+  transition: all 0.3s ease-in-out 0s;
+}
+.checkout__send .input__text {
+  display: flex;
+  gap: 8px;
 }
 
 @media (max-width: 1440px) {
@@ -4032,6 +4119,33 @@ svg {
   }
   .checkout__form-checkboxes {
     width: 70%;
+  }
+  .checkout__send {
+    gap: 24px;
+  }
+  .checkout__send-wrapper {
+    margin-bottom: 16px;
+  }
+  .checkout__send-item {
+    padding: 16px;
+  }
+  .checkout__send-link {
+    margin-bottom: 40px;
+    display: block;
+  }
+  .checkout__send .button {
+    font-size: 16px;
+  }
+  .checkout__send .button--primary {
+    position: unset;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .checkout__send .button--border {
+    width: 100%;
+  }
+  .checkout__send .box {
+    font-size: 14px;
   }
 }
 @media (max-width: 580px) {

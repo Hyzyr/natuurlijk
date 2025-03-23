@@ -113,18 +113,17 @@ if (popup) {
 // productGrid start -------------------------------
 const gridButton = document.getElementById('gridButton');
 let isGrid = true;
-if(gridButton){
+if (gridButton) {
+  gridButton.addEventListener('click', () => {
+    const cartsItemsWrapper = document.querySelector('.cartsItemsWrapper');
+    const cartsItems = cartsItemsWrapper.querySelectorAll('.cart');
 
-gridButton.addEventListener('click', () => {
-  const cartsItemsWrapper = document.querySelector('.cartsItemsWrapper');
-  const cartsItems = cartsItemsWrapper.querySelectorAll('.cart');
+    if (isGrid) {
+      cartsItems.forEach((item) => {
+        item.classList.add('cart--list');
+      });
 
-  if (isGrid) {
-    cartsItems.forEach((item) => {
-      item.classList.add('cart--list');
-    });
-
-    gridButton.innerHTML = `
+      gridButton.innerHTML = `
       <span class="icon icon--stroke">
        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
          <path d="M10 3H3V10H10V3Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -142,13 +141,13 @@ gridButton.addEventListener('click', () => {
       </span>
     `;
 
-    isGrid = false;
-  } else {
-    cartsItems.forEach((item) => {
-      item.classList.remove('cart--list');
-    });
+      isGrid = false;
+    } else {
+      cartsItems.forEach((item) => {
+        item.classList.remove('cart--list');
+      });
 
-    gridButton.innerHTML = `
+      gridButton.innerHTML = `
        <span class="icon icon--stroke">
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M6.66699 5H17.5003" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -170,12 +169,65 @@ gridButton.addEventListener('click', () => {
       </span>
     `;
 
-    isGrid = true;
-  }
-});
+      isGrid = true;
+    }
+  });
 }
 
 // productGrid end -------------------------------
+
+// checkout--send start -------------------------------
+const checkoutSend = document.querySelector('.checkout__send');
+if (checkoutSend) {
+  const radioButtons = document.querySelectorAll('input');
+  const checkoutItems = document.querySelectorAll('.checkout__send-item');
+  const checkoutItemContainer = document.querySelectorAll(
+    '.checkout__send-container'
+  );
+
+  const clearCheckoutItems = () => {
+    checkoutItems.forEach((item) => {
+      item.classList.remove('active');
+    });
+
+    checkoutItemContainer.forEach((item) => {
+      item.style.height = 0;
+    });
+  };
+
+  const checkoutInit = () => {
+    radioButtons.forEach((input, i) => {
+      const checkoutItemContainer = checkoutItems[i].querySelector(
+        '.checkout__send-container'
+      );
+
+      if (input.checked) {
+        checkoutItems[i].classList.add('active');
+        checkoutItemContainer.style.height =
+          checkoutItemContainer.scrollHeight + 'px';
+      }
+    });
+  };
+
+  checkoutInit();
+
+  radioButtons.forEach((input, i) => {
+    input.addEventListener('input', () => {
+      if (input.checked) {
+        const checkoutItemContainer = checkoutItems[i].querySelector(
+          '.checkout__send-container'
+        );
+
+        clearCheckoutItems();
+
+        checkoutItems[i].classList.add('active');
+        checkoutItemContainer.style.height =
+          checkoutItemContainer.scrollHeight + 'px';
+      }
+    });
+  });
+}
+// checkout--send end -------------------------------
 
 // const links = document.querySelectorAll(".links");
 // const sections = document.querySelectorAll(".anchor");
