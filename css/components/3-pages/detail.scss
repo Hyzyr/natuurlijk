@@ -11,6 +11,10 @@
       width: calc(45% - 20px);
       max-width: 460px;
     }
+
+    .swiper-slide{
+      cursor: pointer;
+    }
   }
 
   &__content {

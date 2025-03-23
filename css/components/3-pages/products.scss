@@ -235,6 +235,12 @@
     .swiper {
       width: 100%;
     }
+
+    .button {
+      &--arrow {
+        display: none;
+      }
+    }
   }
 
   .button {
@@ -547,6 +553,12 @@
 
       &-box {
         font-size: 22px;
+      }
+
+      .button {
+        &--arrow {
+          display: flex;
+        }
       }
     }
 
