@@ -257,7 +257,7 @@ svg {
   border: 1px solid #CCCCCC;
   resize: none;
   border-radius: 6px;
-  transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-out 0.1s;
   color: #332B21;
   font-family: "DM Sans", sans-serif;
   font-style: normal;
@@ -297,7 +297,7 @@ svg {
   right: 12px;
   transform: translateY(-50%);
   color: #332B21;
-  transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-out 0.1s;
 }
 .input--select .input__selected-placeholder {
   color: #B3AAA0;
@@ -317,7 +317,7 @@ svg {
   border-radius: 6px;
   z-index: 1;
   pointer-events: none;
-  transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-out 0.1s;
   scrollbar-width: none; /* Firefox 64 */
   -ms-overflow-style: none; /* Internet Explorer 11 */
 }
@@ -328,7 +328,7 @@ svg {
 .input--select .input__dropdown-item {
   cursor: pointer;
   padding: 0.4em 0.5em;
-  transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-out 0.1s;
 }
 .input--select .input__dropdown-item:hover {
   background: #fff;
@@ -381,7 +381,7 @@ svg {
   border: 1px solid #CCCCCC;
   border-radius: 50%;
   position: relative;
-  transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-out 0.1s;
 }
 .input--radio .input__circle:after {
   content: "";
@@ -394,7 +394,7 @@ svg {
   left: 50%;
   transform: translate(-50%, -50%);
   opacity: 0;
-  transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-out 0.1s;
 }
 .input--radio .input__text {
   color: #675642;
@@ -446,7 +446,7 @@ svg {
   font-weight: 700;
   font-size: 16px;
   line-height: 1;
-  transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-out 0.1s;
 }
 .button:active {
   opacity: 0.7;
@@ -517,7 +517,7 @@ svg {
   bottom: 0;
   transform: translateX(-50%);
   background: #287330;
-  transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-out 0.1s;
 }
 .button--text:hover {
   opacity: 0.7;
@@ -694,7 +694,7 @@ svg {
   border: 1px solid #CCCCCC;
   box-sizing: border-box;
   border-radius: 4px;
-  transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-out 0.1s;
 }
 .checkbox span::before {
   content: "";
@@ -708,13 +708,13 @@ svg {
   border-right: 1.5px solid #287330;
   transform: translate(-50%, -50%) rotate(45deg);
   opacity: 0;
-  transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-out 0.1s;
 }
 .checkbox__outer {
   display: flex;
   align-items: flex-start;
   cursor: pointer;
-  transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-out 0.1s;
 }
 .checkbox__outer:hover {
   opacity: 0.6;
@@ -949,7 +949,7 @@ svg {
   align-items: center;
   justify-content: center;
   padding: 10px;
-  transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-out 0.1s;
 }
 .stepper__item-progress:before, .stepper__item-progress:after {
   position: absolute;
@@ -1005,7 +1005,7 @@ svg {
   padding: 10px;
   border: 1px solid transparent;
   box-shadow: 0 0 0 4px #fff;
-  transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-out 0.1s;
   color: #287330;
   font-size: 0.9em;
   color: #332B21;
@@ -1017,7 +1017,7 @@ svg {
   font-weight: 400;
   padding: 0 15px;
   text-align: center;
-  transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-out 0.1s;
 }
 
 .icon {
@@ -1027,7 +1027,7 @@ svg {
   font-size: 18px;
   width: 1em;
   height: 1em;
-  transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-out 0.1s;
 }
 .icon svg {
   fill: currentColor;
@@ -1235,7 +1235,7 @@ svg {
 .cart__info-stars .icon {
   font-size: 24px;
   color: #ECEAE7;
-  transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-out 0.1s;
 }
 .cart__info-stars .icon.active {
   color: #287330;
@@ -1361,7 +1361,7 @@ svg {
   align-items: center;
   gap: 4px;
   color: #287330;
-  transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-out 0.1s;
 }
 .group__mobile-button .icon {
   width: 1em;
@@ -1387,7 +1387,7 @@ svg {
   color: #287330;
   border: 1px solid transparent;
   cursor: pointer;
-  transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-out 0.1s;
 }
 .pagination__button.active {
   background-color: #E9F1EA;
@@ -1407,7 +1407,7 @@ svg {
 .text--link {
   color: #287330;
   text-decoration: underline;
-  transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-out 0.1s;
 }
 .text--link:hover {
   opacity: 0.7;
@@ -1457,7 +1457,7 @@ svg {
   color: #675642;
   font-weight: 500;
   cursor: pointer;
-  transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-out 0.1s;
   position: relative;
 }
 .footer__column-link::after {
@@ -1469,7 +1469,7 @@ svg {
   left: 0;
   bottom: -2px;
   opacity: 0;
-  transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-out 0.1s;
 }
 .footer__column-link:hover {
   color: #287330;
@@ -1495,7 +1495,7 @@ svg {
   color: #287330;
   text-decoration: underline;
   white-space: nowrap;
-  transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-out 0.1s;
 }
 .footer__column p a:hover {
   opacity: 0.7;
@@ -1513,7 +1513,7 @@ svg {
   justify-content: center;
   max-width: 58px;
   height: 24px;
-  transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-out 0.1s;
 }
 .footer__payments-item:hover {
   transform: scale(1.1);
@@ -1546,7 +1546,7 @@ svg {
 .footer__copy-link {
   font-size: 14px;
   color: #675642;
-  transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-out 0.1s;
 }
 .footer__copy-link:hover {
   color: #287330;
@@ -1734,7 +1734,7 @@ svg {
   padding: 16px;
   opacity: 0;
   pointer-events: none;
-  transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-out 0.1s;
 }
 .popup__inner {
   display: flex;
@@ -1751,7 +1751,7 @@ svg {
   border-radius: 6px;
   opacity: 0;
   transform: scale(0.9);
-  transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-out 0.1s;
 }
 .popup__container-footer {
   display: flex;
@@ -1798,7 +1798,7 @@ svg {
   gap: 24px;
 }
 .popup__product-image {
-  transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-out 0.1s;
   font-size: 16px;
   flex: 1;
   max-width: 160px;
@@ -2157,7 +2157,7 @@ svg {
   border-bottom: 1px solid #ECEAE7;
   cursor: pointer;
   font-size: 16px;
-  transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-out 0.1s;
 }
 .products__category-button small {
   color: #B3AAA0;
@@ -2202,18 +2202,18 @@ svg {
   left: 0;
   padding: 20px 16px;
   color: #fff;
-  transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-out 0.1s;
   cursor: pointer;
 }
 .products__more-box .icon {
   color: inherit;
   font-size: 18px;
-  transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-out 0.1s;
 }
 .products__more-box h4 {
   font-size: inherit;
   color: inherit;
-  transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-out 0.1s;
 }
 .products__more-box:hover {
   opacity: 0.7;
@@ -2265,7 +2265,7 @@ svg {
 }
 .filter__dropdown {
   border-bottom: 1px solid #ECEAE7;
-  transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-out 0.1s;
 }
 .filter__dropdown._space {
   margin-bottom: 32px;
@@ -2275,7 +2275,7 @@ svg {
   opacity: 0;
   pointer-events: none;
   overflow: hidden;
-  transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-out 0.1s;
 }
 .filter__dropdown-button {
   font-size: 18px;
@@ -2285,7 +2285,7 @@ svg {
   justify-content: space-between;
   padding: 16px 0;
   cursor: pointer;
-  transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-out 0.1s;
 }
 .filter__dropdown-button:hover {
   color: #287330;
@@ -2545,7 +2545,7 @@ svg {
   line-height: 1.2;
   font-family: "DM Serif Text", sans-serif;
   color: #332B21;
-  transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-out 0.1s;
 }
 .info__item-button .icon {
   font-size: 0.9em;
@@ -2578,7 +2578,7 @@ svg {
   z-index: -1;
   pointer-events: none;
   border-radius: inherit;
-  transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-out 0.1s;
 }
 .info__item-more .button--border:hover {
   background: rgba(40, 115, 48, 0.05);
@@ -3101,7 +3101,7 @@ svg {
 .checkout__basket-box p a {
   color: #287330;
   text-decoration: underline;
-  transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-out 0.1s;
 }
 .checkout__basket-box p a:hover {
   opacity: 0.7;
@@ -3174,7 +3174,7 @@ svg {
   display: flex;
   flex-direction: column;
   position: relative;
-  transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-out 0.1s;
 }
 .checkout__send-item.active {
   border-color: #675642;
@@ -3213,7 +3213,7 @@ svg {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-out 0.1s;
   gap: 20px;
 }
 .checkout__send-group {
@@ -3256,7 +3256,7 @@ svg {
   font-size: 16px;
   line-height: 1.2;
   text-decoration: underline;
-  transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-out 0.1s;
 }
 .checkout__send-link:hover {
   opacity: 0.7;
@@ -3296,7 +3296,7 @@ svg {
 .checkout__send .input {
   border: unset;
   padding: 0;
-  transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-out 0.1s;
 }
 .checkout__info {
   display: flex;
@@ -3463,7 +3463,7 @@ svg {
   font-size: 16px;
   color: #B3AAA0;
   text-decoration: underline;
-  transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-out 0.1s;
 }
 .account__group-link:hover {
   opacity: 0.7;
@@ -3524,7 +3524,7 @@ svg {
   font-size: 16px;
   color: #287330;
   text-decoration: underline;
-  transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-out 0.1s;
 }
 .account__info-link:hover {
   opacity: 0.7;
@@ -3541,7 +3541,7 @@ svg {
   font-weight: 700;
   border-bottom: 1px solid #ECEAE7;
   cursor: pointer;
-  transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-out 0.1s;
 }
 .account__tabs-button:hover {
   opacity: 0.7;
@@ -3589,7 +3589,7 @@ svg {
   color: #287330;
   text-decoration: underline;
   white-space: nowrap;
-  transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-out 0.1s;
 }
 .contact__content-box._lg a:hover {
   opacity: 0.7;
@@ -4025,7 +4025,7 @@ svg {
     opacity: 0;
     transform: translateX(100%);
     pointer-events: none;
-    transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-out 0.1s;
   }
   .filter__inner {
     padding: 16px 16px 100px 16px;
@@ -5071,7 +5071,7 @@ svg {
     font-size: inherit;
     width: 1.3em;
     height: 1.3em;
-    transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-out 0.1s;
   }
   .account__tabs-container {
     position: absolute;
@@ -5085,7 +5085,7 @@ svg {
     pointer-events: none;
     opacity: 0;
     max-height: 0;
-    transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-out 0.1s;
     scrollbar-width: none; /* Firefox 64 */
     -ms-overflow-style: none; /* Internet Explorer 11 */
   }

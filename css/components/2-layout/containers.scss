@@ -1,0 +1,417 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-height: 100%;
+  padding-top: 100px;
+}
+.autoContainer {
+  max-width: 1576px;
+  margin: 0 auto;
+  padding: 0 60px;
+}
+.box {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  &--sm {
+    gap: 8px;
+  }
+
+  &--bg {
+    background: $green-10;
+    padding: 16px;
+    gap: 4px;
+    border-radius: 6px;
+
+    strong {
+      color: $green-100;
+    }
+  }
+
+  &--lg {
+    font-size: 18px;
+  }
+
+  &--textLeft {
+    text-align: left;
+  }
+
+  p {
+    font-size: inherit;
+  }
+}
+.cart {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+
+    &-box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16px;
+    }
+
+    &-price {
+      display: flex;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      font-size: 14px;
+      line-height: 1;
+      color: $brown-100;
+      margin-bottom: 16px;
+
+      del {
+        margin-left: 8px;
+      }
+
+      strong {
+        margin-left: auto;
+        font-size: 20px;
+      }
+    }
+
+    &-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-stars {
+      align-items: center;
+      display: flex;
+      margin-bottom: 8px;
+
+      .icon {
+        font-size: 24px;
+        color: $brown-25;
+        @include transition;
+
+        &.active {
+          color: $green-100;
+        }
+      }
+    }
+
+    &-container {
+    }
+
+    h6 {
+      font-family: $font-secondary;
+      font-weight: 700;
+      min-height: 2em;
+      @include ellipsis(2);
+      margin-bottom: 8px;
+    }
+
+    p {
+      margin-bottom: 8px;
+      font-size: 16px;
+      min-height: 3.8em;
+      @include ellipsis(3);
+    }
+  }
+
+  &--product {
+    .cart {
+      &__info {
+        &-group {
+          .cart {
+            &__info {
+              &-stars {
+                display: none;
+              }
+            }
+          }
+        }
+
+        &-container {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  &--list {
+    width: 100% !important;
+    flex-direction: row;
+    align-items: center;
+
+    .cart {
+      &__image {
+        width: 200px;
+      }
+
+      &__info {
+        flex: 1;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 30px;
+
+        &-group {
+          max-width: 350px;
+          flex: 1;
+          .cart__info-stars {
+            display: flex;
+          }
+        }
+
+        &-container {
+          max-width: 320px;
+          flex: 1;
+          .cart__info-stars {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  .badge {
+    &--lg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+  }
+}
+.row {
+  display: flex;
+  gap: 32px;
+
+  &--wrap {
+    flex-wrap: wrap;
+  }
+
+  &--slider {
+    position: relative;
+
+    &._hideArrow {
+      .button {
+        &--arrow {
+          &-left {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+.group {
+  margin-bottom: 40px;
+
+  &__desktop {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    &-button {
+      display: flex;
+      align-items: center;
+      grid-area: 4px;
+      font-size: 14px;
+      color: $green-100;
+
+      .icon {
+        color: $brown-150;
+        font-size: 16px;
+      }
+
+      &.active {
+        color: $brown-50;
+      }
+    }
+  }
+
+  &__mobile {
+    display: none;
+
+    &-button {
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      color: $green-100;
+      @include transition;
+
+      .icon {
+        width: 1em;
+        height: 1em;
+      }
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+}
+
+
+@mixin containers-1360 {
+  .row {
+    gap: 20px;
+  }
+}
+@mixin containers-1025 {
+  .group {
+    margin-bottom: 16px;
+
+    &__desktop {
+      display: none;
+    }
+
+    &__mobile {
+      display: flex;
+    }
+  }
+  .cart {
+    &--product {
+      .cart {
+        &__info {
+          &-group {
+            .cart {
+              &__info {
+                &-stars {
+                  display: flex;
+                }
+              }
+            }
+          }
+
+          &-container {
+            .cart {
+              &__info {
+                &-stars {
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@mixin containers-940 {
+  .autoContainer {
+    padding: 0 20px;
+  }
+  .cart {
+    gap: 25px;
+  }
+  .group {
+    margin-bottom: 16px;
+
+    &__desktop {
+      display: none;
+    }
+
+    &__mobile {
+      display: flex;
+    }
+  }
+}
+@mixin containers-768 {
+  .autoContainer {
+    padding: 0 16px;
+  }
+  .cart {
+    gap: 20px;
+  }
+}
+@mixin containers-580 {
+  .cart {
+    gap: 10px;
+
+    &__info {
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      &-group {
+        width: 100%;
+      }
+
+      &-stars {
+        display: flex;
+        margin-bottom: 16px;
+      }
+
+      &-box {
+        width: 100%;
+        justify-content: space-between;
+        gap: 5px;
+        margin-bottom: 8px;
+      }
+
+      &-price {
+        width: 104px;
+        flex-wrap: wrap;
+        font-size: 12px;
+        margin: unset;
+
+        strong {
+          width: 100%;
+          font-size: 18px;
+          margin: 8px 0 0;
+        }
+
+        del {
+          margin-left: 4px;
+        }
+      }
+    }
+
+    h6 {
+      margin-bottom: 4px;
+    }
+
+    p {
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+
+    .button {
+      &--primary {
+        padding: unset;
+        font-size: 20px;
+        width: 2em;
+        height: 2em;
+        margin-left: auto;
+
+        span {
+          display: none;
+        }
+
+        .icon {
+          display: flex;
+        }
+      }
+    }
+
+    .badge {
+      &--lg {
+        font-size: 14px;
+      }
+    }
+
+    &--product {
+      .cart {
+        &__info {
+          &-container {
+            flex-wrap: wrap;
+            flex-direction: row;
+          }
+        }
+      }
+    }
+  }
+}
