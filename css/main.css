@@ -3442,6 +3442,93 @@ svg {
 .account__group-link:hover {
   opacity: 0.7;
 }
+.account__container {
+  display: flex;
+  align-items: flex-start;
+  gap: 56px;
+}
+.account__container .input--select {
+  max-width: 312px;
+}
+.account__container .input--select .input__selected-outer {
+  display: none;
+}
+.account__container .input--select .input__dropdown {
+  position: unset;
+  opacity: 1;
+  max-height: unset;
+  pointer-events: all;
+  padding: unset;
+  border: unset;
+  padding: unset;
+}
+.account__container .input--select .input__dropdown-item {
+  padding: 16px 0;
+  border-bottom: 1px solid #ECEAE7;
+  display: flex !important;
+  font-weight: 700;
+}
+.account__container .input--select .input__dropdown-item:nth-child(1) {
+  padding-top: unset;
+}
+.account__info {
+  display: none;
+  flex-direction: column;
+  gap: 24px;
+}
+.account__info-box {
+  display: flex;
+  gap: 16px;
+  font-size: 16px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+.account__info-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 16px;
+  line-height: 1.2;
+  color: #675642;
+}
+.account__info-group h5 {
+  color: #332B21;
+}
+.account__info-link {
+  font-size: 16px;
+  color: #287330;
+  text-decoration: underline;
+  transition: all 0.3s ease-in-out 0s;
+}
+.account__info-link:hover {
+  opacity: 0.7;
+}
+.account__info.active {
+  display: flex;
+}
+.account__tabs {
+  width: 312px;
+}
+.account__tabs-button {
+  padding: 16px 0;
+  font-size: 16px;
+  font-weight: 700;
+  border-bottom: 1px solid #ECEAE7;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out 0s;
+}
+.account__tabs-button:hover {
+  opacity: 0.7;
+}
+.account__tabs-button.active {
+  color: #B3AAA0;
+}
+.account__tabs-button:nth-child(1) {
+  padding-top: 0;
+}
+.account__tabs-selected {
+  display: none;
+}
 .account .button--secondary {
   font-size: 18px;
   padding: 0.78em 1.4em;
@@ -4049,6 +4136,9 @@ svg {
   .account h3 {
     margin-bottom: 30px;
   }
+  .account__tabs {
+    width: 280px;
+  }
 }
 @media (max-width: 768px) {
   .autoContainer {
@@ -4480,6 +4570,9 @@ svg {
   .account__group-link {
     font-size: 14px;
   }
+  .account__tabs {
+    width: 240px;
+  }
   .account .button--secondary {
     font-size: 16px;
   }
@@ -4494,6 +4587,9 @@ svg {
   }
   .account h5 {
     font-size: 22px;
+  }
+  .account--logged h3 {
+    margin-bottom: 30px;
   }
 }
 @media (max-width: 580px) {
@@ -4853,6 +4949,85 @@ svg {
   }
   .account h3 {
     font-size: 28px;
+  }
+  .account__container {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .account__tabs {
+    width: 100%;
+    position: relative;
+  }
+  .account__tabs-selected {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 12px;
+    font-size: 14px;
+    border: 1px solid #CCCCCC;
+    border-radius: 6px;
+  }
+  .account__tabs-selected .icon {
+    font-size: inherit;
+    width: 1.3em;
+    height: 1.3em;
+    transition: all 0.3s ease-in-out 0s;
+  }
+  .account__tabs-container {
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0;
+    background: #fff;
+    width: 100%;
+    border: 1px solid #CCCCCC;
+    border-radius: 6px;
+    padding: 6px 15px;
+    pointer-events: none;
+    opacity: 0;
+    max-height: 0;
+    transition: all 0.3s ease-in-out 0s;
+    scrollbar-width: none; /* Firefox 64 */
+    -ms-overflow-style: none; /* Internet Explorer 11 */
+  }
+  .account__tabs-container::-webkit-scrollbar {
+    /** WebKit */
+    display: none;
+  }
+  .account__tabs-button {
+    font-size: 14px;
+    font-weight: 400;
+    padding: 8px 0;
+  }
+  .account__tabs-button:nth-child(1) {
+    padding: 8px 0;
+  }
+  .account__tabs-button:last-child {
+    border-bottom: unset;
+  }
+  .account__tabs.active .account__tabs-container {
+    pointer-events: all;
+    opacity: 1;
+    max-height: 500px;
+  }
+  .account__tabs.active .account__tabs-selected .icon {
+    transform: rotate(180deg);
+  }
+  .account__info {
+    gap: 16px;
+  }
+  .account__info-group {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+  .account__info-group h5 {
+    font-size: 18px !important;
+  }
+  .account--logged h3 {
+    margin-bottom: 16px;
+  }
+  .account--logged h4,
+  .account--logged h5 {
+    font-size: 22px;
   }
 }
 @media (max-width: 460px) {

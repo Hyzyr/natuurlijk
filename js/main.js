@@ -229,6 +229,95 @@ if (checkoutSend) {
 }
 // checkout--send end -------------------------------
 
+// accountTab start -------------------------------
+const accountContainer = document.getElementById('accountContainer');
+if (accountContainer) {
+  const tabButtons = document.querySelectorAll('.account__tabs-button');
+  const tabContents = document.querySelectorAll('.account__info');
+  const tabSelectedButton = document.querySelector('.account__tabs-selected');
+  const tabSelectedButtonText = document.querySelector(
+    '.account__tabs-selected-text'
+  );
+  const tabs = document.querySelector('.account__tabs');
+
+  const clearAccountTabs = () => {
+    tabButtons.forEach((button) => {
+      button.classList.remove('active');
+    });
+    tabContents.forEach((content) => {
+      content.classList.remove('active');
+    });
+
+    tabs.classList.remove('active');
+  };
+
+  tabButtons.forEach((button, i) => {
+    button.addEventListener('click', () => {
+      if (!button.classList.contains('active')) {
+        clearAccountTabs();
+        button.classList.add('active');
+        tabContents[i].classList.add('active');
+        tabSelectedButtonText.innerHTML = button.innerHTML;
+      }
+    });
+  });
+
+  tabSelectedButton.addEventListener('click', () => {
+    tabs.classList.toggle('active');
+  });
+
+  window.onclick = function (event) {
+    if (accountContainer) {
+      if (!tabs.contains(event.target)) {
+        tabs.classList.remove('active');
+      }
+    }
+  };
+}
+
+// accountTab end -------------------------------
+
+// const tabWrapper = document.querySelectorAll('.tabWrapper');
+// tabWrapper.forEach((tab) => {
+//   const tabEvents = tab.querySelectorAll('.tabBtn');
+//   const tabContainer = tab.querySelectorAll('.tabContainer');
+//   const clearActives = (clearParent = false) => {
+//     tabEvents.forEach(function (item) {
+//       item.classList.remove('active');
+
+//       let parent = item.parentElement.parentElement;
+//       if (clearParent) parent.classList.remove('active');
+//     });
+//     tabContainer.forEach(function (item) {
+//       item.classList.remove('active');
+//     });
+//   };
+//   tabEvents.forEach((currentBtn) => {
+//     let tabId = currentBtn.getAttribute('data-tab');
+//     let currentTab = tab.querySelector(tabId);
+
+//     currentBtn.onclick = () => {
+//       let isActive = currentBtn.classList.contains('active');
+//       let isToggleParent = currentBtn.getAttribute('data-toggle-parent') === '';
+//       let parent = currentBtn.parentElement.parentElement;
+
+//       clearActives(isToggleParent);
+
+//       if (!isActive || tab.classList.contains('tabWrapper--hover')) {
+//         currentBtn.classList.add('active');
+//         currentTab.classList.add('active');
+//         if (isToggleParent) parent.classList.add('active');
+//       }
+//     };
+//     if (tab.classList.contains('tabWrapper--hover'))
+//       currentBtn.onmouseover = () => {
+//         clearActives();
+//         currentBtn.classList.add('active');
+//         currentTab.classList.add('active');
+//       };
+//   });
+// });
+
 // const links = document.querySelectorAll(".links");
 // const sections = document.querySelectorAll(".anchor");
 // function changeLinkState() {
@@ -278,47 +367,6 @@ if (checkoutSend) {
 //         content.classList.remove("active");
 //       }
 //     });
-//   });
-// });
-
-// const tabWrapper = document.querySelectorAll(".tabWrapper");
-// tabWrapper.forEach((tab) => {
-//   const tabEvents = tab.querySelectorAll(".tabBtn");
-//   const tabContainer = tab.querySelectorAll(".tabContainer");
-//   const clearActives = (clearParent = false) => {
-//     tabEvents.forEach(function (item) {
-//       item.classList.remove("active");
-
-//       let parent = item.parentElement.parentElement;
-//       if (clearParent) parent.classList.remove("active");
-//     });
-//     tabContainer.forEach(function (item) {
-//       item.classList.remove("active");
-//     });
-//   };
-//   tabEvents.forEach((currentBtn) => {
-//     let tabId = currentBtn.getAttribute("data-tab");
-//     let currentTab = tab.querySelector(tabId);
-
-//     currentBtn.onclick = () => {
-//       let isActive = currentBtn.classList.contains("active");
-//       let isToggleParent = currentBtn.getAttribute("data-toggle-parent") === "";
-//       let parent = currentBtn.parentElement.parentElement;
-
-//       clearActives(isToggleParent);
-
-//       if (!isActive || tab.classList.contains("tabWrapper--hover")) {
-//         currentBtn.classList.add("active");
-//         currentTab.classList.add("active");
-//         if (isToggleParent) parent.classList.add("active");
-//       }
-//     };
-//     if (tab.classList.contains("tabWrapper--hover"))
-//       currentBtn.onmouseover = () => {
-//         clearActives();
-//         currentBtn.classList.add("active");
-//         currentTab.classList.add("active");
-//       };
 //   });
 // });
 
