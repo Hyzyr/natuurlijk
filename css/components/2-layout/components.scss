@@ -1436,18 +1436,6 @@
     }
   }
 
-  .group {
-    margin-bottom: 16px;
-
-    &__desktop {
-      display: none;
-    }
-
-    &__mobile {
-      display: flex;
-    }
-  }
-
   .cart {
     &--product {
       .cart {
@@ -1486,6 +1474,18 @@
 
   .cart {
     gap: 25px;
+  }
+
+  .group {
+    margin-bottom: 16px;
+
+    &__desktop {
+      display: none;
+    }
+
+    &__mobile {
+      display: flex;
+    }
   }
 }
 

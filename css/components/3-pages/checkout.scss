@@ -597,6 +597,71 @@
   }
 }
 
+.order {
+  padding: 20px 0 40px;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  &__content {
+    max-width: 740px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  &__group {
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    &-box {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 64px;
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding-left: 36px;
+      position: relative;
+    }
+
+    &-number {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1;
+      width: 24px;
+      height: 24px;
+      color: $white;
+      background: $green-100;
+      border-radius: 50%;
+      position: absolute;
+      top: 1px;
+      left: 0;
+    }
+  }
+
+  .box {
+    font-size: 16px;
+  }
+}
+
 @mixin checkout-1360 {
   .checkout {
     &__basket {
@@ -661,6 +726,12 @@
       }
     }
   }
+
+  .order {
+    &__inner {
+      gap: 20px;
+    }
+  }
 }
 
 @mixin checkout-1160 {
@@ -702,6 +773,18 @@
 
     &__basket {
       display: none;
+    }
+  }
+
+  .order {
+    padding: 20px 0 30px;
+
+    &__inner {
+      gap: 8px;
+    }
+
+    &__info {
+      margin-bottom: 40px;
     }
   }
 }
@@ -816,6 +899,28 @@
       }
     }
   }
+
+  .order {
+    &__group {
+      gap: 16px;
+
+      &-box {
+        gap: 16px;
+      }
+    }
+
+    &__info {
+      gap: 16px;
+
+      &-number {
+        font-size: 12px;
+      }
+
+      h4 {
+        margin-bottom: 8px;
+      }
+    }
+  }
 }
 
 @mixin checkout-580 {
@@ -927,6 +1032,34 @@
         flex-direction: column;
         align-items: flex-start;
         gap: 8px;
+      }
+    }
+  }
+
+  .order {
+    padding-bottom: 20px;
+
+    &__info{
+      &-number{
+        top: 0;
+      }
+    }
+
+    h3 {
+      font-size: 28px;
+    }
+
+    h4 {
+      font-size: 24px;
+    }
+
+    h5 {
+      font-size: 20px;
+    }
+
+    .box {
+      h4 {
+        font-size: 20px;
       }
     }
   }
