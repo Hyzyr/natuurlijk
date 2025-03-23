@@ -1284,7 +1284,6 @@ svg {
   flex-direction: column;
   overflow: hidden;
   min-height: 100%;
-  padding-top: 100px;
 }
 
 .autoContainer {
