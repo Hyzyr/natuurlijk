@@ -45,6 +45,7 @@
   @include detail-1025;
   @include basket-1025;
   @include checkout-1025;
+  @include account-1025;
 }
 
 @media (max-width: 940px) {
@@ -57,6 +58,7 @@
   @include detail-940;
   @include products-940;
   @include basket-940;
+  @include account-940;
 }
 
 @media (max-width: 768px) {
@@ -70,6 +72,7 @@
   @include detail-768;
   @include basket-768;
   @include checkout-768;
+  @include account-768;
 }
 
 @media (max-width: 580px) {
@@ -82,6 +85,7 @@
   @include detail-580;
   @include basket-580;
   @include checkout-580;
+  @include account-580;
 }
 
 @media (max-width: 460px) {

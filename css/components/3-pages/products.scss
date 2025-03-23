@@ -47,18 +47,17 @@
       margin-bottom: 120px;
       z-index: 0;
 
-      &._grid{
-        .cart{
+      &._grid {
+        .cart {
           width: 100%;
           flex-direction: row;
 
-          &__image{
+          &__image {
             width: 200px;
           }
 
-          &__info{
+          &__info {
             flex-direction: row;
-
           }
         }
       }
@@ -703,6 +702,10 @@
         padding: 16px;
         font-size: 16px;
       }
+    }
+
+    h3 {
+      font-size: 28px;
     }
   }
 }

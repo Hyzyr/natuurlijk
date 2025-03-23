@@ -2014,6 +2014,7 @@ svg {
 
 .benefits {
   padding-top: 120px;
+  margin-top: auto;
 }
 .benefits__inner {
   position: relative;
@@ -3402,6 +3403,57 @@ svg {
   font-size: 16px;
 }
 
+.account {
+  padding: 20px 0 40px;
+}
+.account__row {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1234px;
+}
+.account__row-column {
+  width: calc(50% - 15px);
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+}
+.account__group {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+.account__group-box {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  justify-content: space-between;
+}
+.account__group-link {
+  font-size: 16px;
+  color: #B3AAA0;
+  text-decoration: underline;
+  transition: all 0.3s ease-in-out 0s;
+}
+.account__group-link:hover {
+  opacity: 0.7;
+}
+.account .button--secondary {
+  font-size: 18px;
+  padding: 0.78em 1.4em;
+  min-width: 48px;
+}
+.account .box p {
+  font-size: 16px;
+}
+.account h3 {
+  margin-bottom: 40px;
+}
+
 @media (max-width: 1440px) {
   h1 {
     font-size: 50px;
@@ -3895,6 +3947,9 @@ svg {
   .order__info {
     margin-bottom: 40px;
   }
+  .account {
+    padding-bottom: 30px;
+  }
 }
 @media (max-width: 940px) {
   .autoContainer {
@@ -3990,6 +4045,9 @@ svg {
   }
   .basket__item-image {
     width: 22%;
+  }
+  .account h3 {
+    margin-bottom: 30px;
   }
 }
 @media (max-width: 768px) {
@@ -4405,6 +4463,38 @@ svg {
   .order__info h4 {
     margin-bottom: 8px;
   }
+  .account__row {
+    flex-direction: column;
+    max-width: unset;
+    gap: 80px;
+  }
+  .account__row-column {
+    gap: 16px;
+    width: 100%;
+    max-width: unset;
+  }
+  .account__group {
+    padding: 8px 0 0 0;
+    gap: 16px;
+  }
+  .account__group-link {
+    font-size: 14px;
+  }
+  .account .button--secondary {
+    font-size: 16px;
+  }
+  .account .input {
+    font-size: 14px;
+  }
+  .account .box p {
+    font-size: 14px;
+  }
+  .account h3 {
+    margin-bottom: 16px;
+  }
+  .account h5 {
+    font-size: 22px;
+  }
 }
 @media (max-width: 580px) {
   .cart {
@@ -4569,6 +4659,9 @@ svg {
     padding: 16px;
     font-size: 16px;
   }
+  .products h3 {
+    font-size: 28px;
+  }
   .popup__product {
     padding: 48px 16px 40px;
   }
@@ -4649,6 +4742,9 @@ svg {
   .basket__item {
     align-items: flex-start;
     gap: 10px;
+  }
+  .basket h3 {
+    font-size: 28px;
   }
   .checkout {
     padding: 20px 0;
@@ -4741,6 +4837,22 @@ svg {
   }
   .order .box h4 {
     font-size: 20px;
+  }
+  .account {
+    padding-bottom: 20px;
+  }
+  .account__group-box {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+  .account__group-box .button--secondary {
+    order: -1;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .account h3 {
+    font-size: 28px;
   }
 }
 @media (max-width: 460px) {

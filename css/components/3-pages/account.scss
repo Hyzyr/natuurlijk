@@ -1,0 +1,151 @@
+.account {
+  padding: 20px 0 40px;
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 1234px;
+
+    &-column {
+      width: calc(50% - 15px);
+      max-width: 500px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 40px;
+    }
+  }
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+
+    &-box {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 20px;
+      justify-content: space-between;
+    }
+
+    &-link {
+      font-size: 16px;
+      color: $brown-50;
+      text-decoration: underline;
+      @include transition;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  .button {
+    &--secondary {
+      font-size: 18px;
+      padding: 0.78em 1.4em;
+      min-width: 48px;
+    }
+  }
+
+  .box {
+    p {
+      font-size: 16px;
+    }
+  }
+
+  h3 {
+    margin-bottom: 40px;
+  }
+}
+
+@mixin account-1025 {
+  .account {
+    padding-bottom: 30px;
+  }
+}
+
+@mixin account-940 {
+  .account {
+    h3 {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@mixin account-768 {
+  .account {
+    &__row {
+      flex-direction: column;
+      max-width: unset;
+      gap: 80px;
+
+      &-column {
+        gap: 16px;
+        width: 100%;
+        max-width: unset;
+      }
+    }
+
+    &__group {
+      padding: 8px 0 0 0;
+      gap: 16px;
+
+      &-link {
+        font-size: 14px;
+      }
+    }
+
+    .button {
+      &--secondary {
+        font-size: 16px;
+      }
+    }
+
+    .input {
+      font-size: 14px;
+    }
+
+    .box {
+      p {
+        font-size: 14px;
+      }
+    }
+
+    h3 {
+      margin-bottom: 16px;
+    }
+    h5 {
+      font-size: 22px;
+    }
+  }
+}
+
+@mixin account-580 {
+  .account {
+    padding-bottom: 20px;
+
+    &__group {
+      &-box {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+
+        .button {
+          &--secondary {
+            order: -1;
+            width: 100%;
+            justify-content: space-between;
+          }
+        }
+      }
+    }
+
+    h3 {
+      font-size: 28px;
+    }
+  }
+}
