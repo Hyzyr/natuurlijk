@@ -23,13 +23,17 @@
     line-height: 1;
 
     &::placeholder {
-      color: $grey-100;
+      color: $brown-50;
+      transition: $t-ease-out;
     }
   }
 
   input:focus,
   textarea:focus {
     border-color: $green-100;
+    &::placeholder {
+      color: $grey-100;
+    }
   }
 
   &--select {
@@ -261,8 +265,17 @@
     }
 
     &:hover {
-      background: rgba($brown-150, 0.1);
-      color: $brown-150;
+      background: $green-100;
+      border-color: $green-100;
+      // color: $brown-150;
+    }
+    &:active {
+      opacity: 0.8;
+      background: $green-100;
+      border-color: $green-100;
+      transition-duration: 0.2s;
+      transition-delay: 0s;
+      // color: $brown-150;
     }
   }
 
@@ -276,8 +289,16 @@
     gap: 15px;
 
     &:hover {
-      background: rgba($green-100, 0.05);
-      color: $green-100;
+      background: $green-75;
+      border-color: $green-75;
+    }
+    &:active {
+      opacity: 0.7;
+      background: $green-75;
+      border-color: $green-75;
+      transition-duration: 0.2s;
+      transition-delay: 0s;
+      // color: $brown-150;
     }
   }
 
@@ -469,7 +490,7 @@
       border-radius: inherit;
       z-index: -1;
       transform: translate(-50%, -50%) scale(0);
-      transition: 0.25s cubic-bezier(0.34, 1.56, 0.64, 1)  0.05s;
+      transition: 0.25s cubic-bezier(0.34, 1.56, 0.64, 1) 0.05s;
     }
     &:hover {
       svg {
@@ -1198,7 +1219,6 @@
   }
 }
 
-
 .text {
   &--primary {
     color: $green-100;
@@ -1214,8 +1234,6 @@
     }
   }
 }
-
-
 
 @mixin components-1160 {
   .more {
@@ -1258,7 +1276,6 @@
       margin-bottom: 25px;
     }
   }
-
 }
 @mixin components-768 {
   .button {

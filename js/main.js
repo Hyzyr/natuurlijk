@@ -19,15 +19,15 @@ const body = document.body;
 //   }
 // };
 
-// const header = document.getElementById('header');
-// if (header)
-//   window.addEventListener('scroll', () => {
-//     if (document.documentElement.scrollTop > 400) {
-//       header.classList.add('sticky');
-//     } else {
-//       header.classList.remove('sticky');
-//     }
-//   });
+const header = document.getElementById('header');
+if (header)
+  window.addEventListener('scroll', () => {
+    if (document.documentElement.scrollTop > 10) {
+      header.classList.add('sticky');
+    } else {
+      header.classList.remove('sticky');
+    }
+  });
 
 const filter = document.getElementById('filter');
 if (filter) {

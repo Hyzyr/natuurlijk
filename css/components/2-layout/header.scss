@@ -1,16 +1,18 @@
 .header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 0 0 30px 0;
-  z-index: 1;
-  transition: 0.2s ease-out;
-  transition-property: opacity, transform, padding;
+  padding: 0;
+  z-index: 10;
+  transition: $t-ease-out;
+  transition-property: top, opacity, transform, padding;
+  @include fast-transition;
 
   &-placeholder {
     width: 100%;
-    height: 200px;
+    height: 230px;
+    transition: 0.1s ease-out 0.02s;
   }
   &QL {
     padding: 10px 0;
@@ -52,6 +54,18 @@
     position: relative;
     background: $white;
 
+    &-logo {
+      font-size: 20px;
+      width: 5.5em;
+      height: 5.5em;
+
+      img,
+      svg {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
     &__inner {
       display: flex;
       align-items: center;
@@ -80,11 +94,175 @@
       display: flex;
     }
   }
+  &Tabs {
+    position: relative;
+    background: $white;
+    z-index: 0;
+    overflow: hidden;
+
+    h6 {
+      font-weight: 700;
+      font-family: $font-secondary;
+    }
+    &-fog {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba($black, 0.2);
+      z-index: 1;
+    }
+    &.active {
+      z-index: 2;
+    }
+
+    &__tab {
+      &-body {
+        display: flex;
+        gap: 2em;
+
+        &-list {
+          padding: 1.335em 0 2em;
+          display: flex;
+          flex-direction: column;
+          gap: 0.8em;
+          font-size: 18px;
+        }
+        &-grid {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          gap: 0.9em;
+          flex-shrink: 0;
+          font-size: 18px;
+          width: 32%;
+          z-index: 0;
+          padding: 1.335em 1.335em 2em 1em;
+
+          &:after {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            width: 50vw;
+            height: 100%;
+            background: $blue-30;
+            z-index: -1;
+          }
+          h6 {
+            width: 100%;
+          }
+          ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+
+            li {
+              width: calc(50% - 0.5em);
+              height: fit-content;
+              background: $white;
+              border: 1px solid $grey-100;
+              border-radius: 6px;
+              transition: $t-ease-out;
+
+              a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 6em;
+                width: 100%;
+
+                img {
+                  width: 100%;
+                  height: 100%;
+                  object-fit: contain;
+                  max-height: 3.4em;
+                  max-width: 8em;
+                }
+              }
+
+              &:hover {
+                filter: contrast(1.2);
+                border-color: $green-75;
+              }
+              &:active {
+                scale: 0.98;
+                border-color: $green-100;
+              }
+            }
+          }
+        }
+      }
+    }
+    &__links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    &-link {
+      position: relative;
+      padding: 1em 0;
+      width: calc(50% - 0.8em);
+
+      //font
+      color: $green-100;
+      font-family: $font-secondary;
+      font-style: normal;
+      font-weight: 400;
+      font-size: inherit;
+      line-height: 100%;
+
+      &:before,
+      &:after {
+        position: absolute;
+        content: '';
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: $grey-100;
+      }
+
+      &::after {
+        background: $green-75;
+        width: 0;
+        opacity: 0;
+        height: 2px;
+        transition: $t-ease-out;
+      }
+      &:hover {
+        color: $brown-150;
+        &:after {
+          width: 100%;
+          opacity: 1;
+        }
+      }
+    }
+    &-brand {
+    }
+  }
   &.sticky {
-    position: fixed;
-    padding: 20px 0;
-    animation: 0.3s sticky ease-in;
-    transition-duration: 0.5s;
+    top: -40px;
+
+    .header {
+      &Main {
+        &-logo {
+          font-size: 16px;
+        }
+      }
+      &Menu {
+        .nav-link {
+          padding: 1em 1.335em;
+          @include fast-transition;
+        }
+      }
+    }
+    & + .header-placeholder {
+      height: 158px;
+      transition-duration: 0s;
+      transition-delay: 0s;
+    }
   }
 }
 .nav {
@@ -137,6 +315,10 @@
         opacity: 0.14;
         transition-duration: 0.1s;
       }
+    }
+    &.active {
+      z-index: 2;
+      background-color: $blue-100;
     }
   }
 }
