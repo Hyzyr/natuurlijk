@@ -2238,6 +2238,9 @@ svg {
 .products__more .swiper {
   width: 100%;
 }
+.products__more .button--arrow {
+  display: none;
+}
 .products .button--filter {
   display: none;
 }
@@ -2358,6 +2361,9 @@ svg {
 .detail__row-column {
   width: calc(45% - 20px);
   max-width: 460px;
+}
+.detail__row .swiper-slide {
+  cursor: pointer;
 }
 .detail__content {
   width: calc(55% - 20px);
@@ -3981,6 +3987,9 @@ svg {
   }
   .products__more-box {
     font-size: 22px;
+  }
+  .products__more .button--arrow {
+    display: flex;
   }
   .products .button--filter {
     display: flex;

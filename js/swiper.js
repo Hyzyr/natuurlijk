@@ -1,5 +1,3 @@
-const detailSlider = document.querySelector('.detailSlider');
-
 const settings = {
   latestSlider: {
     slidesPerView: 1.18,
@@ -133,7 +131,6 @@ const settings = {
     spaceBetween: 16,
     slidesOffsetBefore: 16,
     slidesOffsetAfter: 16,
-    loop: true,
 
     breakpoints: {
       1420: {
@@ -141,7 +138,6 @@ const settings = {
         spaceBetween: 32,
         slidesOffsetBefore: 0,
         slidesOffsetAfter: 0,
-        loop: false,
       },
 
       1160: {
@@ -149,7 +145,6 @@ const settings = {
         spaceBetween: 32,
         slidesOffsetBefore: 0,
         slidesOffsetAfter: 0,
-        loop: true,
       },
 
       1025: {
@@ -157,7 +152,6 @@ const settings = {
         spaceBetween: 20,
         slidesOffsetBefore: 0,
         slidesOffsetAfter: 0,
-        loop: true,
       },
 
       768: {
@@ -165,14 +159,12 @@ const settings = {
         spaceBetween: 24,
         slidesOffsetBefore: 24,
         slidesOffsetAfter: 24,
-        loop: true,
       },
 
       460: {
         slidesPerView: 'auto',
         slidesOffsetBefore: 16,
         slidesOffsetAfter: 16,
-        loop: true,
       },
     },
   },
@@ -267,31 +259,6 @@ const settings = {
     },
   },
 
-  detailSlider: {
-    slidesPerView: 1,
-    loop: true,
-    thumbs: {},
-    watchSlidesProgress: true,
-    allowTouchMove: true,
-
-    breakpoints: {
-      768: {
-        allowTouchMove: false,
-      },
-    },
-  },
-
-  detailSlider2: {
-    slidesPerView: 6,
-    spaceBetween: 16,
-    loop: true,
-    thumbs: {},
-
-    breakpoints: {
-      768: {},
-    },
-  },
-
   moreSlider: {
     slidesPerView: 'auto',
     spaceBetween: 8,
@@ -334,6 +301,20 @@ const settings = {
       },
     },
   },
+
+  detailSlider: {
+    slidesPerView: 1,
+  },
+
+  detailSlider2: {
+    slidesPerGroup: 1,
+    slidesPerView: 6,
+    spaceBetween: 16,
+
+    breakpoints: {
+      768: {},
+    },
+  },
 };
 
 document.querySelectorAll('.swiper').forEach((swiperSlider) => {
@@ -347,7 +328,6 @@ document.querySelectorAll('.swiper').forEach((swiperSlider) => {
   const dots = parentElement.querySelector('.swiper-dots');
   const scroll = parentElement.querySelector('.swiper-scrollbar');
   const thumbs = thumbsSelector ? document.querySelector(thumbsSelector) : null;
-
 
   new Swiper(swiperSlider, {
     ...settings[settingsKey],
@@ -385,3 +365,33 @@ document.querySelectorAll('.swiper').forEach((swiperSlider) => {
       : {},
   });
 });
+
+const isDetail = document.querySelector('.detailSlider');
+
+if (isDetail) {
+  const detailSlider = new Swiper('.detailSlider', {
+    slidesPerView: 1,
+
+    navigation: {
+      nextEl: '.swiper-arrow-next',
+      prevEl: '.swiper-arrow-prev',
+    },
+  });
+
+  const thumbsSwiper = new Swiper('.detailSlider2', {
+    slidesPerGroup: 1,
+    slidesPerView: 6,
+    spaceBetween: 16,
+  });
+
+  const thumbsButtons = document.querySelectorAll(
+    '.detailSlider2 .swiper-slide'
+  );
+
+  thumbsButtons.forEach((button, i) => {
+    button.addEventListener('click', () => {
+      detailSlider.slideTo(i);
+      detailSlider.update();
+    });
+  });
+}
