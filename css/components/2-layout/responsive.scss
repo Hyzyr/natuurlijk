@@ -9,7 +9,7 @@
     padding: 0 40px;
   }
   @include typography-1360;
-  @include components-1360;
+  @include containers-1360;
   @include index-1360;
   @include products-1360;
 }
@@ -33,6 +33,7 @@
 
 @media (max-width: 1025px) {
   @include components-1025;
+  @include containers-1025;
   @include typography-1025;
   @include index-1025;
   @include footer-1025;
@@ -41,10 +42,8 @@
 }
 
 @media (max-width: 940px) {
-  .autoContainer {
-    padding: 0 20px;
-  }
   @include components-940;
+  @include containers-940;
   @include index-940;
   @include footer-940;
   @include detail-940;
@@ -52,10 +51,8 @@
 }
 
 @media (max-width: 768px) {
-  .autoContainer {
-    padding: 0 16px;
-  }
   @include components-768;
+  @include containers-768;
   @include index-768;
   @include footer-768;
   @include products-768;
@@ -64,6 +61,7 @@
 
 @media (max-width: 580px) {
   @include components-580;
+  @include containers-580;
   @include typography-580;
   @include index-580;
   @include footer-580;

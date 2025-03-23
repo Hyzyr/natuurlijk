@@ -1,30 +1,33 @@
 $white: #fff;
+$black: #1c302e;
 
-$grey-100:#CCCCCC;
-$grey-110:#B8B8B8;
+$grey-100: #cccccc;
+$grey-110: #b8b8b8;
 
-$green-10:#E9F1EA;
-$green-50:#93B997;
-$green-100:#287330;
+$green-10: #e9f1ea;
+$green-50: #93b997;
+$green-100: #287330;
 
-$blue-30:#EFF7F7;
-$blue-100:#CAE6E3;
+$blue-30: #eff7f7;
+$blue-100: #cae6e3;
 
-$brown-25: #ECEAE7;
-$brown-50: #B3AAA0;
+$brown-25: #eceae7;
+$brown-50: #b3aaa0;
 $brown-100: #675642;
-$brown-150: #332B21;
+$brown-150: #332b21;
 
-$orange:#FC783F;
+$orange: #fc783f;
 
-$yellow:#FFC336;
+$yellow: #ffc336;
 
-$rose:#F99AA1;
+$rose: #f99aa1;
 
-$red:#FD391F;
+$red: #fd391f;
 
-$font-primary: "DM Serif Text", sans-serif;
-$font-secondary: "DM Sans", sans-serif;
+$font-primary: 'DM Serif Text', sans-serif;
+$font-secondary: 'DM Sans', sans-serif;
 
-
-  
+// transitions
+$t-ease-out: 0.25s cubic-bezier(0.147, 0.664, 0.688, 0.714) 0.05s;
+$t-ease-in: 0.3s cubic-bezier(0.813, 0.152, 0.63, 0.568) 0.05s;
+$t-spring: 0.25s cubic-bezier(0.34, 1.56, 0.64, 1) 0.05s;
