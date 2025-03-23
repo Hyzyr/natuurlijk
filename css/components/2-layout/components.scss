@@ -75,6 +75,10 @@
           color: $brown-150;
           @include transition;
         }
+
+        &-placeholder {
+          color: $brown-50;
+        }
       }
 
       &__dropdown {
@@ -183,6 +187,7 @@
 
       &__text {
         color: $brown-100;
+        flex: 1;
       }
     }
   }

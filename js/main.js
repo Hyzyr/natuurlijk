@@ -179,7 +179,7 @@ if (gridButton) {
 // checkout--send start -------------------------------
 const checkoutSend = document.querySelector('.checkout__send');
 if (checkoutSend) {
-  const radioButtons = document.querySelectorAll('input');
+  const radioButtons = document.querySelectorAll('input[type="radio"]');
   const checkoutItems = document.querySelectorAll('.checkout__send-item');
   const checkoutItemContainer = document.querySelectorAll(
     '.checkout__send-container'

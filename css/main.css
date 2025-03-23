@@ -299,6 +299,9 @@ svg {
   color: #332B21;
   transition: all 0.3s ease-in-out 0s;
 }
+.input--select .input__selected-placeholder {
+  color: #B3AAA0;
+}
 .input--select .input__dropdown {
   position: absolute;
   top: calc(100% + 10px);
@@ -395,6 +398,7 @@ svg {
 }
 .input--radio .input__text {
   color: #675642;
+  flex: 1;
 }
 .input--search {
   position: relative;
@@ -2931,6 +2935,9 @@ svg {
   width: 100%;
   opacity: 1;
 }
+.checkout__tabs-button:last-child.active::after {
+  width: 100%;
+}
 .checkout__tabs-text {
   font-weight: 700;
   font-size: 16px;
@@ -3049,9 +3056,6 @@ svg {
   padding: 0.8em 1.4em;
   white-space: nowrap;
 }
-.checkout__form h5 {
-  font-size: 22px !important;
-}
 .checkout__basket {
   width: 460px;
   padding: 24px;
@@ -3101,6 +3105,9 @@ svg {
   justify-content: space-between;
   gap: 10px;
 }
+.checkout__basket-group strong {
+  white-space: nowrap;
+}
 .checkout__basket-total {
   display: flex;
   flex-direction: column;
@@ -3135,12 +3142,15 @@ svg {
 }
 .checkout__send-item {
   padding: 24px 210px 24px 24px;
-  border: 1px solid #675642;
+  border: 1px solid #CCCCCC;
   border-radius: 6px;
   display: flex;
   flex-direction: column;
   position: relative;
   transition: all 0.3s ease-in-out 0s;
+}
+.checkout__send-item.active {
+  border-color: #675642;
 }
 .checkout__send-item.active .input {
   margin-bottom: 14px;
@@ -3149,13 +3159,62 @@ svg {
   height: auto;
   opacity: 1;
   pointer-events: all;
+  overflow: unset;
+}
+.checkout__send-item._payment {
+  padding: 24px 24px 24px 24px;
+}
+.checkout__send-item._payment .button--primary {
+  position: unset;
+  margin-left: auto;
+}
+.checkout__send-item._payment .input--radio {
+  margin-bottom: unset;
+}
+.checkout__send-item._payment .input--select {
+  width: 65%;
+  max-width: 460px;
+  margin-bottom: unset;
+}
+.checkout__send-item._payment .input--select .input__selected {
+  padding: 0.95em 1em;
+}
+.checkout__send-item._payment.active .checkout__send-box {
+  margin-bottom: 16px;
+}
+.checkout__send-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.3s ease-in-out 0s;
+  gap: 20px;
+}
+.checkout__send-group {
+  display: flex;
+  background: rgba(140, 207, 0, 0.25);
+  padding: 24px;
+  justify-content: space-between;
+  gap: 20px;
 }
 .checkout__send-container {
   height: 0;
   opacity: 0;
   overflow: hidden;
   pointer-events: none;
-  transition: all 0.3s ease-in-out 0s;
+  transition: opacity 0.5s ease-in-out, all 0.3s ease-in-out;
+}
+.checkout__send-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.checkout__send-content .text--primary {
+  color: #8CCF00;
+}
+.checkout__send-payments {
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 .checkout__send-info {
   display: flex;
@@ -3180,6 +3239,9 @@ svg {
   flex-direction: column;
   gap: 32px;
   margin-bottom: 48px;
+}
+.checkout__send-wrapper._sm {
+  margin-bottom: unset;
 }
 .checkout__send .box {
   font-size: 16px;
@@ -3209,9 +3271,78 @@ svg {
   padding: 0;
   transition: all 0.3s ease-in-out 0s;
 }
-.checkout__send .input__text {
+.checkout__info {
   display: flex;
+  flex-direction: column;
+}
+.checkout__info-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+.checkout__info-item {
+  padding: 24px 0;
+  border-bottom: 1px solid #ECEAE7;
+  display: flex;
+  flex-direction: column;
   gap: 8px;
+  font-size: 16px;
+}
+.checkout__info-text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.checkout__info-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.checkout__info p {
+  font-size: 16px;
+}
+.checkout__total {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.checkout__total-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  line-height: 1;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+  color: #287330;
+}
+.checkout__total-button .icon {
+  font-size: inherit;
+  color: inherit;
+}
+.checkout__total-button-text {
+  position: relative;
+}
+.checkout__total-button-text:after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: #287330;
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+}
+.checkout__total-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  font-size: 16px;
+}
+.checkout h5 {
+  font-size: 22px !important;
 }
 
 @media (max-width: 1440px) {
@@ -3694,6 +3825,9 @@ svg {
   .checkout__inner {
     flex-direction: column;
   }
+  .checkout__total {
+    display: flex;
+  }
   .checkout__content {
     max-width: unset;
     gap: 30px;
@@ -4112,6 +4246,9 @@ svg {
   .checkout__content {
     gap: 24px;
   }
+  .checkout__total-group {
+    font-size: 12px;
+  }
   .checkout__box {
     padding: 16px;
     gap: 16px;
@@ -4123,15 +4260,42 @@ svg {
   .checkout__send {
     gap: 24px;
   }
+  .checkout__send-group {
+    padding: 16px;
+  }
+  .checkout__send-group p {
+    font-size: 14px;
+  }
+  .checkout__send-group .checkout__send-link {
+    margin-bottom: unset;
+  }
   .checkout__send-wrapper {
     margin-bottom: 16px;
+  }
+  .checkout__send-wrapper._sm {
+    gap: 16px;
   }
   .checkout__send-item {
     padding: 16px;
   }
+  .checkout__send-item._payment {
+    padding: 16px;
+  }
+  .checkout__send-item._payment .checkout__send-link {
+    margin-bottom: unset;
+  }
+  .checkout__send-item._payment .input--select {
+    margin-bottom: 16px;
+    max-width: unset;
+    width: 100%;
+  }
   .checkout__send-link {
+    font-size: 14px;
     margin-bottom: 40px;
     display: block;
+  }
+  .checkout__send-info {
+    font-size: 14px;
   }
   .checkout__send .button {
     font-size: 16px;
@@ -4146,6 +4310,16 @@ svg {
   }
   .checkout__send .box {
     font-size: 14px;
+  }
+  .checkout__send .input {
+    font-size: 14px;
+  }
+  .checkout__info .checkout__send-link {
+    margin-bottom: unset;
+  }
+  .checkout__info-item {
+    font-size: 14px;
+    padding: 16px 0;
   }
 }
 @media (max-width: 580px) {
@@ -4460,6 +4634,11 @@ svg {
   }
   .checkout__form .list__box:nth-child(2) {
     margin: 0 auto;
+  }
+  .checkout__send-group {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
   }
 }
 @media (max-width: 460px) {
