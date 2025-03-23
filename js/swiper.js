@@ -378,12 +378,6 @@ if (isDetail) {
     },
   });
 
-  const thumbsSwiper = new Swiper('.detailSlider2', {
-    slidesPerGroup: 1,
-    slidesPerView: 6,
-    spaceBetween: 16,
-  });
-
   const thumbsButtons = document.querySelectorAll(
     '.detailSlider2 .swiper-slide'
   );
