@@ -343,6 +343,7 @@
       flex-direction: column;
       position: relative;
       @include transition;
+      overflow: hidden;
 
       &.active {
         border-color: $brown-100;
@@ -362,6 +363,8 @@
 
       &._payment {
         padding: 24px 24px 24px 24px;
+        overflow: unset;
+
         .button {
           &--primary {
             position: unset;
