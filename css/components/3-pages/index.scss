@@ -10,7 +10,6 @@
     width: 400px;
   }
 }
-
 .hero {
   background: $blue-30;
   margin-bottom: -40px;
@@ -51,8 +50,13 @@
       object-fit: cover;
     }
   }
-}
 
+  .box {
+    p {
+      font-size: 20px;
+    }
+  }
+}
 .latest {
   padding-bottom: 40px;
 
@@ -81,8 +85,15 @@
       }
     }
   }
-}
 
+  .box {
+    font-size: 18px;
+
+    p {
+      line-height: 1.25;
+    }
+  }
+}
 .goods {
   padding: 40px 0;
 
@@ -114,7 +125,6 @@
     color: $brown-100;
   }
 }
-
 .brands {
   padding: 40px 0;
 
@@ -145,7 +155,6 @@
     }
   }
 }
-
 .about {
   padding: 40px 0;
 
@@ -186,9 +195,14 @@
     &--sm {
       margin-bottom: unset;
     }
+
+    p {
+      &._lg {
+        font-size: 20px;
+      }
+    }
   }
 }
-
 .category {
   padding: 40px 0;
 
@@ -229,8 +243,11 @@
       }
     }
   }
-}
 
+  .badge{
+    font-size: 14px;
+  }
+}
 .benefits {
   padding-top: 120px;
   margin-top: auto;
@@ -271,7 +288,6 @@
     }
   }
 }
-
 @mixin index-1360 {
   .latest {
     &__item {
@@ -287,7 +303,6 @@
     padding-top: 100px;
   }
 }
-
 @mixin index-1280 {
   .hero {
     margin-bottom: -20px;
@@ -295,11 +310,21 @@
     &__content {
       padding: 60px 0 60px;
     }
+
+    .box {
+      p {
+        font-size: 18px;
+      }
+    }
   }
 
   .latest {
     &__item {
       gap: 24px;
+    }
+
+    .box {
+      font-size: 16px;
     }
   }
 
@@ -316,10 +341,15 @@
       &--sm {
         margin-bottom: unset;
       }
+
+      p {
+        &._lg {
+          font-size: 18px;
+        }
+      }
     }
   }
 }
-
 @mixin index-1160 {
   .about {
     &__inner {
@@ -333,7 +363,6 @@
     }
   }
 }
-
 @mixin index-1025 {
   .latest {
     .row {
@@ -401,7 +430,6 @@
     padding-top: 80px;
   }
 }
-
 @mixin index-940 {
   .hero {
     margin-bottom: -10px;
@@ -455,7 +483,6 @@
     }
   }
 }
-
 @mixin index-768 {
   .hero {
     margin-bottom: unset;
@@ -561,8 +588,17 @@
     }
   }
 }
-
 @mixin index-580 {
+  .hero {
+    .box {
+      gap: 8px;
+
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+
   .goods {
     .row {
       margin-bottom: 30px;
@@ -601,9 +637,19 @@
 
   .about {
     padding: 20px 0;
+
     &__content {
       padding: 16px;
     }
+
+    .box {
+      p {
+        &._lg {
+          font-size: 16px;
+        }
+      }
+    }
+    
   }
 
   .category {
@@ -629,7 +675,6 @@
     }
   }
 }
-
 @mixin index-460 {
   .hero {
     &__content {
@@ -650,13 +695,6 @@
     padding: 20px 0;
   }
 
-  .about {
-    h3 {
-      font-size: 20px;
-    }
-  }
 }
-
 @mixin index-380 {
- 
 }

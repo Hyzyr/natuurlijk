@@ -58,6 +58,7 @@
       font-size: 20px;
       width: 5.5em;
       height: 5.5em;
+      @include transition;
 
       img,
       svg {
@@ -260,8 +261,6 @@
           opacity: 1;
         }
       }
-    }
-    &-brand {
     }
   }
   &.sticky {
