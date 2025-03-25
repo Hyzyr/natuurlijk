@@ -177,26 +177,29 @@
 
     &__inner {
       margin: 0 auto;
-      height: 100%;
-      overflow: auto;
+      height: 90%;
     }
 
     &__container {
-      padding: 32px;
+      padding: 32px 12px 32px 32px;
       background: $white;
       border-radius: 6px;
       display: flex;
-      gap: 32px;
+      gap: 20px;
+      height: 100%;
 
       max-width: 1194px;
       margin: 0 auto 0;
     }
 
     &__column {
-      width: 214px;
+      width: 230px;
       display: flex;
       flex-direction: column;
       gap: 40px;
+      padding-right: 16px;
+      overflow: auto;
+      height: 100%;
 
       &-group {
         display: flex;
@@ -236,7 +239,9 @@
       display: flex;
       flex-direction: column;
       gap: 40px;
-
+      height: 100%;
+      overflow: auto;
+      padding-right: 20px;
       &-box {
         display: flex;
         align-items: center;
@@ -971,6 +976,7 @@
 
       &__inner {
         padding-right: 10px;
+        overflow: auto;
       }
 
       &__container {
@@ -981,11 +987,21 @@
 
       &__column {
         width: 100%;
+        max-width: unset;
+        overflow: unset;
+        max-width: unset;
+        flex: unset;
+        padding-right: unset;
       }
 
       &__content {
+        width: 100%;
         order: -1;
         gap: 16px;
+        flex: unset;
+        height: unset;
+        overflow: unset;
+        padding-right: unset;
 
         &-box {
           padding: 16px 0;
