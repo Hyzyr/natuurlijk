@@ -1753,6 +1753,9 @@ svg {
 .headerMenu__inner {
   display: flex;
 }
+.headerMenu__inner-mobactions {
+  display: none;
+}
 .header.sticky {
   top: -40px;
 }
@@ -4602,6 +4605,7 @@ svg {
     flex-direction: column;
   }
   .headerMenu__inner-mobactions {
+    display: flex;
     margin-top: auto;
   }
   .headerMenu__inner-mobactions .button--text {
