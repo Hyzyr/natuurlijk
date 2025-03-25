@@ -96,6 +96,11 @@
         <div class="headerMain">
           <div class="autoContainer">
             <div class="headerMain__inner">
+              <div class="headerMain__inner-burger">
+                <button class="burger" id="menuBtn">
+                  <span></span>
+                </button>
+              </div>
               <a href="/" class="headerMain-logo">
                 <img src="images/logo-main.png" alt="%ProjectName%" />
               </a>
@@ -123,8 +128,9 @@
                   </svg>
                 </span>
               </div>
-              <div class="headerMain__actions">
-                <button class="icoBtn icoBtn--main">
+              <div class="headerMain__actions toggleWithMenu">
+                <button class="icoBtn icoBtn--main mobMenu">
+                  <span>Jildert</span>
                   <svg
                     width="18"
                     height="20"
@@ -171,51 +177,74 @@
                   <div class="icoBtn-badge">23</div>
                 </button>
               </div>
-              <button class="burger" id="menuBtn"></button>
             </div>
           </div>
         </div>
-        <div class="headerMenu">
+        <div class="headerMenu" id="menu">
           <div class="autoContainer">
             <div class="headerMenu__inner">
               <nav class="nav">
-                <div class="nav-link active">
+                <div class="nav-link" data-tab="tab-gezondheid">
                   <span>Gezondheid</span>
                 </div>
-                <div class="nav-link">
+                <div class="nav-link" data-tab="tab-voedingssupplementen">
                   <span>Voedingssupplementen</span>
                 </div>
-                <div class="nav-link">
+                <div class="nav-link" data-tab="tab-baby-mama">
                   <span>Baby & Mama</span>
                 </div>
-                <div class="nav-link">
+                <div class="nav-link" data-tab="tab-verzorging">
                   <span>Verzorging</span>
                 </div>
-                <div class="nav-link">
+                <div class="nav-link" data-tab="tab-uiterlijk">
                   <span>Uiterlijk</span>
                 </div>
-                <div class="nav-link">
+                <div class="nav-link" data-tab="tab-eten-drinken">
                   <span>Eten & Drinken</span>
                 </div>
-                <div class="nav-link">
+                <div class="nav-link" data-tab="tab-huishoudelijk">
                   <span>Huishoudelijk</span>
                 </div>
-                <div class="nav-link">
+                <div class="nav-link" data-tab="tab-erotiek">
                   <span>Erotiek</span>
                 </div>
-                <div class="nav-link">
+                <div class="nav-link" data-tab="tab-op=op">
                   <span>OP=OP</span>
                 </div>
               </nav>
+              <div class="headerMenu__inner-mobactions">
+                <button class="button button--text">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M2.5 15V10C2.5 8.01088 3.29018 6.10322 4.6967 4.6967C6.10322 3.29018 8.01088 2.5 10 2.5C11.9891 2.5 13.8968 3.29018 15.3033 4.6967C16.7098 6.10322 17.5 8.01088 17.5 10V15"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path
+                      d="M17.5 15.8334C17.5 16.2754 17.3244 16.6993 17.0118 17.0119C16.6993 17.3244 16.2754 17.5 15.8333 17.5H15C14.558 17.5 14.134 17.3244 13.8215 17.0119C13.5089 16.6993 13.3333 16.2754 13.3333 15.8334V13.3334C13.3333 12.8913 13.5089 12.4674 13.8215 12.1548C14.134 11.8423 14.558 11.6667 15 11.6667H17.5V15.8334ZM2.5 15.8334C2.5 16.2754 2.67559 16.6993 2.98816 17.0119C3.30072 17.3244 3.72464 17.5 4.16667 17.5H5C5.44203 17.5 5.86595 17.3244 6.17851 17.0119C6.49107 16.6993 6.66667 16.2754 6.66667 15.8334V13.3334C6.66667 12.8913 6.49107 12.4674 6.17851 12.1548C5.86595 11.8423 5.44203 11.6667 5 11.6667H2.5V15.8334Z"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                  Klantenservice
+                </button>
+              </div>
             </div>
           </div>
         </div>
-        <div class="headerTabs ">
+        <div class="headerTabs">
           <div class="autoContainer">
-            <div class="headerTabs__tab">
+            <div class="headerTabs__tab" id="tab-gezondheid">
               <div class="headerTabs__tab-body">
                 <div class="headerTabs__tab-body-list">
-                  <h6 class="_sm">Categorieën</h6>
+                  <h6 class="_sm backToMenu">Categorieën (gezondheid)</h6>
                   <div class="headerTabs__links">
                     <a class="headerTabs-link" href="#">Pijnstilling</a>
                     <a class="headerTabs-link" href="#">Ogen en oren</a>
@@ -239,24 +268,416 @@
                   </div>
                 </div>
                 <div class="headerTabs__tab-body-grid">
-                  <h6 class="_sm">Merken</h6>
+                  <h6 class="_sm backToMenu">Merken</h6>
                   <ul>
-                  <li class="headerTabs-brand">
-                    <a href="#"><img src="images/brands/brand-1.png" alt="brand-1" /></a>
-                  </li>
-                  <li class="headerTabs-brand">
-                    <a href="#"><img src="images/brands/brand-2.png" alt="brand-2" /></a>
-                  </li>
-                  <li class="headerTabs-brand">
-                    <a href="#"><img src="images/brands/brand-3.png" alt="brand-3" /></a>
-                  </li>
-                </ul>
+                    <li class="headerTabs-brand">
+                      <a href="#"
+                        ><img src="images/brands/brand-1.png" alt="brand-1"
+                      /></a>
+                    </li>
+                    <li class="headerTabs-brand">
+                      <a href="#"
+                        ><img src="images/brands/brand-2.png" alt="brand-2"
+                      /></a>
+                    </li>
+                    <li class="headerTabs-brand">
+                      <a href="#"
+                        ><img src="images/brands/brand-3.png" alt="brand-3"
+                      /></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="headerTabs__tab" id="tab-voedingssupplementen">
+              <div class="headerTabs__tab-body">
+                <div class="headerTabs__tab-body-list">
+                  <h6 class="_sm backToMenu">
+                    Categorieën (voedingssupplementen)
+                  </h6>
+                  <div class="headerTabs__links">
+                    <a class="headerTabs-link" href="#">Pijnstilling</a>
+                    <a class="headerTabs-link" href="#">Ogen en oren</a>
+                    <a class="headerTabs-link" href="#">Rustgevend</a>
+                    <a class="headerTabs-link" href="#"
+                      >Spieren en gewrichten</a
+                    >
+                    <a class="headerTabs-link" href="#">Huidverzorging</a>
+                    <a class="headerTabs-link" href="#"
+                      >Homeopathie en kruiden</a
+                    >
+                    <a class="headerTabs-link" href="#">Diabetes</a>
+                    <a class="headerTabs-link" href="#">Griep en verkoudheid</a>
+                    <a class="headerTabs-link" href="#">Stoppen met roken</a>
+                    <a class="headerTabs-link" href="#"
+                      >Nier blaas en prostaat</a
+                    >
+                    <a class="headerTabs-link" href="#">Luchtwegen</a>
+                    <a class="headerTabs-link" href="#">Afvallen</a>
+                    <a class="headerTabs-link" href="#">Maag en darmen</a>
+                  </div>
+                </div>
+                <div class="headerTabs__tab-body-grid">
+                  <h6 class="_sm backToMenu">Merken</h6>
+                  <ul>
+                    <li class="headerTabs-brand">
+                      <a href="#"
+                        ><img src="images/brands/brand-1.png" alt="brand-1"
+                      /></a>
+                    </li>
+                    <li class="headerTabs-brand">
+                      <a href="#"
+                        ><img src="images/brands/brand-2.png" alt="brand-2"
+                      /></a>
+                    </li>
+                    <li class="headerTabs-brand">
+                      <a href="#"
+                        ><img src="images/brands/brand-3.png" alt="brand-3"
+                      /></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="headerTabs__tab" id="tab-baby-mama">
+              <div class="headerTabs__tab-body">
+                <div class="headerTabs__tab-body-list">
+                  <h6 class="_sm backToMenu">Categorieën (baby-mama)</h6>
+                  <div class="headerTabs__links">
+                    <a class="headerTabs-link" href="#">Pijnstilling</a>
+                    <a class="headerTabs-link" href="#">Ogen en oren</a>
+                    <a class="headerTabs-link" href="#">Rustgevend</a>
+                    <a class="headerTabs-link" href="#"
+                      >Spieren en gewrichten</a
+                    >
+                    <a class="headerTabs-link" href="#">Huidverzorging</a>
+                    <a class="headerTabs-link" href="#"
+                      >Homeopathie en kruiden</a
+                    >
+                    <a class="headerTabs-link" href="#">Diabetes</a>
+                    <a class="headerTabs-link" href="#">Griep en verkoudheid</a>
+                    <a class="headerTabs-link" href="#">Stoppen met roken</a>
+                    <a class="headerTabs-link" href="#"
+                      >Nier blaas en prostaat</a
+                    >
+                    <a class="headerTabs-link" href="#">Luchtwegen</a>
+                    <a class="headerTabs-link" href="#">Afvallen</a>
+                    <a class="headerTabs-link" href="#">Maag en darmen</a>
+                  </div>
+                </div>
+                <div class="headerTabs__tab-body-grid">
+                  <h6 class="_sm backToMenu">Merken</h6>
+                  <ul>
+                    <li class="headerTabs-brand">
+                      <a href="#"
+                        ><img src="images/brands/brand-1.png" alt="brand-1"
+                      /></a>
+                    </li>
+                    <li class="headerTabs-brand">
+                      <a href="#"
+                        ><img src="images/brands/brand-2.png" alt="brand-2"
+                      /></a>
+                    </li>
+                    <li class="headerTabs-brand">
+                      <a href="#"
+                        ><img src="images/brands/brand-3.png" alt="brand-3"
+                      /></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="headerTabs__tab" id="tab-verzorging">
+              <div class="headerTabs__tab-body">
+                <div class="headerTabs__tab-body-list">
+                  <h6 class="_sm backToMenu">Categorieën (verzorging)</h6>
+                  <div class="headerTabs__links">
+                    <a class="headerTabs-link" href="#">Pijnstilling</a>
+                    <a class="headerTabs-link" href="#">Ogen en oren</a>
+                    <a class="headerTabs-link" href="#">Rustgevend</a>
+                    <a class="headerTabs-link" href="#"
+                      >Spieren en gewrichten</a
+                    >
+                    <a class="headerTabs-link" href="#">Huidverzorging</a>
+                    <a class="headerTabs-link" href="#"
+                      >Homeopathie en kruiden</a
+                    >
+                    <a class="headerTabs-link" href="#">Diabetes</a>
+                    <a class="headerTabs-link" href="#">Griep en verkoudheid</a>
+                    <a class="headerTabs-link" href="#">Stoppen met roken</a>
+                    <a class="headerTabs-link" href="#"
+                      >Nier blaas en prostaat</a
+                    >
+                    <a class="headerTabs-link" href="#">Luchtwegen</a>
+                    <a class="headerTabs-link" href="#">Afvallen</a>
+                    <a class="headerTabs-link" href="#">Maag en darmen</a>
+                  </div>
+                </div>
+                <div class="headerTabs__tab-body-grid">
+                  <h6 class="_sm backToMenu">Merken</h6>
+                  <ul>
+                    <li class="headerTabs-brand">
+                      <a href="#"
+                        ><img src="images/brands/brand-1.png" alt="brand-1"
+                      /></a>
+                    </li>
+                    <li class="headerTabs-brand">
+                      <a href="#"
+                        ><img src="images/brands/brand-2.png" alt="brand-2"
+                      /></a>
+                    </li>
+                    <li class="headerTabs-brand">
+                      <a href="#"
+                        ><img src="images/brands/brand-3.png" alt="brand-3"
+                      /></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="headerTabs__tab" id="tab-uiterlijk">
+              <div class="headerTabs__tab-body">
+                <div class="headerTabs__tab-body-list">
+                  <h6 class="_sm backToMenu">Categorieën (uiterlijk)</h6>
+                  <div class="headerTabs__links">
+                    <a class="headerTabs-link" href="#">Pijnstilling</a>
+                    <a class="headerTabs-link" href="#">Ogen en oren</a>
+                    <a class="headerTabs-link" href="#">Rustgevend</a>
+                    <a class="headerTabs-link" href="#"
+                      >Spieren en gewrichten</a
+                    >
+                    <a class="headerTabs-link" href="#">Huidverzorging</a>
+                    <a class="headerTabs-link" href="#"
+                      >Homeopathie en kruiden</a
+                    >
+                    <a class="headerTabs-link" href="#">Diabetes</a>
+                    <a class="headerTabs-link" href="#">Griep en verkoudheid</a>
+                    <a class="headerTabs-link" href="#">Stoppen met roken</a>
+                    <a class="headerTabs-link" href="#"
+                      >Nier blaas en prostaat</a
+                    >
+                    <a class="headerTabs-link" href="#">Luchtwegen</a>
+                    <a class="headerTabs-link" href="#">Afvallen</a>
+                    <a class="headerTabs-link" href="#">Maag en darmen</a>
+                  </div>
+                </div>
+                <div class="headerTabs__tab-body-grid">
+                  <h6 class="_sm backToMenu">Merken</h6>
+                  <ul>
+                    <li class="headerTabs-brand">
+                      <a href="#"
+                        ><img src="images/brands/brand-1.png" alt="brand-1"
+                      /></a>
+                    </li>
+                    <li class="headerTabs-brand">
+                      <a href="#"
+                        ><img src="images/brands/brand-2.png" alt="brand-2"
+                      /></a>
+                    </li>
+                    <li class="headerTabs-brand">
+                      <a href="#"
+                        ><img src="images/brands/brand-3.png" alt="brand-3"
+                      /></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="headerTabs__tab" id="tab-eten-drinken">
+              <div class="headerTabs__tab-body">
+                <div class="headerTabs__tab-body-list">
+                  <h6 class="_sm backToMenu">Categorieën (eten-drinken)</h6>
+                  <div class="headerTabs__links">
+                    <a class="headerTabs-link" href="#">Pijnstilling</a>
+                    <a class="headerTabs-link" href="#">Ogen en oren</a>
+                    <a class="headerTabs-link" href="#">Rustgevend</a>
+                    <a class="headerTabs-link" href="#"
+                      >Spieren en gewrichten</a
+                    >
+                    <a class="headerTabs-link" href="#">Huidverzorging</a>
+                    <a class="headerTabs-link" href="#"
+                      >Homeopathie en kruiden</a
+                    >
+                    <a class="headerTabs-link" href="#">Diabetes</a>
+                    <a class="headerTabs-link" href="#">Griep en verkoudheid</a>
+                    <a class="headerTabs-link" href="#">Stoppen met roken</a>
+                    <a class="headerTabs-link" href="#"
+                      >Nier blaas en prostaat</a
+                    >
+                    <a class="headerTabs-link" href="#">Luchtwegen</a>
+                    <a class="headerTabs-link" href="#">Afvallen</a>
+                    <a class="headerTabs-link" href="#">Maag en darmen</a>
+                  </div>
+                </div>
+                <div class="headerTabs__tab-body-grid">
+                  <h6 class="_sm backToMenu">Merken</h6>
+                  <ul>
+                    <li class="headerTabs-brand">
+                      <a href="#"
+                        ><img src="images/brands/brand-1.png" alt="brand-1"
+                      /></a>
+                    </li>
+                    <li class="headerTabs-brand">
+                      <a href="#"
+                        ><img src="images/brands/brand-2.png" alt="brand-2"
+                      /></a>
+                    </li>
+                    <li class="headerTabs-brand">
+                      <a href="#"
+                        ><img src="images/brands/brand-3.png" alt="brand-3"
+                      /></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="headerTabs__tab" id="tab-huishoudelijk">
+              <div class="headerTabs__tab-body">
+                <div class="headerTabs__tab-body-list">
+                  <h6 class="_sm backToMenu">Categorieën (huishoudelijk)</h6>
+                  <div class="headerTabs__links">
+                    <a class="headerTabs-link" href="#">Pijnstilling</a>
+                    <a class="headerTabs-link" href="#">Ogen en oren</a>
+                    <a class="headerTabs-link" href="#">Rustgevend</a>
+                    <a class="headerTabs-link" href="#"
+                      >Spieren en gewrichten</a
+                    >
+                    <a class="headerTabs-link" href="#">Huidverzorging</a>
+                    <a class="headerTabs-link" href="#"
+                      >Homeopathie en kruiden</a
+                    >
+                    <a class="headerTabs-link" href="#">Diabetes</a>
+                    <a class="headerTabs-link" href="#">Griep en verkoudheid</a>
+                    <a class="headerTabs-link" href="#">Stoppen met roken</a>
+                    <a class="headerTabs-link" href="#"
+                      >Nier blaas en prostaat</a
+                    >
+                    <a class="headerTabs-link" href="#">Luchtwegen</a>
+                    <a class="headerTabs-link" href="#">Afvallen</a>
+                    <a class="headerTabs-link" href="#">Maag en darmen</a>
+                  </div>
+                </div>
+                <div class="headerTabs__tab-body-grid">
+                  <h6 class="_sm backToMenu">Merken</h6>
+                  <ul>
+                    <li class="headerTabs-brand">
+                      <a href="#"
+                        ><img src="images/brands/brand-1.png" alt="brand-1"
+                      /></a>
+                    </li>
+                    <li class="headerTabs-brand">
+                      <a href="#"
+                        ><img src="images/brands/brand-2.png" alt="brand-2"
+                      /></a>
+                    </li>
+                    <li class="headerTabs-brand">
+                      <a href="#"
+                        ><img src="images/brands/brand-3.png" alt="brand-3"
+                      /></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="headerTabs__tab" id="tab-erotiek">
+              <div class="headerTabs__tab-body">
+                <div class="headerTabs__tab-body-list">
+                  <h6 class="_sm backToMenu">Categorieën (erotiek)</h6>
+                  <div class="headerTabs__links">
+                    <a class="headerTabs-link" href="#">Pijnstilling</a>
+                    <a class="headerTabs-link" href="#">Ogen en oren</a>
+                    <a class="headerTabs-link" href="#">Rustgevend</a>
+                    <a class="headerTabs-link" href="#"
+                      >Spieren en gewrichten</a
+                    >
+                    <a class="headerTabs-link" href="#">Huidverzorging</a>
+                    <a class="headerTabs-link" href="#"
+                      >Homeopathie en kruiden</a
+                    >
+                    <a class="headerTabs-link" href="#">Diabetes</a>
+                    <a class="headerTabs-link" href="#">Griep en verkoudheid</a>
+                    <a class="headerTabs-link" href="#">Stoppen met roken</a>
+                    <a class="headerTabs-link" href="#"
+                      >Nier blaas en prostaat</a
+                    >
+                    <a class="headerTabs-link" href="#">Luchtwegen</a>
+                    <a class="headerTabs-link" href="#">Afvallen</a>
+                    <a class="headerTabs-link" href="#">Maag en darmen</a>
+                  </div>
+                </div>
+                <div class="headerTabs__tab-body-grid">
+                  <h6 class="_sm backToMenu">Merken</h6>
+                  <ul>
+                    <li class="headerTabs-brand">
+                      <a href="#"
+                        ><img src="images/brands/brand-1.png" alt="brand-1"
+                      /></a>
+                    </li>
+                    <li class="headerTabs-brand">
+                      <a href="#"
+                        ><img src="images/brands/brand-2.png" alt="brand-2"
+                      /></a>
+                    </li>
+                    <li class="headerTabs-brand">
+                      <a href="#"
+                        ><img src="images/brands/brand-3.png" alt="brand-3"
+                      /></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="headerTabs__tab" id="tab-op=op">
+              <div class="headerTabs__tab-body">
+                <div class="headerTabs__tab-body-list">
+                  <h6 class="_sm backToMenu">Categorieën (op=op)</h6>
+                  <div class="headerTabs__links">
+                    <a class="headerTabs-link" href="#">Pijnstilling</a>
+                    <a class="headerTabs-link" href="#">Ogen en oren</a>
+                    <a class="headerTabs-link" href="#">Rustgevend</a>
+                    <a class="headerTabs-link" href="#"
+                      >Spieren en gewrichten</a
+                    >
+                    <a class="headerTabs-link" href="#">Huidverzorging</a>
+                    <a class="headerTabs-link" href="#"
+                      >Homeopathie en kruiden</a
+                    >
+                    <a class="headerTabs-link" href="#">Diabetes</a>
+                    <a class="headerTabs-link" href="#">Griep en verkoudheid</a>
+                    <a class="headerTabs-link" href="#">Stoppen met roken</a>
+                    <a class="headerTabs-link" href="#"
+                      >Nier blaas en prostaat</a
+                    >
+                    <a class="headerTabs-link" href="#">Luchtwegen</a>
+                    <a class="headerTabs-link" href="#">Afvallen</a>
+                    <a class="headerTabs-link" href="#">Maag en darmen</a>
+                  </div>
+                </div>
+                <div class="headerTabs__tab-body-grid">
+                  <h6 class="_sm backToMenu">Merken</h6>
+                  <ul>
+                    <li class="headerTabs-brand">
+                      <a href="#"
+                        ><img src="images/brands/brand-1.png" alt="brand-1"
+                      /></a>
+                    </li>
+                    <li class="headerTabs-brand">
+                      <a href="#"
+                        ><img src="images/brands/brand-2.png" alt="brand-2"
+                      /></a>
+                    </li>
+                    <li class="headerTabs-brand">
+                      <a href="#"
+                        ><img src="images/brands/brand-3.png" alt="brand-3"
+                      /></a>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="headerTabs-fog "></div>
+        <div class="headerTabs-fog"></div>
       </header>
       <div class="header-placeholder"></div>
 

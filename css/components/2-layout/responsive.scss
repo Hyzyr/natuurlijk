@@ -1,3 +1,6 @@
+@media (max-width: 1560px) {
+  @include header-1560;
+}
 @media (max-width: 1440px) {
   @include typography-1440;
   @include index-1440;
@@ -17,6 +20,7 @@
 
 @media (max-width: 1280px) {
   @include typography-1280;
+  @include header-1280;
   @include index-1280;
   @include products-1280;
   @include basket-1280;
@@ -40,8 +44,9 @@
   @include components-1025;
   @include containers-1025;
   @include typography-1025;
-  @include index-1025;
+  @include header-1025;
   @include footer-1025;
+  @include index-1025;
   @include products-1025;
   @include detail-1025;
   @include basket-1025;
@@ -49,15 +54,20 @@
   @include account-1025;
   @include contact-1025;
 }
-
+@media (min-width: 941px) {
+  @include min-header-940;
+}
 @media (max-width: 940px) {
+  :root {
+    --header-height: 160px;
+  }
   ::-webkit-scrollbar {
     width: 4px;
     height: 4px;
   }
-
   @include components-940;
   @include containers-940;
+  @include header-940;
   @include index-940;
   @include footer-940;
   @include detail-940;
@@ -104,7 +114,6 @@
   @include components-460;
   @include index-460;
   @include products-460;
-
 }
 
 @media (max-width: 380px) {
