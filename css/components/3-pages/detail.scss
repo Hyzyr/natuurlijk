@@ -219,7 +219,6 @@
     }
   }
 }
-
 .info {
   padding: 40px 0;
 
@@ -401,7 +400,6 @@
     }
   }
 }
-
 @mixin detail-1025 {
   .detail {
     padding: 20px 0 30px;
@@ -415,7 +413,6 @@
     }
   }
 }
-
 @mixin detail-940 {
   .detail {
     &__info {
@@ -460,7 +457,6 @@
     }
   }
 }
-
 @mixin detail-768 {
   .detail {
     &__row {
@@ -587,10 +583,13 @@
     }
   }
 }
-
 @mixin detail-580 {
   .detail {
     padding: 20px 0;
+
+    h3{
+      font-size: 28px;
+    }
   }
 
   .info {

@@ -1,5 +1,6 @@
 .contact {
   padding: 20px 0 40px;
+
   &__content {
     display: flex;
     flex-direction: column;
@@ -50,7 +51,6 @@
     padding: 20px 0 30px;
   }
 }
-
 @mixin contact-768 {
   .contact {
     &__content {
@@ -94,7 +94,6 @@
     }
   }
 }
-
 @mixin contact-580 {
   .contact {
     padding: 20px 0 20px;
