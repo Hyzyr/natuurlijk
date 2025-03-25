@@ -94,12 +94,12 @@ if (filter) {
 
   filterOpenButton.addEventListener('click', () => {
     filter.classList.add('active');
-    body.classList.add('active');
+    document.body.classList.add('active');
   });
 
   filterCloseButton.addEventListener('click', () => {
     filter.classList.remove('active');
-    body.classList.remove('active');
+    document.body.classList.remove('active');
   });
   // filter popup end
 }
