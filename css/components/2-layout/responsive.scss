@@ -102,6 +102,7 @@
   @include checkout-580;
   @include account-580;
   @include contact-580;
+  @include header-580;
 }
 
 @media (max-width: 460px) {
@@ -114,6 +115,8 @@
   @include components-460;
   @include index-460;
   @include products-460;
+  @include header-460;
+  @include basket-460;
 }
 
 @media (max-width: 380px) {

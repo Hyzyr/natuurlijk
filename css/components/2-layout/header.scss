@@ -13,6 +13,10 @@
     width: 100%;
     height: 228px;
     transition: 0.1s ease-out 0.02s;
+
+    &._sm {
+      height: 130px;
+    }
   }
   &QL {
     padding: 10px 0;
@@ -129,6 +133,25 @@
       height: 140px;
       transition-duration: 0.2s;
       transition-delay: 0s;
+
+      &._sm {
+        height: 98px;
+      }
+    }
+  }
+
+  &--sm {
+    .header {
+      &Main {
+        border-bottom: 1px solid $brown-25;
+      }
+      &QL {
+        display: none;
+      }
+    }
+
+    &.sticky {
+      top: 0;
     }
   }
 }
@@ -393,7 +416,11 @@
           }
         }
       }
-      &-brand {
+
+      .button {
+        &--link {
+          margin: auto auto 0 0;
+        }
       }
     }
   }
@@ -472,6 +499,12 @@
         }
       }
     }
+
+    &--sm {
+      &.sticky {
+        top: 0;
+      }
+    }
   }
   .nav {
     justify-content: space-between;
@@ -493,13 +526,14 @@
     }
   }
 }
-
 @mixin header-940 {
   .header {
     &Main {
+      border-bottom: 1px solid $brown-25;
       &__inner {
         flex-wrap: wrap;
-        row-gap: 8px;
+        gap: 8px 1em;
+        padding: 8px 0 16px;
 
         &-burger {
           display: block;
@@ -546,6 +580,7 @@
       }
       &-logo {
         min-width: unset;
+        font-size: 18px;
       }
     }
     .burger {
@@ -732,6 +767,42 @@
       &-brand {
       }
     }
+    &-placeholder {
+      height: 211px;
+
+      &._sm {
+        height: 159px;
+      }
+    }
+
+    &--sm {
+      .header {
+        &QL {
+          display: block;
+        }
+      }
+      .burger {
+        opacity: 0;
+      }
+
+      &.sticky {
+        top: -31px;
+
+        .headerMain {
+          &__inner {
+            padding: 8px 0;
+          }
+        }
+      }
+    }
+
+    &.sticky {
+      .headerMain {
+        &__inner {
+          padding: 8px 0;
+        }
+      }
+    }
   }
 
   .nav {
@@ -810,6 +881,51 @@
             width: 2px;
             height: 100%;
           }
+        }
+      }
+    }
+  }
+}
+@mixin header-580 {
+  .header {
+    &Main {
+      &-logo {
+        font-size: 16px;
+      }
+    }
+    &QL {
+      &-item {
+        justify-content: center;
+      }
+    }
+    &-placeholder {
+      height: 200px;
+
+      &._sm {
+        height: 149px;
+      }
+    }
+  }
+}
+@mixin header-460 {
+  .header {
+    &Main {
+      &-logo {
+        font-size: 12px;
+      }
+    }
+    &-placeholder {
+      height: 180px;
+
+      &._sm {
+        height: 129px;
+      }
+    }
+
+    &.sticky {
+      .headerMain {
+        &-logo {
+          font-size: 12px;
         }
       }
     }

@@ -1,4 +1,48 @@
+const windowWidth = window.innerWidth;
+const effectType = windowWidth < 580 ? 'fade' : 'slide';
+
 const settings = {
+  headerSlider: {
+    slidesPerView: 1,
+    spaceBetween: 0,
+
+    effect: effectType,
+    fadeEffect: {
+      crossFade: true,
+    },
+
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+
+    loop: true,
+
+    breakpoints: {
+      1160: {
+        slidesPerView: 4,
+        spaceBetween: 32,
+        loop: false,
+        autoplay: false,
+      },
+
+      1025: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+
+      840: {
+        slidesPerView: 3,
+        spaceBetween: 24,
+      },
+
+      580: {
+        slidesPerView: 2,
+        spaceBetween: 24,
+      },
+    },
+  },
+
   latestSlider: {
     slidesPerView: 1.18,
     spaceBetween: 16,
@@ -216,20 +260,37 @@ const settings = {
     slidesPerView: 1,
     spaceBetween: 16,
 
+    effect: effectType,
+    fadeEffect: {
+      crossFade: true,
+    },
+
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+
+    loop: true,
+
     breakpoints: {
       1420: {
         slidesPerView: 4,
         spaceBetween: 32,
+        loop: false,
+        autoplay: false,
       },
 
       1160: {
         slidesPerView: 4,
         spaceBetween: 32,
+        loop: false,
+        autoplay: false,
       },
 
       1025: {
         slidesPerView: 3,
         spaceBetween: 20,
+    
       },
 
       840: {
