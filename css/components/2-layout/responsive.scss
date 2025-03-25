@@ -87,6 +87,7 @@
   @include checkout-768;
   @include account-768;
   @include contact-768;
+  @include header-768;
 }
 
 @media (max-width: 580px) {
@@ -120,6 +121,7 @@
 }
 
 @media (max-width: 380px) {
+  @include header-380;
   @include index-380;
   @include products-380;
 }

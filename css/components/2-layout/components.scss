@@ -228,6 +228,7 @@
   border: 1px solid transparent;
   border-radius: 6px;
 
+  font-family: $font-secondary;
   color: $brown-150;
   font-style: normal;
   font-weight: 700;
@@ -245,7 +246,6 @@
   }
 
   &--primary {
-    font-family: $font-secondary;
     background: $brown-150;
     border-color: $brown-150;
     color: $white;
@@ -282,7 +282,6 @@
   &--secondary {
     font-size: 18px;
     padding: 0.78em 0.8em;
-    font-family: $font-secondary;
     background: $green-100;
     border-color: $green-100;
     color: $white;
@@ -303,7 +302,6 @@
   }
 
   &--border {
-    font-family: $font-secondary;
     font-weight: 400;
     padding: 0.65em 1em;
     border-color: $green-100;
@@ -317,7 +315,6 @@
 
   &--text {
     position: relative;
-    font-family: $font-secondary;
     font-weight: 700;
     padding: 0 0 10px 0;
     gap: 8px;
@@ -431,6 +428,7 @@
     text-decoration: underline;
     color: $green-100;
     font-weight: 700;
+
 
     &:hover {
       color: $green-75;

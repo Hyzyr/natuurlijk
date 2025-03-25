@@ -82,17 +82,29 @@
             <a href="/" class="headerMain-logo">
               <img src="images/logo-main.png" alt="%ProjectName%" />
             </a>
-            <div class="input input--search">
-              <input type="text" placeholder="Waar ben je naar op zoek?" id="headerSearch" />
-              <span class="icon icon--stroke">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                  <path d="M21 21L16.65 16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round" />
-                </svg>
-              </span>
+            <div class="input__outer" id="headerSearchOuter">
+              <div class="input input--search">
+                <input type="text" placeholder="Waar ben je naar op zoek?" id="headerSearch" />
+                <span class="icon icon--stroke">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M21 21L16.65 16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                </span>
+              </div>
+              <button class="button button--icon headerSearch__close">
+                <span class="icon icon--stroke">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                </span>
+              </button>
             </div>
             <div class="headerMain__actions toggleWithMenu">
               <a href="/account.html" class="icoBtn icoBtn--main mobMenu">
@@ -544,7 +556,575 @@
             </div>
           </div>
         </div>
-      </div>  
+      </div>
+      <div class="headerSearch" id="headerSearchPopup">
+        <div class="autoContainer">
+          <div class="headerSearch__inner">
+            <div class="headerSearch__container">
+              <div class="headerSearch__box">
+                <button class="button button--icon headerSearch__close">
+                  <span class="icon icon--stroke">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                      <path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+                  </span>
+                </button>
+                <h4>
+                  Zoeken
+                </h4>
+              </div>
+              <div class="headerSearch__column">
+                <div class="headerSearch__column-group">
+                  <h6>
+                    Categorieën
+                  </h6>
+                  <div class="headerSearch__column-category">
+                    <button class="headerSearch__column-button">
+                      <span>
+                        Shampoos
+                      </span>
+                    </button>
+                    <button class="headerSearch__column-button">
+                      <span>
+                        Huidolieën
+                      </span>
+                    </button>
+                    <button class="headerSearch__column-button">
+                      <span>
+                        Kurkuma
+                      </span>
+                    </button>
+                    <button class="headerSearch__column-button">
+                      <span>
+                        Shampoo
+                      </span>
+                    </button>
+                    <button class="headerSearch__column-button">
+                      <span>
+                        Etherische olieën
+                      </span>
+                    </button>
+                  </div>
+                </div>
+                <div class="headerSearch__column-group">
+                  <h6>
+                    Merken
+                  </h6>
+                  <div class="headerSearch__column-category">
+                    <button class="headerSearch__column-button">
+                      <span>
+                        Zwitsal
+                      </span>
+                    </button>
+                    <button class="headerSearch__column-button">
+                      <span>
+                        Uni Swiss
+                      </span>
+                    </button>
+                    <button class="headerSearch__column-button">
+                      <span>
+                        Ricola
+                      </span>
+                    </button>
+                    <button class="headerSearch__column-button">
+                      <span>
+                        A. Vogel
+                      </span>
+                    </button>
+                    <button class="headerSearch__column-button">
+                      <span>
+                        Hagerty
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="headerSearch__content">
+                <div class="headerSearch__content-box">
+                  <span>
+                    3 artikelen
+                  </span>
+                  <button class="button button--link">
+                    <span>
+                      Bekijk alle resultaten
+                    </span>
+                  </button>
+                </div>
+                <div class="headerSearch__content-row">
+                  <div class="cart cart--product">
+                    <div class="badge badge--lg badge--opacity">
+                      <span>
+                        Bestseller
+                      </span>
+                    </div>
+                    <div class="cart__image">
+                      <div class="ratioImage ratioImage--contain">
+                        <img src="/images/goods/product-1.png" alt="product">
+                      </div>
+                    </div>
+                    <div class="cart__info">
+                      <div class="cart__info-group">
+                        <h6>
+                          WELEDA Rhinodoron <span class="noBreak">neusspray (20 ml)</span>
+                        </h6>
+                        <p>Weleda Rhinodoron Neusspray verzorgt, reinigt en bevochtigt het droge</p>
+                        <div class="cart__info-stars">
+                          <span class="icon active">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <rect width="28" height="28" fill="white" />
+                              <path
+                                d="M13.9997 2.33325L17.6047 9.63658L25.6663 10.8149L19.833 16.4966L21.2097 24.5232L13.9997 20.7316L6.78967 24.5232L8.16634 16.4966L2.33301 10.8149L10.3947 9.63658L13.9997 2.33325Z"
+                                fill="currentColor" />
+                            </svg>
+                          </span>
+                          <span class="icon active">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <rect width="28" height="28" fill="white" />
+                              <path
+                                d="M13.9997 2.33325L17.6047 9.63658L25.6663 10.8149L19.833 16.4966L21.2097 24.5232L13.9997 20.7316L6.78967 24.5232L8.16634 16.4966L2.33301 10.8149L10.3947 9.63658L13.9997 2.33325Z"
+                                fill="currentColor" />
+                            </svg>
+                          </span>
+                          <span class="icon active">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <rect width="28" height="28" fill="white" />
+                              <path
+                                d="M13.9997 2.33325L17.6047 9.63658L25.6663 10.8149L19.833 16.4966L21.2097 24.5232L13.9997 20.7316L6.78967 24.5232L8.16634 16.4966L2.33301 10.8149L10.3947 9.63658L13.9997 2.33325Z"
+                                fill="currentColor" />
+                            </svg>
+                          </span>
+                          <span class="icon active">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <rect width="28" height="28" fill="white" />
+                              <path
+                                d="M13.9997 2.33325L17.6047 9.63658L25.6663 10.8149L19.833 16.4966L21.2097 24.5232L13.9997 20.7316L6.78967 24.5232L8.16634 16.4966L2.33301 10.8149L10.3947 9.63658L13.9997 2.33325Z"
+                                fill="currentColor" />
+                            </svg>
+                          </span>
+                          <span class="icon">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <rect width="28" height="28" fill="white" />
+                              <path
+                                d="M13.9997 2.33325L17.6047 9.63658L25.6663 10.8149L19.833 16.4966L21.2097 24.5232L13.9997 20.7316L6.78967 24.5232L8.16634 16.4966L2.33301 10.8149L10.3947 9.63658L13.9997 2.33325Z"
+                                fill="currentColor" />
+                            </svg>
+                          </span>
+                        </div>
+                      </div>
+                      <div class="cart__info-container">
+                        <div class="cart__info-box">
+                          <div class="badge badge--sm badge--grey">
+                            <span>20 ml</span>
+                          </div>
+                          <div class="badge badge--light">
+                            <span>Op voorraad</span>
+                          </div>
+                        </div>
+                        <div class="cart__info-stars">
+                          <span class="icon active">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <rect width="28" height="28" fill="white" />
+                              <path
+                                d="M13.9997 2.33325L17.6047 9.63658L25.6663 10.8149L19.833 16.4966L21.2097 24.5232L13.9997 20.7316L6.78967 24.5232L8.16634 16.4966L2.33301 10.8149L10.3947 9.63658L13.9997 2.33325Z"
+                                fill="currentColor" />
+                            </svg>
+                          </span>
+                          <span class="icon active">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <rect width="28" height="28" fill="white" />
+                              <path
+                                d="M13.9997 2.33325L17.6047 9.63658L25.6663 10.8149L19.833 16.4966L21.2097 24.5232L13.9997 20.7316L6.78967 24.5232L8.16634 16.4966L2.33301 10.8149L10.3947 9.63658L13.9997 2.33325Z"
+                                fill="currentColor" />
+                            </svg>
+                          </span>
+                          <span class="icon active">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <rect width="28" height="28" fill="white" />
+                              <path
+                                d="M13.9997 2.33325L17.6047 9.63658L25.6663 10.8149L19.833 16.4966L21.2097 24.5232L13.9997 20.7316L6.78967 24.5232L8.16634 16.4966L2.33301 10.8149L10.3947 9.63658L13.9997 2.33325Z"
+                                fill="currentColor" />
+                            </svg>
+                          </span>
+                          <span class="icon active">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <rect width="28" height="28" fill="white" />
+                              <path
+                                d="M13.9997 2.33325L17.6047 9.63658L25.6663 10.8149L19.833 16.4966L21.2097 24.5232L13.9997 20.7316L6.78967 24.5232L8.16634 16.4966L2.33301 10.8149L10.3947 9.63658L13.9997 2.33325Z"
+                                fill="currentColor" />
+                            </svg>
+                          </span>
+                          <span class="icon">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <rect width="28" height="28" fill="white" />
+                              <path
+                                d="M13.9997 2.33325L17.6047 9.63658L25.6663 10.8149L19.833 16.4966L21.2097 24.5232L13.9997 20.7316L6.78967 24.5232L8.16634 16.4966L2.33301 10.8149L10.3947 9.63658L13.9997 2.33325Z"
+                                fill="currentColor" />
+                            </svg>
+                          </span>
+                        </div>
+                        <div class="cart__info-price">
+                          <span>
+                            Adviesprijs
+                          </span>
+                          <del>€ 9,99</del>
+                          <strong>
+                            € 8.06
+                          </strong>
+                        </div>
+                        <button class="button button--primary">
+                          <span class="icon icon--stroke">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M9 22C9.55228 22 10 21.5523 10 21C10 20.4477 9.55228 20 9 20C8.44772 20 8 20.4477 8 21C8 21.5523 8.44772 22 9 22Z"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                              </path>
+                              <path
+                                d="M20 22C20.5523 22 21 21.5523 21 21C21 20.4477 20.5523 20 20 20C19.4477 20 19 20.4477 19 21C19 21.5523 19.4477 22 20 22Z"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                              </path>
+                              <path
+                                d="M1 1H5L7.68 14.39C7.77144 14.8504 8.02191 15.264 8.38755 15.5583C8.75318 15.8526 9.2107 16.009 9.68 16H19.4C19.8693 16.009 20.3268 15.8526 20.6925 15.5583C21.0581 15.264 21.3086 14.8504 21.4 14.39L23 6H6"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                              </path>
+                            </svg>
+                          </span>
+                          <span>
+                            In winkelmand
+                          </span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cart cart--product">
+                    <div class="badge badge--lg badge--opacity">
+                      <span>
+                        Bestseller
+                      </span>
+                    </div>
+                    <div class="cart__image">
+                      <div class="ratioImage ratioImage--contain">
+                        <img src="/images/goods/product-1.png" alt="product">
+                      </div>
+                    </div>
+                    <div class="cart__info">
+                      <div class="cart__info-group">
+                        <h6>
+                          WELEDA Rhinodoron <span class="noBreak">neusspray (20 ml)</span>
+                        </h6>
+                        <p>Weleda Rhinodoron Neusspray verzorgt, reinigt en bevochtigt het droge</p>
+                        <div class="cart__info-stars">
+                          <span class="icon active">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <rect width="28" height="28" fill="white" />
+                              <path
+                                d="M13.9997 2.33325L17.6047 9.63658L25.6663 10.8149L19.833 16.4966L21.2097 24.5232L13.9997 20.7316L6.78967 24.5232L8.16634 16.4966L2.33301 10.8149L10.3947 9.63658L13.9997 2.33325Z"
+                                fill="currentColor" />
+                            </svg>
+                          </span>
+                          <span class="icon active">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <rect width="28" height="28" fill="white" />
+                              <path
+                                d="M13.9997 2.33325L17.6047 9.63658L25.6663 10.8149L19.833 16.4966L21.2097 24.5232L13.9997 20.7316L6.78967 24.5232L8.16634 16.4966L2.33301 10.8149L10.3947 9.63658L13.9997 2.33325Z"
+                                fill="currentColor" />
+                            </svg>
+                          </span>
+                          <span class="icon active">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <rect width="28" height="28" fill="white" />
+                              <path
+                                d="M13.9997 2.33325L17.6047 9.63658L25.6663 10.8149L19.833 16.4966L21.2097 24.5232L13.9997 20.7316L6.78967 24.5232L8.16634 16.4966L2.33301 10.8149L10.3947 9.63658L13.9997 2.33325Z"
+                                fill="currentColor" />
+                            </svg>
+                          </span>
+                          <span class="icon active">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <rect width="28" height="28" fill="white" />
+                              <path
+                                d="M13.9997 2.33325L17.6047 9.63658L25.6663 10.8149L19.833 16.4966L21.2097 24.5232L13.9997 20.7316L6.78967 24.5232L8.16634 16.4966L2.33301 10.8149L10.3947 9.63658L13.9997 2.33325Z"
+                                fill="currentColor" />
+                            </svg>
+                          </span>
+                          <span class="icon">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <rect width="28" height="28" fill="white" />
+                              <path
+                                d="M13.9997 2.33325L17.6047 9.63658L25.6663 10.8149L19.833 16.4966L21.2097 24.5232L13.9997 20.7316L6.78967 24.5232L8.16634 16.4966L2.33301 10.8149L10.3947 9.63658L13.9997 2.33325Z"
+                                fill="currentColor" />
+                            </svg>
+                          </span>
+                        </div>
+                      </div>
+                      <div class="cart__info-container">
+                        <div class="cart__info-box">
+                          <div class="badge badge--sm badge--grey">
+                            <span>20 ml</span>
+                          </div>
+                          <div class="badge badge--light">
+                            <span>Op voorraad</span>
+                          </div>
+                        </div>
+                        <div class="cart__info-stars">
+                          <span class="icon active">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <rect width="28" height="28" fill="white" />
+                              <path
+                                d="M13.9997 2.33325L17.6047 9.63658L25.6663 10.8149L19.833 16.4966L21.2097 24.5232L13.9997 20.7316L6.78967 24.5232L8.16634 16.4966L2.33301 10.8149L10.3947 9.63658L13.9997 2.33325Z"
+                                fill="currentColor" />
+                            </svg>
+                          </span>
+                          <span class="icon active">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <rect width="28" height="28" fill="white" />
+                              <path
+                                d="M13.9997 2.33325L17.6047 9.63658L25.6663 10.8149L19.833 16.4966L21.2097 24.5232L13.9997 20.7316L6.78967 24.5232L8.16634 16.4966L2.33301 10.8149L10.3947 9.63658L13.9997 2.33325Z"
+                                fill="currentColor" />
+                            </svg>
+                          </span>
+                          <span class="icon active">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <rect width="28" height="28" fill="white" />
+                              <path
+                                d="M13.9997 2.33325L17.6047 9.63658L25.6663 10.8149L19.833 16.4966L21.2097 24.5232L13.9997 20.7316L6.78967 24.5232L8.16634 16.4966L2.33301 10.8149L10.3947 9.63658L13.9997 2.33325Z"
+                                fill="currentColor" />
+                            </svg>
+                          </span>
+                          <span class="icon active">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <rect width="28" height="28" fill="white" />
+                              <path
+                                d="M13.9997 2.33325L17.6047 9.63658L25.6663 10.8149L19.833 16.4966L21.2097 24.5232L13.9997 20.7316L6.78967 24.5232L8.16634 16.4966L2.33301 10.8149L10.3947 9.63658L13.9997 2.33325Z"
+                                fill="currentColor" />
+                            </svg>
+                          </span>
+                          <span class="icon">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <rect width="28" height="28" fill="white" />
+                              <path
+                                d="M13.9997 2.33325L17.6047 9.63658L25.6663 10.8149L19.833 16.4966L21.2097 24.5232L13.9997 20.7316L6.78967 24.5232L8.16634 16.4966L2.33301 10.8149L10.3947 9.63658L13.9997 2.33325Z"
+                                fill="currentColor" />
+                            </svg>
+                          </span>
+                        </div>
+                        <div class="cart__info-price">
+                          <span>
+                            Adviesprijs
+                          </span>
+                          <del>€ 9,99</del>
+                          <strong>
+                            € 8.06
+                          </strong>
+                        </div>
+                        <button class="button button--primary">
+                          <span class="icon icon--stroke">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M9 22C9.55228 22 10 21.5523 10 21C10 20.4477 9.55228 20 9 20C8.44772 20 8 20.4477 8 21C8 21.5523 8.44772 22 9 22Z"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                              </path>
+                              <path
+                                d="M20 22C20.5523 22 21 21.5523 21 21C21 20.4477 20.5523 20 20 20C19.4477 20 19 20.4477 19 21C19 21.5523 19.4477 22 20 22Z"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                              </path>
+                              <path
+                                d="M1 1H5L7.68 14.39C7.77144 14.8504 8.02191 15.264 8.38755 15.5583C8.75318 15.8526 9.2107 16.009 9.68 16H19.4C19.8693 16.009 20.3268 15.8526 20.6925 15.5583C21.0581 15.264 21.3086 14.8504 21.4 14.39L23 6H6"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                              </path>
+                            </svg>
+                          </span>
+                          <span>
+                            In winkelmand
+                          </span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cart cart--product">
+                    <div class="badge badge--lg badge--opacity">
+                      <span>
+                        Bestseller
+                      </span>
+                    </div>
+                    <div class="cart__image">
+                      <div class="ratioImage ratioImage--contain">
+                        <img src="/images/goods/product-1.png" alt="product">
+                      </div>
+                    </div>
+                    <div class="cart__info">
+                      <div class="cart__info-group">
+                        <h6>
+                          WELEDA Rhinodoron <span class="noBreak">neusspray (20 ml)</span>
+                        </h6>
+                        <p>Weleda Rhinodoron Neusspray verzorgt, reinigt en bevochtigt het droge</p>
+                        <div class="cart__info-stars">
+                          <span class="icon active">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <rect width="28" height="28" fill="white" />
+                              <path
+                                d="M13.9997 2.33325L17.6047 9.63658L25.6663 10.8149L19.833 16.4966L21.2097 24.5232L13.9997 20.7316L6.78967 24.5232L8.16634 16.4966L2.33301 10.8149L10.3947 9.63658L13.9997 2.33325Z"
+                                fill="currentColor" />
+                            </svg>
+                          </span>
+                          <span class="icon active">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <rect width="28" height="28" fill="white" />
+                              <path
+                                d="M13.9997 2.33325L17.6047 9.63658L25.6663 10.8149L19.833 16.4966L21.2097 24.5232L13.9997 20.7316L6.78967 24.5232L8.16634 16.4966L2.33301 10.8149L10.3947 9.63658L13.9997 2.33325Z"
+                                fill="currentColor" />
+                            </svg>
+                          </span>
+                          <span class="icon active">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <rect width="28" height="28" fill="white" />
+                              <path
+                                d="M13.9997 2.33325L17.6047 9.63658L25.6663 10.8149L19.833 16.4966L21.2097 24.5232L13.9997 20.7316L6.78967 24.5232L8.16634 16.4966L2.33301 10.8149L10.3947 9.63658L13.9997 2.33325Z"
+                                fill="currentColor" />
+                            </svg>
+                          </span>
+                          <span class="icon active">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <rect width="28" height="28" fill="white" />
+                              <path
+                                d="M13.9997 2.33325L17.6047 9.63658L25.6663 10.8149L19.833 16.4966L21.2097 24.5232L13.9997 20.7316L6.78967 24.5232L8.16634 16.4966L2.33301 10.8149L10.3947 9.63658L13.9997 2.33325Z"
+                                fill="currentColor" />
+                            </svg>
+                          </span>
+                          <span class="icon">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <rect width="28" height="28" fill="white" />
+                              <path
+                                d="M13.9997 2.33325L17.6047 9.63658L25.6663 10.8149L19.833 16.4966L21.2097 24.5232L13.9997 20.7316L6.78967 24.5232L8.16634 16.4966L2.33301 10.8149L10.3947 9.63658L13.9997 2.33325Z"
+                                fill="currentColor" />
+                            </svg>
+                          </span>
+                        </div>
+                      </div>
+                      <div class="cart__info-container">
+                        <div class="cart__info-box">
+                          <div class="badge badge--sm badge--grey">
+                            <span>20 ml</span>
+                          </div>
+                          <div class="badge badge--light">
+                            <span>Op voorraad</span>
+                          </div>
+                        </div>
+                        <div class="cart__info-stars">
+                          <span class="icon active">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <rect width="28" height="28" fill="white" />
+                              <path
+                                d="M13.9997 2.33325L17.6047 9.63658L25.6663 10.8149L19.833 16.4966L21.2097 24.5232L13.9997 20.7316L6.78967 24.5232L8.16634 16.4966L2.33301 10.8149L10.3947 9.63658L13.9997 2.33325Z"
+                                fill="currentColor" />
+                            </svg>
+                          </span>
+                          <span class="icon active">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <rect width="28" height="28" fill="white" />
+                              <path
+                                d="M13.9997 2.33325L17.6047 9.63658L25.6663 10.8149L19.833 16.4966L21.2097 24.5232L13.9997 20.7316L6.78967 24.5232L8.16634 16.4966L2.33301 10.8149L10.3947 9.63658L13.9997 2.33325Z"
+                                fill="currentColor" />
+                            </svg>
+                          </span>
+                          <span class="icon active">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <rect width="28" height="28" fill="white" />
+                              <path
+                                d="M13.9997 2.33325L17.6047 9.63658L25.6663 10.8149L19.833 16.4966L21.2097 24.5232L13.9997 20.7316L6.78967 24.5232L8.16634 16.4966L2.33301 10.8149L10.3947 9.63658L13.9997 2.33325Z"
+                                fill="currentColor" />
+                            </svg>
+                          </span>
+                          <span class="icon active">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <rect width="28" height="28" fill="white" />
+                              <path
+                                d="M13.9997 2.33325L17.6047 9.63658L25.6663 10.8149L19.833 16.4966L21.2097 24.5232L13.9997 20.7316L6.78967 24.5232L8.16634 16.4966L2.33301 10.8149L10.3947 9.63658L13.9997 2.33325Z"
+                                fill="currentColor" />
+                            </svg>
+                          </span>
+                          <span class="icon">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <rect width="28" height="28" fill="white" />
+                              <path
+                                d="M13.9997 2.33325L17.6047 9.63658L25.6663 10.8149L19.833 16.4966L21.2097 24.5232L13.9997 20.7316L6.78967 24.5232L8.16634 16.4966L2.33301 10.8149L10.3947 9.63658L13.9997 2.33325Z"
+                                fill="currentColor" />
+                            </svg>
+                          </span>
+                        </div>
+                        <div class="cart__info-price">
+                          <span>
+                            Adviesprijs
+                          </span>
+                          <del>€ 9,99</del>
+                          <strong>
+                            € 8.06
+                          </strong>
+                        </div>
+                        <button class="button button--primary">
+                          <span class="icon icon--stroke">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M9 22C9.55228 22 10 21.5523 10 21C10 20.4477 9.55228 20 9 20C8.44772 20 8 20.4477 8 21C8 21.5523 8.44772 22 9 22Z"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                              </path>
+                              <path
+                                d="M20 22C20.5523 22 21 21.5523 21 21C21 20.4477 20.5523 20 20 20C19.4477 20 19 20.4477 19 21C19 21.5523 19.4477 22 20 22Z"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                              </path>
+                              <path
+                                d="M1 1H5L7.68 14.39C7.77144 14.8504 8.02191 15.264 8.38755 15.5583C8.75318 15.8526 9.2107 16.009 9.68 16H19.4C19.8693 16.009 20.3268 15.8526 20.6925 15.5583C21.0581 15.264 21.3086 14.8504 21.4 14.39L23 6H6"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                              </path>
+                            </svg>
+                          </span>
+                          <span>
+                            In winkelmand
+                          </span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="headerTabs-fog"></div>
     </header>
     <div class="header-placeholder"></div>
