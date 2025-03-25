@@ -100,6 +100,7 @@ if (header)
 const headerSearch = document.getElementById('headerSearch');
 
 if (headerSearch) {
+
   const headerSearchOuter = document.getElementById('headerSearchOuter');
   const headerSearchPopup = document.getElementById('headerSearchPopup');
   const headerSearchContent = headerSearchPopup.querySelector(
@@ -113,14 +114,13 @@ if (headerSearch) {
     headerSearchPopup.classList.remove('active');
     headerSearchOuter.classList.remove('active');
     body.classList.remove('active');
-    header.classList.remove('sticky');
 
     headerSearch.value = '';
   };
 
   headerSearch.addEventListener('keyup', (e) => {
     if (e.target.value != '' && e.target.value != ' ') {
-      header.classList.add('sticky');
+      if (window.pageYOffset < 20) window.scrollTo(0, 20);
 
       setTimeout(() => {
         const headerSearchPosition = headerSearch.getBoundingClientRect();
