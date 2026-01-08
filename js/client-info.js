@@ -6,7 +6,8 @@
  */
 
 class ClientInfo {
-  constructor() {
+  constructor(configPath = './client-info.json') {
+    this.configPath = configPath;
     this.data = null;
     this.loaded = false;
   }
@@ -21,7 +22,7 @@ class ClientInfo {
     }
 
     try {
-      const response = await fetch('/client-info.json');
+      const response = await fetch(this.configPath);
       if (!response.ok) {
         throw new Error(`Failed to load client info: ${response.status}`);
       }
@@ -111,7 +112,15 @@ class ClientInfo {
         
         if (attrConfig) {
           // Format: "attrName:template"
-          const [attrName, template] = attrConfig.split(':');
+          // Validate format before processing
+          if (!attrConfig.includes(':')) {
+            console.warn(`Invalid data-client-info-attr format: ${attrConfig}. Expected "attrName:template"`);
+            return;
+          }
+          
+          const colonIndex = attrConfig.indexOf(':');
+          const attrName = attrConfig.substring(0, colonIndex);
+          const template = attrConfig.substring(colonIndex + 1);
           const attrValue = template.replace('{value}', value);
           element.setAttribute(attrName, attrValue);
         } else {
@@ -141,15 +150,20 @@ class ClientInfo {
   }
 }
 
-// Create a global instance
+// Create a global instance with default path
+// You can customize the path: new ClientInfo('/custom/path/client-info.json')
 const clientInfo = new ClientInfo();
 
 // Example usage:
 // 
-// // Initialize on page load
+// // Initialize on page load with default path
 // document.addEventListener('DOMContentLoaded', async () => {
 //   await clientInfo.init();
 // });
+//
+// // Or use a custom config path
+// const customClientInfo = new ClientInfo('/config/client-info.json');
+// await customClientInfo.init();
 //
 // // Or load and use manually
 // clientInfo.load().then(() => {

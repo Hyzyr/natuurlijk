@@ -12,20 +12,20 @@
     "workingHours": "Bereikbaar op werkdagen van 09:00 tot 17:00 uur"
   },
   "address": {
-    "street": "",
-    "postalCode": "",
-    "city": "",
+    "street": null,
+    "postalCode": null,
+    "city": null,
     "country": "Nederland"
   },
   "businessDetails": {
-    "kvkNumber": "",
-    "btwNumber": "",
-    "ibanNumber": ""
+    "kvkNumber": null,
+    "btwNumber": null,
+    "ibanNumber": null
   },
   "social": {
-    "facebook": "",
-    "instagram": "",
-    "youtube": ""
+    "facebook": null,
+    "instagram": null,
+    "youtube": null
   },
   "shipping": {
     "freeShippingThreshold": "€ 74,95",
