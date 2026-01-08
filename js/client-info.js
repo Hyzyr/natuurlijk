@@ -106,7 +106,8 @@ class ClientInfo {
       const path = element.getAttribute('data-client-info');
       const value = this.getNestedValue(path);
       
-      if (value) {
+      // Only update if value is not null or undefined
+      if (value !== null && value !== undefined) {
         // Check if we need to update an attribute instead of text content
         const attrConfig = element.getAttribute('data-client-info-attr');
         
@@ -115,16 +116,15 @@ class ClientInfo {
           // Validate format before processing
           if (!attrConfig.includes(':')) {
             console.warn(`Invalid data-client-info-attr format: ${attrConfig}. Expected "attrName:template"`);
-            return;
+          } else {
+            const colonIndex = attrConfig.indexOf(':');
+            const attrName = attrConfig.substring(0, colonIndex);
+            const template = attrConfig.substring(colonIndex + 1);
+            const attrValue = template.replace('{value}', value);
+            element.setAttribute(attrName, attrValue);
           }
-          
-          const colonIndex = attrConfig.indexOf(':');
-          const attrName = attrConfig.substring(0, colonIndex);
-          const template = attrConfig.substring(colonIndex + 1);
-          const attrValue = template.replace('{value}', value);
-          element.setAttribute(attrName, attrValue);
         } else {
-          // Update text content
+          // Update text content only if no attribute config
           element.textContent = value;
         }
       }
