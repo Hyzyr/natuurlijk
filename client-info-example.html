@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client Info - Gebruiksvoorbeeld</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      line-height: 1.6;
+    }
+    h1, h2 {
+      color: #2c5f2d;
+    }
+    .info-section {
+      background: #f4f4f4;
+      padding: 15px;
+      margin: 20px 0;
+      border-radius: 5px;
+    }
+    .info-section h3 {
+      margin-top: 0;
+      color: #2c5f2d;
+    }
+    code {
+      background: #e8e8e8;
+      padding: 2px 5px;
+      border-radius: 3px;
+      font-family: 'Courier New', monospace;
+    }
+    pre {
+      background: #e8e8e8;
+      padding: 15px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+    .example {
+      border-left: 4px solid #2c5f2d;
+      padding-left: 15px;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Client Info Systeem - Gebruiksvoorbeeld</h1>
+  
+  <div class="info-section">
+    <h3>Automatisch bijgewerkte informatie</h3>
+    <p>
+      <strong>Bedrijfsnaam:</strong> <span data-client-info="company.name">Laden...</span><br>
+      <strong>E-mail:</strong> 
+      <a href="mailto:" data-client-info="contact.email" data-client-info-attr="href:mailto:{value}">
+        <span data-client-info="contact.email">Laden...</span>
+      </a><br>
+      <strong>Telefoon:</strong> 
+      <a href="tel:" data-client-info="contact.phone" data-client-info-attr="href:tel:{value}">
+        <span data-client-info="contact.phoneDisplay">Laden...</span>
+      </a><br>
+      <strong>Openingstijden:</strong> <span data-client-info="contact.workingHours">Laden...</span>
+    </p>
+  </div>
+
+  <div class="info-section">
+    <h3>Verzending</h3>
+    <ul>
+      <li><span data-client-info="shipping.deliveryTime">Laden...</span></li>
+      <li>Gratis verzending vanaf <span data-client-info="shipping.freeShippingThreshold">Laden...</span></li>
+      <li><span data-client-info="shipping.returnPolicy">Laden...</span></li>
+    </ul>
+  </div>
+
+  <h2>Gebruiksinstructies</h2>
+
+  <div class="example">
+    <h3>1. Include het script in je HTML</h3>
+    <pre><code>&lt;script src="/js/client-info.js"&gt;&lt;/script&gt;</code></pre>
+  </div>
+
+  <div class="example">
+    <h3>2. Gebruik data-attributes voor automatische updates</h3>
+    <pre><code>&lt;!-- Eenvoudige tekst --&gt;
+&lt;span data-client-info="contact.email"&gt;&lt;/span&gt;
+
+&lt;!-- Link met e-mail --&gt;
+&lt;a href="mailto:" 
+   data-client-info="contact.email" 
+   data-client-info-attr="href:mailto:{value}"&gt;
+  &lt;span data-client-info="contact.email"&gt;&lt;/span&gt;
+&lt;/a&gt;
+
+&lt;!-- Telefoon link --&gt;
+&lt;a href="tel:" 
+   data-client-info="contact.phone" 
+   data-client-info-attr="href:tel:{value}"&gt;
+  &lt;span data-client-info="contact.phoneDisplay"&gt;&lt;/span&gt;
+&lt;/a&gt;</code></pre>
+  </div>
+
+  <div class="example">
+    <h3>3. Initialiseer op pagina load</h3>
+    <pre><code>document.addEventListener('DOMContentLoaded', async () => {
+  await clientInfo.init();
+});</code></pre>
+  </div>
+
+  <div class="example">
+    <h3>4. Of gebruik programmatisch</h3>
+    <pre><code>// Laad de data
+await clientInfo.load();
+
+// Verkrijg specifieke informatie
+const contact = clientInfo.getContact();
+console.log('E-mail:', contact.email);
+
+const shipping = clientInfo.getShipping();
+console.log('Gratis verzending vanaf:', shipping.freeShippingThreshold);</code></pre>
+  </div>
+
+  <h2>Beschikbare data paden</h2>
+  <div class="info-section">
+    <pre><code>company.name
+company.legalName
+company.description
+company.url
+
+contact.email
+contact.phone
+contact.phoneDisplay
+contact.workingHours
+
+address.street
+address.postalCode
+address.city
+address.country
+
+businessDetails.kvkNumber
+businessDetails.btwNumber
+businessDetails.ibanNumber
+
+social.facebook
+social.instagram
+social.youtube
+
+shipping.freeShippingThreshold
+shipping.deliveryTime
+shipping.returnPolicy
+
+legal.termsUrl
+legal.privacyUrl
+legal.cookieUrl</code></pre>
+  </div>
+
+  <script src="/js/client-info.js"></script>
+  <script>
+    // Initialize client info on page load
+    document.addEventListener('DOMContentLoaded', async () => {
+      try {
+        await clientInfo.init();
+        console.log('Client info loaded successfully');
+      } catch (error) {
+        console.error('Failed to load client info:', error);
+      }
+    });
+  </script>
+</body>
+</html>
