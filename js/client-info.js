@@ -143,7 +143,7 @@ class ClientInfo {
           // Format: "attrName:template"
           // Validate format before processing
           if (!attrConfig.includes(':')) {
-            console.warn(`Invalid data-client-info-attr format: ${attrConfig}. Expected "attrName:template"`);
+            console.warn(`Invalid data-client-info-attr format: ${attrConfig}. Expected "attrName:template". Skipping attribute update.`);
           } else {
             const colonIndex = attrConfig.indexOf(':');
             const attrName = attrConfig.substring(0, colonIndex);
