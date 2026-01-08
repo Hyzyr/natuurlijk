@@ -40,6 +40,9 @@ class ClientInfo {
    * @returns {Object} Company data
    */
   getCompany() {
+    if (!this.loaded) {
+      console.warn('Client info not loaded yet. Call load() or init() first.');
+    }
     return this.data?.company || {};
   }
 
@@ -48,6 +51,9 @@ class ClientInfo {
    * @returns {Object} Contact data
    */
   getContact() {
+    if (!this.loaded) {
+      console.warn('Client info not loaded yet. Call load() or init() first.');
+    }
     return this.data?.contact || {};
   }
 
@@ -56,6 +62,9 @@ class ClientInfo {
    * @returns {Object} Address data
    */
   getAddress() {
+    if (!this.loaded) {
+      console.warn('Client info not loaded yet. Call load() or init() first.');
+    }
     return this.data?.address || {};
   }
 
@@ -64,6 +73,9 @@ class ClientInfo {
    * @returns {Object} Business details
    */
   getBusinessDetails() {
+    if (!this.loaded) {
+      console.warn('Client info not loaded yet. Call load() or init() first.');
+    }
     return this.data?.businessDetails || {};
   }
 
@@ -72,6 +84,9 @@ class ClientInfo {
    * @returns {Object} Social media data
    */
   getSocial() {
+    if (!this.loaded) {
+      console.warn('Client info not loaded yet. Call load() or init() first.');
+    }
     return this.data?.social || {};
   }
 
@@ -80,6 +95,9 @@ class ClientInfo {
    * @returns {Object} Shipping data
    */
   getShipping() {
+    if (!this.loaded) {
+      console.warn('Client info not loaded yet. Call load() or init() first.');
+    }
     return this.data?.shipping || {};
   }
 
@@ -88,6 +106,9 @@ class ClientInfo {
    * @returns {Object} Legal data
    */
   getLegal() {
+    if (!this.loaded) {
+      console.warn('Client info not loaded yet. Call load() or init() first.');
+    }
     return this.data?.legal || {};
   }
 
@@ -104,6 +125,13 @@ class ClientInfo {
     
     elements.forEach(element => {
       const path = element.getAttribute('data-client-info');
+      
+      // Validate path exists
+      if (!path || typeof path !== 'string') {
+        console.warn('Invalid or missing data-client-info attribute on element:', element);
+        return;
+      }
+      
       const value = this.getNestedValue(path);
       
       // Only update if value is not null or undefined
@@ -120,7 +148,8 @@ class ClientInfo {
             const colonIndex = attrConfig.indexOf(':');
             const attrName = attrConfig.substring(0, colonIndex);
             const template = attrConfig.substring(colonIndex + 1);
-            const attrValue = template.replace('{value}', value);
+            // Use replaceAll to handle multiple {value} placeholders
+            const attrValue = template.replaceAll('{value}', value);
             element.setAttribute(attrName, attrValue);
           }
         } else {
@@ -137,6 +166,10 @@ class ClientInfo {
    * @returns {any} The value at the path
    */
   getNestedValue(path) {
+    if (!path || typeof path !== 'string') {
+      console.warn('Invalid path provided to getNestedValue:', path);
+      return undefined;
+    }
     return path.split('.').reduce((obj, key) => obj?.[key], this.data);
   }
 
